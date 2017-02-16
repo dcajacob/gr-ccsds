@@ -39,6 +39,7 @@ namespace gr {
          bool d_printing;
 
          uint32_t d_sync_word;
+         uint32_t d_alt_sync_word;
          uint8_t d_decoder_state;
          uint32_t d_data_reg;
          uint8_t d_bit_counter;
@@ -53,7 +54,11 @@ namespace gr {
          void enter_sync_search();
          void enter_codeword();
          bool compare_sync_word();
+         bool compare_alt_sync_word();
          bool decode_frame();
+         uint8_t reverse(uint8_t x, uint8_t n);
+         uint8_t invert(uint8_t x, uint8_t mask);
+         uint32_t reverse_and_invert(uint32_t x, uint8_t n, uint8_t mask);
 
      public:
       ccsds_decoder_impl(int threshold, bool rs_decode, bool deinterleave, bool descramble, bool verbose, bool printing);
@@ -73,4 +78,3 @@ namespace gr {
 } // namespace gr
 
 #endif /* INCLUDED_CCSDS_CCSDS_DECODER_IMPL_H */
-

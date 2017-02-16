@@ -61,6 +61,12 @@ namespace gr {
           d_sync_word = (d_sync_word << 8) | (SYNC_WORD[i] & 0xff);
       }
 
+      // Create an alternative sync word that corresponds to a 90 deg
+      //  constellation rotation. Others covered by differential encoding.
+      //d_alt_sync_word = reverse_and_invert(d_sync_word, 2, 0x02);
+      d_alt_sync_word = reverse_and_invert(d_sync_word, 2, 0x02);
+      if (d_verbose) printf("\tFormed an alternate sync word:\t%Zd\n", static_cast<uint64_t>(d_alt_sync_word));
+
       enter_sync_search();
     }
 
@@ -85,6 +91,10 @@ namespace gr {
                       if (d_verbose) printf("\tsync word detected\n");
                       d_num_frames_received++;
                       enter_codeword();
+                  } else if (compare_alt_sync_word()) {
+                      if (d_verbose) printf("\talternate sync word detected\n");
+                      d_num_frames_received++;
+                      //enter_codeword();
                   }
                   break;
               case STATE_CODEWORD:
@@ -144,6 +154,14 @@ namespace gr {
         return nwrong <= d_threshold;
     }
 
+    bool ccsds_decoder_impl::compare_alt_sync_word()
+    {
+        uint32_t nwrong = 0;
+        uint32_t wrong_bits = d_data_reg ^ d_alt_sync_word;
+        volk_32u_popcnt(&nwrong, wrong_bits);
+        return nwrong <= d_threshold;
+    }
+
     bool ccsds_decoder_impl::decode_frame()
     {
         // this will be set to false if a codeword is not decodable
@@ -182,6 +200,53 @@ namespace gr {
         if (success) d_num_frames_decoded++;
 
         return success;
+    }
+
+    uint8_t ccsds_decoder_impl::reverse(uint8_t x, uint8_t n)
+    {
+        // Bit-reverse every n bits
+        uint8_t result = 0;
+        for (uint8_t i=0; i<n; i++) {
+            if ((x >> i) & 1)
+                result |= 1 << (n - 1 - i);
+        }
+
+        return result;
+    }
+
+    uint8_t ccsds_decoder_impl::invert(uint8_t x, uint8_t mask)
+    {
+        // Invert the masked bits
+        return x ^ mask;
+    }
+
+    uint32_t ccsds_decoder_impl::reverse_and_invert(uint32_t x, uint8_t n, uint8_t mask)
+    {
+        uint32_t temp = 0;
+        uint32_t result = 0;
+        uint8_t sym = 0;
+
+        for (uint8_t i=0; i<(32/2); i++) {
+            sym = invert(reverse((x >> (30 - 2*i)) & 0x3, 2), 0x02);
+            //sym = reverse((x >> (30 - 2*i)) & 0x3, 2);
+            //sym = invert(reverse((x >> (30 - 2*i)) & 0x3, 2), 0x01);
+            temp = (temp << 2) | (sym & 0xFF);
+        }
+        result = temp;
+
+/*
+        for (uint8_t i=(32/2); i>0; --i) {
+            sym = invert(reverse((x >> (2*i)) & 0x3, 2), 0x02);
+            temp = (temp >> 2) | (sym & 0xFF);
+        }
+        result = temp;
+*/
+        //for (uint8_t i=0; i<(32/2); i++) {
+        //    sym = (temp >> (2*i)) & 0x3;
+        //    result = (result << 2) | (sym & 0xFF);
+        //}
+
+        return result;
     }
   } /* namespace ccsds */
 } /* namespace gr */
