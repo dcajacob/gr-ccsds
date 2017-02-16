@@ -93,7 +93,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(800, 1668)</value>
+      <value>(792, 1468)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -246,11 +246,11 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1440, 16)</value>
+      <value>(1600, 1440)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value>1,0,1,1</value>
+      <value>qtgui@0:4,1</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -374,11 +374,11 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(888, 1640)</value>
+      <value>(880, 1440)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>qtgui@0:5,1</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -445,7 +445,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(560, 1648)</value>
+      <value>(552, 1448)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -488,7 +488,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(56, 1648)</value>
+      <value>(48, 1448)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -531,7 +531,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(64, 1768)</value>
+      <value>(56, 1568)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -566,11 +566,11 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1160, 1640)</value>
+      <value>(1456, 1440)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>qtgui@0:3,2</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -656,11 +656,11 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1056, 16)</value>
+      <value>(1280, 1440)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>qtgui@0:3,1</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -719,11 +719,11 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1016, 1640)</value>
+      <value>(1008, 1440)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>qtgui@0:5,2</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -871,7 +871,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(560, 1768)</value>
+      <value>(552, 1568)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -906,11 +906,11 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1304, 1640)</value>
+      <value>(1152, 1440)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>qtgui@0:4,2</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -973,7 +973,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(248, 1652)</value>
+      <value>(240, 1452)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1016,7 +1016,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(240, 1772)</value>
+      <value>(232, 1572)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1059,7 +1059,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(400, 1652)</value>
+      <value>(392, 1452)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1102,7 +1102,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(400, 1652)</value>
+      <value>(392, 1452)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -3041,7 +3041,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(416, 1768)</value>
+      <value>(408, 1568)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -3172,7 +3172,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>qtgui@1:</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3539,7 +3539,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>qtgui@0:1,1,1,2</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3826,7 +3826,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>qtgui@0:2,1,1,2</value>
     </param>
     <param>
       <key>_rotation</key>
