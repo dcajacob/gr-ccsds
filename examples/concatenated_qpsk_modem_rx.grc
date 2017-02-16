@@ -120,7 +120,7 @@
     </param>
     <param>
       <key>type</key>
-      <value>qpsk</value>
+      <value>dqpsk</value>
     </param>
     <param>
       <key>dims</key>
@@ -132,7 +132,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1168, 148)</value>
+      <value>(560, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1145,7 +1145,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1204,7 +1204,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>file</key>
-      <value>/home/dan/Downloads/blah.txt</value>
+      <value>file_prefix + "/Downloads/blah.txt"</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1251,7 +1251,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1561,7 +1561,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1604,7 +1604,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1759,6 +1759,49 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>value</key>
       <value>fec_extended_decoder</value>
+    </param>
+  </block>
+  <block>
+    <key>parameter</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(440, 8)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>file_prefix</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>File Prefix</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value></value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>string</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>expanduser('~')</value>
     </param>
   </block>
   <block>
@@ -3967,6 +4010,12 @@ For example (171,133) =&gt; (121,91)</value>
   <connection>
     <source_block_id>fec_extended_decoder_0</source_block_id>
     <sink_block_id>blocks_deinterleave_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>fec_extended_decoder_0</source_block_id>
+    <sink_block_id>ccsds_decoder</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
