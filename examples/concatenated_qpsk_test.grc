@@ -120,7 +120,7 @@
     </param>
     <param>
       <key>type</key>
-      <value>dqpsk</value>
+      <value>qpsk</value>
     </param>
     <param>
       <key>dims</key>
@@ -3535,7 +3535,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(808, 740)</value>
+      <value>(816, 740)</value>
     </param>
     <param>
       <key>gui_hint</key>
