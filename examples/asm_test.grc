@@ -892,7 +892,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>function_name</key>
-      <value>get_value</value>
+      <value>level</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1641,7 +1641,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>vlen</key>
-      <value>4</value>
+      <value>4*2*4</value>
     </param>
   </block>
   <block>
@@ -1802,7 +1802,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>num_items</key>
-      <value>4</value>
+      <value>4*2*4</value>
     </param>
     <param>
       <key>vlen</key>
@@ -1943,7 +1943,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>vlen</key>
-      <value>4</value>
+      <value>4*2*4</value>
     </param>
   </block>
   <block>
