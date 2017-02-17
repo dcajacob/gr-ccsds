@@ -2406,9 +2406,9 @@ For example (171,133) =&gt; (121,91)</value>
   </connection>
   <connection>
     <source_block_id>blocks_tuntap_pdu_0</source_block_id>
-    <sink_block_id>blocks_throttle_0</sink_block_id>
+    <sink_block_id>blocks_pdu_to_tagged_stream_1</sink_block_id>
     <source_key>pdus</source_key>
-    <sink_key>0</sink_key>
+    <sink_key>pdus</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_unpack_k_bits_bb_0_0_1</source_block_id>
