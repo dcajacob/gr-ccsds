@@ -1026,6 +1026,57 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
+    <key>blocks_tuntap_pdu</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>istunflag</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(56, 92)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_tuntap_pdu_0</value>
+    </param>
+    <param>
+      <key>ifn</key>
+      <value>tun0</value>
+    </param>
+    <param>
+      <key>mtu</key>
+      <value>mtu</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
     <key>blocks_unpack_k_bits_bb</key>
     <param>
       <key>alias</key>
@@ -1407,6 +1458,49 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>import</key>
       <value>from os.path import expanduser</value>
+    </param>
+  </block>
+  <block>
+    <key>parameter</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(816, 16)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>mtu</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>MTU</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value></value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>intx</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>1500</value>
     </param>
   </block>
   <block>
@@ -2281,6 +2375,12 @@ For example (171,133) =&gt; (121,91)</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>blocks_pdu_to_tagged_stream_1</source_block_id>
+    <sink_block_id>blocks_throttle_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>blocks_random_pdu_0</source_block_id>
     <sink_block_id>blocks_pdu_to_tagged_stream_1</sink_block_id>
     <source_key>pdus</source_key>
@@ -2303,6 +2403,12 @@ For example (171,133) =&gt; (121,91)</value>
     <sink_block_id>blocks_stream_to_tagged_stream_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_tuntap_pdu_0</source_block_id>
+    <sink_block_id>blocks_pdu_to_tagged_stream_1</sink_block_id>
+    <source_key>pdus</source_key>
+    <sink_key>pdus</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_unpack_k_bits_bb_0_0_1</source_block_id>

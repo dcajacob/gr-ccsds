@@ -120,7 +120,7 @@
     </param>
     <param>
       <key>type</key>
-      <value>dqpsk</value>
+      <value>qpsk</value>
     </param>
     <param>
       <key>dims</key>
