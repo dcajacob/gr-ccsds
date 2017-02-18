@@ -2536,7 +2536,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>center_freq0</key>
-      <value>uhd.tune_request(tx_freq, 2e6)</value>
+      <value>uhd.tune_request(tx_freq, samp_rate*2)</value>
     </param>
     <param>
       <key>norm_gain0</key>
@@ -3188,7 +3188,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4011,7 +4011,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4182,7 +4182,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>center_freq0</key>
-      <value>uhd.tune_request(rx_freq, 2e6)</value>
+      <value>uhd.tune_request(rx_freq, samp_rate*2)</value>
     </param>
     <param>
       <key>dc_offs_enb0</key>
@@ -5346,7 +5346,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -6685,7 +6685,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
