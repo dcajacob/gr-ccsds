@@ -160,6 +160,33 @@
     </param>
   </block>
   <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(920, 12)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>data_rate</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>user_data_rate*2.</value>
+    </param>
+  </block>
+  <block>
     <key>variable_cc_decoder_def</key>
     <param>
       <key>padding</key>
@@ -373,7 +400,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>4e6</value>
+      <value>data_rate*sps</value>
     </param>
   </block>
   <block>
@@ -428,6 +455,33 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>value</key>
       <value>4</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(912, 84)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>user_data_rate</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0.25e6</value>
     </param>
   </block>
   <block>
