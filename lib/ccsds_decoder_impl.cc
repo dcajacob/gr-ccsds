@@ -66,9 +66,7 @@ namespace gr {
       //d_alt_sync_word = reverse_and_invert(d_sync_word, 2, 0x02);
       d_alt_sync_word = reverse_and_invert(d_sync_word, 2, 0x02, 32);
       if (d_verbose) printf("\tNormal sync word:\t%Zd\n", static_cast<uint64_t>(d_sync_word));
-      if (d_verbose) printf("\tFormed an alternate sync word:\t%Zd\n", static_cast<uint64_t>(d_alt_sync_word));
-      if (d_verbose) printf("\tNormal sync word:\t%d\n", (d_sync_word & 0xFFFFFFFF));
-      if (d_verbose) printf("\tFormed an alternate sync word:\t%d\n", (d_alt_sync_word & 0xFFFFFFFF));
+      if (d_verbose) printf("\tFormed an alternate sync word:\t%zd\n", static_cast<uint64_t>(d_alt_sync_word));
       d_alt_sync_state = false;
 
       enter_sync_search();
@@ -97,7 +95,7 @@ namespace gr {
                       d_alt_sync_state = false;
                       enter_codeword();
                   } else if (compare_alt_sync_word()) {
-                      if (d_verbose) printf("\talternate sync word detected %Zd\n", static_cast<uint64_t>(reverse_and_invert(d_data_reg, 2, 0x02, 32)));
+                      if (d_verbose) printf("\talternate sync word detected %zd\n", static_cast<uint64_t>(reverse_and_invert(d_data_reg, 2, 0x02, 32)));
                       d_num_frames_received++;
                       d_alt_sync_state = true;
                       enter_codeword();
