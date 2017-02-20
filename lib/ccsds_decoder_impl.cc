@@ -67,6 +67,8 @@ namespace gr {
       d_alt_sync_word = reverse_and_invert(d_sync_word, 2, 0x02, 32);
       if (d_verbose) printf("\tNormal sync word:\t%Zd\n", static_cast<uint64_t>(d_sync_word));
       if (d_verbose) printf("\tFormed an alternate sync word:\t%Zd\n", static_cast<uint64_t>(d_alt_sync_word));
+      if (d_verbose) printf("\tNormal sync word:\t%d\n", (d_sync_word & 0xFFFFFFFF));
+      if (d_verbose) printf("\tFormed an alternate sync word:\t%d\n", (d_alt_sync_word & 0xFFFFFFFF));
       d_alt_sync_state = false;
 
       enter_sync_search();
@@ -107,7 +109,7 @@ namespace gr {
                   d_bit_counter++;
                   if (d_bit_counter == 8) {
                       if (d_alt_sync_state) {
-                          d_data_reg = reverse_and_invert(d_data_reg, 2, 0x02, 8);
+                          d_data_reg = reverse_and_invert(d_data_reg, 2, 0x02, 8) & 0xFF;
                       }
                       d_codeword[d_byte_counter] = d_data_reg;
                       d_byte_counter++;
