@@ -65,6 +65,7 @@ namespace gr {
       //  constellation rotation. Others covered by differential encoding.
       //d_alt_sync_word = reverse_and_invert(d_sync_word, 2, 0x02);
       d_alt_sync_word = reverse_and_invert(d_sync_word, 2, 0x02, 32);
+      if (d_verbose) printf("\tNormal sync word:\t%Zd\n", static_cast<uint64_t>(d_sync_word));
       if (d_verbose) printf("\tFormed an alternate sync word:\t%Zd\n", static_cast<uint64_t>(d_alt_sync_word));
       d_alt_sync_state = false;
 
