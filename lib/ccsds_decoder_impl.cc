@@ -237,7 +237,9 @@ namespace gr {
 
         for (uint8_t i=0; i<(length/n); i++) {
             //sym = invert(reverse((x >> ((length-n) - n*i)) & 0x3, n), 0x02);
-            sym = reverse((x >> ((length-n) - n*i)) & 0x3, n);
+            //sym = reverse((x >> ((length-n) - n*i)) & 0x3, n);
+            sym = invert((x >> ((length-n) - n*i)) & 0x3, 0x02);
+
             //sym = reverse((x >> (30 - 2*i)) & 0x3, 2);
             //sym = invert(reverse((x >> (30 - 2*i)) & 0x3, 2), 0x01);
             temp = (temp << n) | (sym & 0xFF);
