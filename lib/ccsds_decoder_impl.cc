@@ -64,8 +64,9 @@ namespace gr {
       // Create an alternative sync word that corresponds to a 90 deg
       //  constellation rotation. Others covered by differential encoding.
       //d_alt_sync_word = reverse_and_invert(d_sync_word, 2, 0x02);
-      d_alt_sync_word = reverse_and_invert(d_sync_word, 2, 0x02);
+      d_alt_sync_word = reverse_and_invert(d_sync_word, 2, 0x02, 32);
       if (d_verbose) printf("\tFormed an alternate sync word:\t%Zd\n", static_cast<uint64_t>(d_alt_sync_word));
+      d_alt_sync_state = false;
 
       enter_sync_search();
     }
@@ -90,11 +91,13 @@ namespace gr {
                   if (compare_sync_word()) {
                       if (d_verbose) printf("\tsync word detected\n");
                       d_num_frames_received++;
+                      d_alt_sync_state = false;
                       enter_codeword();
                   } else if (compare_alt_sync_word()) {
                       if (d_verbose) printf("\talternate sync word detected\n");
                       d_num_frames_received++;
-                      //enter_codeword();
+                      d_alt_sync_state = true;
+                      enter_codeword();
                   }
                   break;
               case STATE_CODEWORD:
@@ -102,6 +105,9 @@ namespace gr {
                   d_data_reg = (d_data_reg << 1) | (in[count++] & 0x01);
                   d_bit_counter++;
                   if (d_bit_counter == 8) {
+                      if (d_alt_sync_state) {
+                          d_data_reg = reverse_and_invert(d_data_reg, 2, 0x02, 8);
+                      }
                       d_codeword[d_byte_counter] = d_data_reg;
                       d_byte_counter++;
                       d_bit_counter = 0;
@@ -220,17 +226,17 @@ namespace gr {
         return x ^ mask;
     }
 
-    uint32_t ccsds_decoder_impl::reverse_and_invert(uint32_t x, uint8_t n, uint8_t mask)
+    uint32_t ccsds_decoder_impl::reverse_and_invert(uint32_t x, uint8_t n, uint8_t mask, uint8_t length)
     {
         uint32_t temp = 0;
         uint32_t result = 0;
         uint8_t sym = 0;
 
-        for (uint8_t i=0; i<(32/2); i++) {
-            sym = invert(reverse((x >> (30 - 2*i)) & 0x3, 2), 0x02);
+        for (uint8_t i=0; i<(length/n); i++) {
+            sym = invert(reverse((x >> ((length-n) - n*i)) & 0x3, n), 0x02);
             //sym = reverse((x >> (30 - 2*i)) & 0x3, 2);
             //sym = invert(reverse((x >> (30 - 2*i)) & 0x3, 2), 0x01);
-            temp = (temp << 2) | (sym & 0xFF);
+            temp = (temp << n) | (sym & 0xFF);
         }
         result = temp;
 
