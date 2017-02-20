@@ -94,7 +94,7 @@ namespace gr {
                       d_alt_sync_state = false;
                       enter_codeword();
                   } else if (compare_alt_sync_word()) {
-                      if (d_verbose) printf("\talternate sync word detected\n");
+                      if (d_verbose) printf("\talternate sync word detected %Zd\n", static_cast<uint64_t>(reverse_and_invert(d_sync_word, 2, 0x02, 32)));
                       d_num_frames_received++;
                       d_alt_sync_state = true;
                       enter_codeword();
