@@ -89,11 +89,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(72, 1508)</value>
+      <value>(1136, 1084)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -105,7 +105,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>4</value>
+      <value>2**constel.bits_per_symbol()</value>
     </param>
   </block>
   <block>
@@ -258,6 +258,33 @@
     </param>
   </block>
   <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1208, 1084)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>eb</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0.35</value>
+    </param>
+  </block>
+  <block>
     <key>variable_cc_encoder_def</key>
     <param>
       <key>padding</key>
@@ -320,6 +347,33 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>mode</key>
       <value>fec.CC_STREAMING</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(776, 884)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>matched_filter</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>firdes.root_raised_cosine(nfilts, nfilts, 1, .7, int(11*sps*nfilts))</value>
     </param>
   </block>
   <block>
@@ -427,34 +481,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>4</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1064, 1084)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>sps_0</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>4</value>
+      <value>4*0+10</value>
     </param>
   </block>
   <block>
@@ -481,7 +508,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>0.25e6</value>
+      <value>0.25e6*0+125e3</value>
     </param>
   </block>
   <block>
@@ -545,6 +572,69 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>zeropad</key>
       <value>100000</value>
+    </param>
+  </block>
+  <block>
+    <key>analog_agc2_xx</key>
+    <param>
+      <key>attack_rate</key>
+      <value>0.6e-1</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>decay_rate</key>
+      <value>1e-3</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(328, 792)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>gain</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>analog_agc2_xx_0</value>
+    </param>
+    <param>
+      <key>max_gain</key>
+      <value>65536</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>reference</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
     </param>
   </block>
   <block>
@@ -710,6 +800,116 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>num_streams</key>
       <value>2</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_deinterleave</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>blocksize</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(112, 1448)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_deinterleave_0_0_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>num_streams</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_delay</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>delay</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(496, 1636)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_delay_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>num_ports</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
     </param>
     <param>
       <key>vlen</key>
@@ -933,6 +1133,61 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
+    <key>blocks_interleave</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>blocksize</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(488, 1448)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_interleave_0_0_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>num_streams</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
     <key>blocks_message_strobe_random</key>
     <param>
       <key>alias</key>
@@ -1039,6 +1294,53 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
+    <key>blocks_null_sink</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bus_conns</key>
+      <value>[[0,],]</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(288, 1112)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_null_sink_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
     <key>blocks_pack_k_bits_bb</key>
     <param>
       <key>alias</key>
@@ -1082,6 +1384,53 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
+    <key>blocks_pdu_set</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1216, 136)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_pdu_set_0</value>
+    </param>
+    <param>
+      <key>k</key>
+      <value>pmt.intern("key")</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>v</key>
+      <value>pmt.intern("value")</value>
+    </param>
+  </block>
+  <block>
     <key>blocks_pdu_to_tagged_stream</key>
     <param>
       <key>alias</key>
@@ -1101,7 +1450,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(784, 1308)</value>
+      <value>(800, 1308)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1513,7 +1862,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>descramble</key>
-      <value>True</value>
+      <value>False</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -1530,6 +1879,69 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>id</key>
       <value>ccsds_decoder</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>printing</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>rs_decode</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>threshold</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>verbose</key>
+      <value>True</value>
+    </param>
+  </block>
+  <block>
+    <key>ccsds_ccsds_decoder</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>deinterleave</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>descramble</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(616, 1440)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>ccsds_decoder_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1616,7 +2028,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>scramble</key>
-      <value>True</value>
+      <value>False</value>
     </param>
     <param>
       <key>verbose</key>
@@ -1643,7 +2055,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(376, 936)</value>
+      <value>(568, 952)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1675,7 +2087,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>sps</key>
-      <value>1</value>
+      <value>2</value>
     </param>
   </block>
   <block>
@@ -1706,7 +2118,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>excess_bw</key>
-      <value>0.35*2</value>
+      <value>eb</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1785,6 +2197,57 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
+    <key>digital_correlate_and_sync_cc</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>filter</key>
+      <value>matched_filter</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(64, 1020)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>digital_correlate_and_sync_cc_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>sps</key>
+      <value>sps</value>
+    </param>
+    <param>
+      <key>symbols</key>
+      <value>[int(2*(int(x)-0.5)) for x in list(bin(0x1acffc1d)[2:])]</value>
+    </param>
+  </block>
+  <block>
     <key>digital_costas_loop_cc</key>
     <param>
       <key>alias</key>
@@ -1804,7 +2267,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(632, 960)</value>
+      <value>(824, 976)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1922,6 +2385,92 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
+    <key>digital_diff_decoder_bb</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(272, 1500)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>digital_diff_decoder_bb_0_0_0_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>modulus</key>
+      <value>2</value>
+    </param>
+  </block>
+  <block>
+    <key>digital_diff_decoder_bb</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(272, 1436)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>digital_diff_decoder_bb_0_0_1</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>modulus</key>
+      <value>2</value>
+    </param>
+  </block>
+  <block>
     <key>digital_diff_encoder_bb</key>
     <param>
       <key>alias</key>
@@ -2008,6 +2557,65 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
+    <key>digital_fll_band_edge_cc</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>rolloff</key>
+      <value>eb</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(552, 776)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>digital_fll_band_edge_cc_0</value>
+    </param>
+    <param>
+      <key>w</key>
+      <value>2*3.14/100.0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>filter_size</key>
+      <value>55</value>
+    </param>
+    <param>
+      <key>samps_per_sym</key>
+      <value>sps</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>cc</value>
+    </param>
+  </block>
+  <block>
     <key>digital_pfb_clock_sync_xxx</key>
     <param>
       <key>alias</key>
@@ -2031,7 +2639,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(136, 960)</value>
+      <value>(328, 976)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2063,7 +2671,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>osps</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>sps</key>
@@ -2094,7 +2702,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(152, 1488)</value>
+      <value>(984, 1488)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2158,6 +2766,65 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>id</key>
       <value>fec_extended_decoder_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>puncpat</key>
+      <value>'11'</value>
+    </param>
+    <param>
+      <key>threadtype</key>
+      <value>capillary</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>fec_extended_decoder</value>
+    </param>
+  </block>
+  <block>
+    <key>fec_extended_decoder</key>
+    <param>
+      <key>ann</key>
+      <value>None</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>decoder_list</key>
+      <value>decoder_variable</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(240, 1616)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>fec_extended_decoder_0_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -2349,6 +3016,162 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
+    <key>kiss_nrzi_decode</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(296, 1232)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>kiss_nrzi_decode_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>kiss_nrzi_decode</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(296, 1392)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>kiss_nrzi_decode_0_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>kiss_nrzi_encode</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(768, 384)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>kiss_nrzi_encode_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>kiss_nrzi_encode</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(744, 544)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>kiss_nrzi_encode_0_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
     <key>parameter</key>
     <param>
       <key>alias</key>
@@ -2407,7 +3230,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(296, 1480)</value>
+      <value>(1128, 1480)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2450,7 +3273,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(592, 1480)</value>
+      <value>(1424, 1480)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2493,7 +3316,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(448, 1480)</value>
+      <value>(1280, 1480)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5350,7 +6173,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(56, 712)</value>
+      <value>(32, 712)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -6851,6 +7674,12 @@ For example (171,133) =&gt; (121,91)</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>analog_agc2_xx_0</source_block_id>
+    <sink_block_id>digital_fll_band_edge_cc_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>analog_random_source_x_0</source_block_id>
     <sink_block_id>blocks_throttle_0</sink_block_id>
     <source_key>0</source_key>
@@ -6864,7 +7693,19 @@ For example (171,133) =&gt; (121,91)</value>
   </connection>
   <connection>
     <source_block_id>blocks_deinterleave_0</source_block_id>
+    <sink_block_id>kiss_nrzi_encode_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_deinterleave_0</source_block_id>
     <sink_block_id>digital_diff_encoder_bb_0_0_0_0</sink_block_id>
+    <source_key>1</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_deinterleave_0</source_block_id>
+    <sink_block_id>kiss_nrzi_encode_0</sink_block_id>
     <source_key>1</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -6876,8 +7717,38 @@ For example (171,133) =&gt; (121,91)</value>
   </connection>
   <connection>
     <source_block_id>blocks_deinterleave_0_0</source_block_id>
+    <sink_block_id>kiss_nrzi_decode_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_deinterleave_0_0</source_block_id>
     <sink_block_id>digital_diff_decoder_bb_0_0_0</sink_block_id>
     <source_key>1</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_deinterleave_0_0</source_block_id>
+    <sink_block_id>kiss_nrzi_decode_0_0</sink_block_id>
+    <source_key>1</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_deinterleave_0_0_0</source_block_id>
+    <sink_block_id>digital_diff_decoder_bb_0_0_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_deinterleave_0_0_0</source_block_id>
+    <sink_block_id>digital_diff_decoder_bb_0_0_0_0</sink_block_id>
+    <source_key>1</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_delay_0</source_block_id>
+    <sink_block_id>fec_extended_decoder_0_0</sink_block_id>
+    <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
@@ -6895,6 +7766,12 @@ For example (171,133) =&gt; (121,91)</value>
   <connection>
     <source_block_id>blocks_interleave_0_0</source_block_id>
     <sink_block_id>ccsds_decoder</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_interleave_0_0_0</source_block_id>
+    <sink_block_id>ccsds_decoder_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -6983,6 +7860,12 @@ For example (171,133) =&gt; (121,91)</value>
     <sink_key>pdus</sink_key>
   </connection>
   <connection>
+    <source_block_id>ccsds_decoder_0</source_block_id>
+    <sink_block_id>blocks_pdu_to_tagged_stream_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>pdus</sink_key>
+  </connection>
+  <connection>
     <source_block_id>ccsds_encoder</source_block_id>
     <sink_block_id>blocks_unpack_k_bits_bb_0_0_1</sink_block_id>
     <source_key>0</source_key>
@@ -7002,7 +7885,25 @@ For example (171,133) =&gt; (121,91)</value>
   </connection>
   <connection>
     <source_block_id>digital_constellation_soft_decoder_cf_0</source_block_id>
+    <sink_block_id>blocks_delay_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_constellation_soft_decoder_cf_0</source_block_id>
     <sink_block_id>fec_extended_decoder_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_correlate_and_sync_cc_0</source_block_id>
+    <sink_block_id>blocks_null_sink_0</sink_block_id>
+    <source_key>1</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_correlate_and_sync_cc_0</source_block_id>
+    <sink_block_id>digital_pfb_clock_sync_xxx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -7025,6 +7926,18 @@ For example (171,133) =&gt; (121,91)</value>
     <sink_key>1</sink_key>
   </connection>
   <connection>
+    <source_block_id>digital_diff_decoder_bb_0_0_0_0</source_block_id>
+    <sink_block_id>blocks_interleave_0_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_diff_decoder_bb_0_0_1</source_block_id>
+    <sink_block_id>blocks_interleave_0_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>digital_diff_encoder_bb_0_0_0</source_block_id>
     <sink_block_id>blocks_interleave_0</sink_block_id>
     <source_key>0</source_key>
@@ -7035,6 +7948,12 @@ For example (171,133) =&gt; (121,91)</value>
     <sink_block_id>blocks_interleave_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_fll_band_edge_cc_0</source_block_id>
+    <sink_block_id>digital_correlate_and_sync_cc_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>digital_pfb_clock_sync_xxx_0</source_block_id>
@@ -7049,14 +7968,44 @@ For example (171,133) =&gt; (121,91)</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>fec_extended_decoder_0_0</source_block_id>
+    <sink_block_id>blocks_deinterleave_0_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>fec_extended_encoder_0</source_block_id>
     <sink_block_id>blocks_pack_k_bits_bb_0_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>kiss_nrzi_decode_0</source_block_id>
+    <sink_block_id>blocks_interleave_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>kiss_nrzi_decode_0_0</source_block_id>
+    <sink_block_id>blocks_interleave_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>kiss_nrzi_encode_0</source_block_id>
+    <sink_block_id>blocks_interleave_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>kiss_nrzi_encode_0_0</source_block_id>
+    <sink_block_id>blocks_interleave_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>uhd_usrp_source_0</source_block_id>
-    <sink_block_id>digital_pfb_clock_sync_xxx_0</sink_block_id>
+    <sink_block_id>analog_agc2_xx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
