@@ -373,7 +373,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>firdes.root_raised_cosine(nfilts, nfilts, 1, .7, int(11*sps*nfilts))</value>
+      <value>firdes.root_raised_cosine(nfilts, nfilts, 1, .7, int(11*sps_rx*nfilts))</value>
     </param>
   </block>
   <block>
@@ -388,7 +388,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(976, 1148)</value>
+      <value>(1064, 1148)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -415,7 +415,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1048, 1148)</value>
+      <value>(1136, 1148)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -427,7 +427,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>firdes.root_raised_cosine(nfilts, nfilts, 1.0/float(sps), 0.35, 11*sps*nfilts)</value>
+      <value>firdes.root_raised_cosine(nfilts, nfilts, 1.0/float(sps_rx), 0.35, 11*sps_rx*nfilts)</value>
     </param>
   </block>
   <block>
@@ -442,7 +442,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(200, 12)</value>
+      <value>(192, 76)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -450,11 +450,11 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>id</key>
-      <value>samp_rate</value>
+      <value>samp_rate_rx</value>
     </param>
     <param>
       <key>value</key>
-      <value>data_rate*sps</value>
+      <value>data_rate*sps_rx</value>
     </param>
   </block>
   <block>
@@ -469,7 +469,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(304, 12)</value>
+      <value>(192, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -477,7 +477,61 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>id</key>
-      <value>sps</value>
+      <value>samp_rate_tx</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>data_rate*sps_tx</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(320, 76)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>sps_rx</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>4*0+10</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(320, 12)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>sps_tx</value>
     </param>
     <param>
       <key>value</key>
@@ -1046,7 +1100,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(264, 192)</value>
+      <value>(256, 192)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1383,7 +1437,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(528, 192)</value>
+      <value>(520, 192)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1434,7 +1488,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(448, 104)</value>
+      <value>(576, 104)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1572,7 +1626,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>samples_per_second</key>
-      <value>samp_rate</value>
+      <value>samp_rate_tx</value>
     </param>
     <param>
       <key>type</key>
@@ -1918,7 +1972,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>samples_per_symbol</key>
-      <value>sps</value>
+      <value>sps_tx</value>
     </param>
     <param>
       <key>verbose</key>
@@ -2071,7 +2125,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>sps</key>
-      <value>sps</value>
+      <value>sps_rx</value>
     </param>
     <param>
       <key>symbols</key>
@@ -2235,7 +2289,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(744, 492)</value>
+      <value>(744, 476)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2353,7 +2407,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>samps_per_sym</key>
-      <value>sps</value>
+      <value>sps_rx</value>
     </param>
     <param>
       <key>type</key>
@@ -2420,7 +2474,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>sps</key>
-      <value>sps</value>
+      <value>sps_rx</value>
     </param>
     <param>
       <key>taps</key>
@@ -2557,7 +2611,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(352, 444)</value>
+      <value>(352, 436)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2686,7 +2740,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(384, 12)</value>
+      <value>(392, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2889,7 +2943,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>center_freq0</key>
-      <value>uhd.tune_request(tx_freq, samp_rate*2)</value>
+      <value>uhd.tune_request(tx_freq, samp_rate_tx*2)</value>
     </param>
     <param>
       <key>norm_gain0</key>
@@ -3665,7 +3719,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>samp_rate</key>
-      <value>samp_rate</value>
+      <value>samp_rate_tx</value>
     </param>
     <param>
       <key>hide_cmd_port</key>
@@ -4488,7 +4542,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>samp_rate</key>
-      <value>samp_rate</value>
+      <value>samp_rate_tx</value>
     </param>
     <param>
       <key>hide_cmd_port</key>
@@ -4535,7 +4589,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>center_freq0</key>
-      <value>uhd.tune_request(rx_freq, samp_rate*2)</value>
+      <value>uhd.tune_request(rx_freq, samp_rate_rx*2)</value>
     </param>
     <param>
       <key>dc_offs_enb0</key>
@@ -5831,7 +5885,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>samp_rate</key>
-      <value>samp_rate</value>
+      <value>samp_rate_rx</value>
     </param>
     <param>
       <key>hide_cmd_port</key>
@@ -7170,7 +7224,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>samp_rate</key>
-      <value>samp_rate</value>
+      <value>samp_rate_rx</value>
     </param>
     <param>
       <key>hide_cmd_port</key>
