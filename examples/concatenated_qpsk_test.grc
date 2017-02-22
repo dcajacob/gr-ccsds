@@ -344,7 +344,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>0.35*2</value>
+      <value>0.35</value>
     </param>
   </block>
   <block>
@@ -2894,6 +2894,65 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>verbose</key>
+      <value>False</value>
+    </param>
+  </block>
+  <block>
+    <key>digital_constellation_receiver_cb</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>constellation</key>
+      <value>constel</value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1208, 648)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>digital_constellation_receiver_cb_0</value>
+    </param>
+    <param>
+      <key>loop_bw</key>
+      <value>phase_bw</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>fmax</key>
+      <value>0.25</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>fmin</key>
+      <value>-0.25</value>
+    </param>
+    <param>
+      <key>showports</key>
       <value>False</value>
     </param>
   </block>
