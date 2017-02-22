@@ -89,11 +89,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(792, 1468)</value>
+      <value>(1008, 1052)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -105,7 +105,34 @@
     </param>
     <param>
       <key>value</key>
-      <value>4</value>
+      <value>2**constel.bits_per_symbol()</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(392, 1000)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>arity_0</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>constel.points()</value>
     </param>
   </block>
   <block>
@@ -291,6 +318,33 @@
     <param>
       <key>widget</key>
       <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1080, 1052)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>eb</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0.35*2</value>
     </param>
   </block>
   <block>
@@ -625,6 +679,68 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
+      <value>(96, 628)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>matched_filter</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>firdes.root_raised_cosine(nfilts, nfilts, 1, .7, int(11*sps*nfilts))</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_modulate_vector</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>data</key>
+      <value>[0x1a, 0xcf, 0xfc, 0x1d]</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>taps</key>
+      <value>[1]</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1296, 96)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>modulated_sync_word</value>
+    </param>
+    <param>
+      <key>mod</key>
+      <value>rxmod</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
       <value>(848, 1116)</value>
     </param>
     <param>
@@ -790,7 +906,34 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>firdes.root_raised_cosine(nfilts, nfilts, 1.0/float(sps), 0.35, 11*sps*nfilts)</value>
+      <value>firdes.root_raised_cosine(nfilts, nfilts, 1.0/float(sps), eb, 11*sps*nfilts)</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1296, 28)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>rxmod</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>digital.generic_mod(constel, False, sps, False, 0.7, False, False)</value>
     </param>
   </block>
   <block>
@@ -817,7 +960,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>1e6*16</value>
+      <value>1e6*4</value>
     </param>
   </block>
   <block>
@@ -844,7 +987,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>4</value>
+      <value>4+10*0+6</value>
     </param>
   </block>
   <block>
@@ -1342,6 +1485,92 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
+    <key>blocks_complex_to_float</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(808, 656)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_complex_to_float_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_complex_to_mag</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(808, 616)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_complex_to_mag_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
     <key>blocks_deinterleave</key>
     <param>
       <key>alias</key>
@@ -1361,7 +1590,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1416,7 +1645,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1632,7 +1861,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1687,7 +1916,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1775,6 +2004,53 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>std</key>
       <value>10</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_null_sink</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bus_conns</key>
+      <value>[[0,],]</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(112, 824)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_null_sink_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
     </param>
   </block>
   <block>
@@ -2330,7 +2606,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>descramble</key>
-      <value>True</value>
+      <value>False</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -2433,7 +2709,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>scramble</key>
-      <value>True</value>
+      <value>False</value>
     </param>
     <param>
       <key>verbose</key>
@@ -2472,7 +2748,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(496, 512)</value>
+      <value>(504, 512)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2582,11 +2858,11 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>excess_bw</key>
-      <value>0.35*2</value>
+      <value>eb</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2641,7 +2917,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2662,6 +2938,112 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>digital_corr_est_cc</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(224, 800)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>digital_corr_est_cc_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>sps</key>
+      <value>sps</value>
+    </param>
+    <param>
+      <key>symbols</key>
+      <value>modulated_sync_word</value>
+    </param>
+    <param>
+      <key>mark_delay</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>threshold</key>
+      <value>0.9</value>
+    </param>
+  </block>
+  <block>
+    <key>digital_correlate_and_sync_cc</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>filter</key>
+      <value>matched_filter</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(104, 716)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>digital_correlate_and_sync_cc_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>sps</key>
+      <value>sps</value>
+    </param>
+    <param>
+      <key>symbols</key>
+      <value>[int(2*(int(x)-0.5)) for x in list(bin(0x1acffc1d)[2:])]</value>
     </param>
   </block>
   <block>
@@ -2888,6 +3270,108 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
+    <key>digital_fll_band_edge_cc</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>rolloff</key>
+      <value>eb</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(328, 640)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>digital_fll_band_edge_cc_0</value>
+    </param>
+    <param>
+      <key>w</key>
+      <value>2*3.14/100.0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>filter_size</key>
+      <value>45+55*0+11</value>
+    </param>
+    <param>
+      <key>samps_per_sym</key>
+      <value>sps</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>cc</value>
+    </param>
+  </block>
+  <block>
+    <key>digital_map_bb</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1080, 1188)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>digital_map_bb_0</value>
+    </param>
+    <param>
+      <key>map</key>
+      <value>0,1</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
     <key>digital_pfb_clock_sync_xxx</key>
     <param>
       <key>alias</key>
@@ -2982,7 +3466,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3033,7 +3517,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>encoder_list</key>
@@ -4266,6 +4750,369 @@ For example (171,133) =&gt; (121,91)</value>
       <value>-1</value>
     </param>
   </block>
+  <block>
+    <key>qtgui_time_sink_x</key>
+    <param>
+      <key>autoscale</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>axislabels</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>ctrlpanel</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>entags</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1008, 624)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>1,0,1,2</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>grid</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>qtgui_time_sink_x_1</value>
+    </param>
+    <param>
+      <key>legend</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>alpha1</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color1</key>
+      <value>"blue"</value>
+    </param>
+    <param>
+      <key>label1</key>
+      <value></value>
+    </param>
+    <param>
+      <key>marker1</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style1</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>width1</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alpha10</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color10</key>
+      <value>"blue"</value>
+    </param>
+    <param>
+      <key>label10</key>
+      <value></value>
+    </param>
+    <param>
+      <key>marker10</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style10</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>width10</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alpha2</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color2</key>
+      <value>"red"</value>
+    </param>
+    <param>
+      <key>label2</key>
+      <value></value>
+    </param>
+    <param>
+      <key>marker2</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style2</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>width2</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alpha3</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color3</key>
+      <value>"green"</value>
+    </param>
+    <param>
+      <key>label3</key>
+      <value></value>
+    </param>
+    <param>
+      <key>marker3</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style3</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>width3</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alpha4</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color4</key>
+      <value>"black"</value>
+    </param>
+    <param>
+      <key>label4</key>
+      <value></value>
+    </param>
+    <param>
+      <key>marker4</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style4</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>width4</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alpha5</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color5</key>
+      <value>"cyan"</value>
+    </param>
+    <param>
+      <key>label5</key>
+      <value></value>
+    </param>
+    <param>
+      <key>marker5</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style5</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>width5</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alpha6</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color6</key>
+      <value>"magenta"</value>
+    </param>
+    <param>
+      <key>label6</key>
+      <value></value>
+    </param>
+    <param>
+      <key>marker6</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style6</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>width6</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alpha7</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color7</key>
+      <value>"yellow"</value>
+    </param>
+    <param>
+      <key>label7</key>
+      <value></value>
+    </param>
+    <param>
+      <key>marker7</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style7</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>width7</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alpha8</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color8</key>
+      <value>"dark red"</value>
+    </param>
+    <param>
+      <key>label8</key>
+      <value></value>
+    </param>
+    <param>
+      <key>marker8</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style8</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>width8</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alpha9</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color9</key>
+      <value>"dark green"</value>
+    </param>
+    <param>
+      <key>label9</key>
+      <value></value>
+    </param>
+    <param>
+      <key>marker9</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>style9</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>width9</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>name</key>
+      <value></value>
+    </param>
+    <param>
+      <key>nconnections</key>
+      <value>3</value>
+    </param>
+    <param>
+      <key>size</key>
+      <value>40000</value>
+    </param>
+    <param>
+      <key>srate</key>
+      <value>samp_rate*sps*8*2</value>
+    </param>
+    <param>
+      <key>tr_chan</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>tr_delay</key>
+      <value>0.010</value>
+    </param>
+    <param>
+      <key>tr_level</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>tr_mode</key>
+      <value>qtgui.TRIG_MODE_NORM</value>
+    </param>
+    <param>
+      <key>tr_slope</key>
+      <value>qtgui.TRIG_SLOPE_POS</value>
+    </param>
+    <param>
+      <key>tr_tag</key>
+      <value>""</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>update_time</key>
+      <value>0.10</value>
+    </param>
+    <param>
+      <key>ylabel</key>
+      <value>Amplitude</value>
+    </param>
+    <param>
+      <key>yunit</key>
+      <value>""</value>
+    </param>
+    <param>
+      <key>ymax</key>
+      <value>400</value>
+    </param>
+    <param>
+      <key>ymin</key>
+      <value>-200</value>
+    </param>
+  </block>
   <connection>
     <source_block_id>ais_zeropad_file_source_0</source_block_id>
     <sink_block_id>blocks_throttle_0</sink_block_id>
@@ -4287,6 +5134,24 @@ For example (171,133) =&gt; (121,91)</value>
   <connection>
     <source_block_id>blocks_char_to_float_0_0_0_0</source_block_id>
     <sink_block_id>blocks_delay_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_complex_to_float_0</source_block_id>
+    <sink_block_id>qtgui_time_sink_x_1</sink_block_id>
+    <source_key>1</source_key>
+    <sink_key>2</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_complex_to_float_0</source_block_id>
+    <sink_block_id>qtgui_time_sink_x_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_complex_to_mag_0</source_block_id>
+    <sink_block_id>qtgui_time_sink_x_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -4370,7 +5235,13 @@ For example (171,133) =&gt; (121,91)</value>
   </connection>
   <connection>
     <source_block_id>blocks_rotator_cc_0</source_block_id>
-    <sink_block_id>digital_pfb_clock_sync_xxx_0</sink_block_id>
+    <sink_block_id>digital_corr_est_cc_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_rotator_cc_0</source_block_id>
+    <sink_block_id>digital_fll_band_edge_cc_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -4418,7 +5289,7 @@ For example (171,133) =&gt; (121,91)</value>
   </connection>
   <connection>
     <source_block_id>blocks_unpack_k_bits_bb_0_0_1_0</source_block_id>
-    <sink_block_id>blocks_char_to_float_0_0_0</sink_block_id>
+    <sink_block_id>digital_map_bb_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -4459,6 +5330,36 @@ For example (171,133) =&gt; (121,91)</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>digital_corr_est_cc_0</source_block_id>
+    <sink_block_id>blocks_null_sink_0</sink_block_id>
+    <source_key>1</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_corr_est_cc_0</source_block_id>
+    <sink_block_id>digital_pfb_clock_sync_xxx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_correlate_and_sync_cc_0</source_block_id>
+    <sink_block_id>blocks_complex_to_mag_0</sink_block_id>
+    <source_key>1</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_correlate_and_sync_cc_0</source_block_id>
+    <sink_block_id>blocks_null_sink_0</sink_block_id>
+    <source_key>1</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_correlate_and_sync_cc_0</source_block_id>
+    <sink_block_id>digital_pfb_clock_sync_xxx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>digital_costas_loop_cc_0</source_block_id>
     <sink_block_id>digital_constellation_soft_decoder_cf_0</sink_block_id>
     <source_key>0</source_key>
@@ -4493,6 +5394,24 @@ For example (171,133) =&gt; (121,91)</value>
     <sink_block_id>blocks_interleave_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_fll_band_edge_cc_0</source_block_id>
+    <sink_block_id>digital_corr_est_cc_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_fll_band_edge_cc_0</source_block_id>
+    <sink_block_id>digital_correlate_and_sync_cc_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_map_bb_0</source_block_id>
+    <sink_block_id>blocks_char_to_float_0_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>digital_pfb_clock_sync_xxx_0</source_block_id>
