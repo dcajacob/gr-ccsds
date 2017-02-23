@@ -81,6 +81,7 @@ namespace gr {
             if (msg.get() == NULL) {
                 //return 0;
                 //return an IDLE frame
+                d_curr_meta = pmt::PMT_NIL;
                 d_curr_vec = pmt::make_u8vector(DATA_LEN, 0x00);
                 d_curr_len = pmt::length(d_curr_vec);
                 if (d_verbose) {
