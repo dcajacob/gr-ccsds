@@ -77,7 +77,7 @@ namespace gr {
 
             if (d_curr_len != 0) return 0;
 
-            pmt::pmt_t msg(delete_head_blocking(pmt::mp("in"), 100));
+            pmt::pmt_t msg(delete_head_blocking(pmt::mp("in"), 10)); //100));
             if (msg.get() == NULL) {
                 //return 0;
                 //return an IDLE frame
@@ -108,10 +108,8 @@ namespace gr {
       const uint8_t* in;
       if (d_itemsize == 0) {
           // see if there is anything to do
-          //if (d_curr_len == 0) return 0;
-          if (d_curr_len == 0) {
-
-          }
+          // with filling, we should never get here
+          if (d_curr_len == 0) return 0;
 
           if (d_curr_len != DATA_LEN) {
               printf("[ERROR] expected %i bytes, got %i\n", DATA_LEN, (int)d_curr_len);
