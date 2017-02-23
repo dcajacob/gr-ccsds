@@ -79,7 +79,14 @@ namespace gr {
 
             pmt::pmt_t msg(delete_head_blocking(pmt::mp("in"), 100));
             if (msg.get() == NULL) {
-                return 0;
+                //return 0;
+                //return an IDLE frame
+                d_curr_vec = pmt::make_u8vector(DATA_LEN, 0x00);
+                d_curr_len = pmt::length(d_curr_vec);
+                if (d_verbose) {
+                    printf("Pushing an IDLE frame\n");
+                }
+                return TOTAL_FRAME_LEN;
             }
             if (!pmt::is_pair(msg)) {
                 throw std::runtime_error("received a malformed pdu message");
@@ -101,7 +108,10 @@ namespace gr {
       const uint8_t* in;
       if (d_itemsize == 0) {
           // see if there is anything to do
-          if (d_curr_len == 0) return 0;
+          //if (d_curr_len == 0) return 0;
+          if (d_curr_len == 0) {
+
+          }
 
           if (d_curr_len != DATA_LEN) {
               printf("[ERROR] expected %i bytes, got %i\n", DATA_LEN, (int)d_curr_len);
@@ -176,4 +186,3 @@ namespace gr {
 
   } /* namespace ccsds */
 } /* namespace gr */
-

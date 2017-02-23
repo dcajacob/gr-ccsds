@@ -662,7 +662,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>file</key>
@@ -1024,7 +1024,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>file</key>
@@ -1432,7 +1432,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1640,7 +1640,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1695,7 +1695,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>istunflag</key>
@@ -1868,7 +1868,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>type</key>
-      <value>byte</value>
+      <value>message</value>
     </param>
     <param>
       <key>interleave</key>
@@ -1900,7 +1900,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>verbose</key>
-      <value>False</value>
+      <value>True</value>
     </param>
   </block>
   <block>
@@ -7387,7 +7387,7 @@ For example (171,133) =&gt; (121,91)</value>
     <source_block_id>blocks_pdu_to_tagged_stream_1</source_block_id>
     <sink_block_id>ccsds_encoder</sink_block_id>
     <source_key>0</source_key>
-    <sink_key>0</sink_key>
+    <sink_key>in</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_random_pdu_0</source_block_id>
@@ -7399,7 +7399,7 @@ For example (171,133) =&gt; (121,91)</value>
     <source_block_id>blocks_random_pdu_0</source_block_id>
     <sink_block_id>ccsds_encoder</sink_block_id>
     <source_key>pdus</source_key>
-    <sink_key>0</sink_key>
+    <sink_key>in</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_socket_pdu_0</source_block_id>
@@ -7411,13 +7411,19 @@ For example (171,133) =&gt; (121,91)</value>
     <source_block_id>blocks_stream_to_tagged_stream_0</source_block_id>
     <sink_block_id>ccsds_encoder</sink_block_id>
     <source_key>0</source_key>
-    <sink_key>0</sink_key>
+    <sink_key>in</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_tuntap_pdu_0_0</source_block_id>
     <sink_block_id>blocks_pdu_to_tagged_stream_1</sink_block_id>
     <source_key>pdus</source_key>
     <sink_key>pdus</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_tuntap_pdu_0_0</source_block_id>
+    <sink_block_id>ccsds_encoder</sink_block_id>
+    <source_key>pdus</source_key>
+    <sink_key>in</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_unpack_k_bits_bb_0_0_1</source_block_id>
