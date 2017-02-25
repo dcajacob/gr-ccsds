@@ -156,6 +156,12 @@ namespace gr {
                             break;
                         case 3:
                             d_data_reg = sync_word_munge(3, d_data_reg, 2, 0x02, 8) & 0xFF;
+                            break;
+                        case 4:
+                            d_data_reg = sync_word_munge(4, d_data_reg, 2, 0x02, 8) & 0xFF;
+                            break;
+                        case 5:
+                            d_data_reg = sync_word_munge(5, d_data_reg, 2, 0x02, 8) & 0xFF;
                       }
 
                       d_codeword[d_byte_counter] = d_data_reg;
