@@ -65,10 +65,16 @@ namespace gr {
       // Create an alternative sync word that corresponds to a 90 deg
       //  constellation rotation. Others covered by differential encoding.
       //d_alt_sync_word = reverse_and_invert(d_sync_word, 2, 0x02);
-      d_alt_sync_word = reverse_and_invert(d_sync_word, 2, 0x02, 32);
-      if (d_verbose) printf("\tNormal sync word:\t%Zd\n", static_cast<uint64_t>(d_sync_word));
-      if (d_verbose) printf("\tFormed an alternate sync word:\t%zd\n", static_cast<uint64_t>(d_alt_sync_word));
-      d_alt_sync_state = false;
+      d_alt_sync_word1 = sync_word_munge(1, d_sync_word, 2, 0x02, 32);
+      d_alt_sync_word2 = sync_word_munge(2, d_sync_word, 2, 0x02, 32);
+      d_alt_sync_word3 = sync_word_munge(3, d_sync_word, 2, 0x02, 32);
+      if (d_verbose) {
+          printf("\tNormal sync word:\t%Zd\n", static_cast<uint64_t>(d_sync_word));
+          printf("\tFormed an alternate sync word:\t%zd\n", static_cast<uint64_t>(d_alt_sync_word1));
+          printf("\tFormed an alternate sync word:\t%zd\n", static_cast<uint64_t>(d_alt_sync_word2));
+          printf("\tFormed an alternate sync word:\t%zd\n", static_cast<uint64_t>(d_alt_sync_word3));
+      }
+      d_alt_sync_state = 0;
 
 
       enter_sync_search();
@@ -94,13 +100,25 @@ namespace gr {
                   if (compare_sync_word()) {
                       if (d_verbose) printf("\tsync word detected\n");
                       d_num_frames_received++;
-                      d_alt_sync_state = false;
+                      d_alt_sync_state = 0;
                       enter_codeword();
                       break;
-                  } else if (compare_alt_sync_word()) {
-                      if (d_verbose) printf("\talternate sync word detected %zd\n", static_cast<uint64_t>(reverse_and_invert(d_data_reg, 2, 0x02, 32)));
+                  } else if (compare_alt_sync_word(d_alt_sync_word1)) {
+                      if (d_verbose) printf("\talternate sync word detected %zd\n", static_cast<uint64_t>(sync_word_munge(1, d_data_reg, 2, 0x02, 32)));
                       d_num_frames_received++;
-                      d_alt_sync_state = true;
+                      d_alt_sync_state = 1;
+                      enter_codeword();
+                      break;
+                  } else if (compare_alt_sync_word(d_alt_sync_word2)) {
+                      if (d_verbose) printf("\talternate sync word detected %zd\n", static_cast<uint64_t>(sync_word_munge(2, d_data_reg, 2, 0x02, 32)));
+                      d_num_frames_received++;
+                      d_alt_sync_state = 2;
+                      enter_codeword();
+                      break;
+                  } else if (compare_alt_sync_word(d_alt_sync_word2)) {
+                      if (d_verbose) printf("\talternate sync word detected %zd\n", static_cast<uint64_t>(sync_word_munge(3, d_data_reg, 2, 0x02, 32)));
+                      d_num_frames_received++;
+                      d_alt_sync_state = 3;
                       enter_codeword();
                       break;
                   }
@@ -111,8 +129,17 @@ namespace gr {
                   d_bit_counter++;
                   if (d_bit_counter == 8) {
 
-                      if (d_alt_sync_state) {
-                          d_data_reg = reverse_and_invert(d_data_reg, 2, 0x02, 8) & 0xFF;
+                    switch (d_alt_sync_state) {
+                        case 0:
+                            break;
+                        case 1:
+                            d_data_reg = sync_word_munge(1, d_data_reg, 2, 0x02, 8) & 0xFF;
+                            break;
+                        case 2:
+                            d_data_reg = sync_word_munge(2, d_data_reg, 2, 0x02, 8) & 0xFF;
+                            break;
+                        case 3:
+                            d_data_reg = sync_word_munge(3, d_data_reg, 2, 0x02, 8) & 0xFF;
                       }
 
                       d_codeword[d_byte_counter] = d_data_reg;
@@ -167,10 +194,10 @@ namespace gr {
         return nwrong <= d_threshold;
     }
 
-    bool ccsds_decoder_impl::compare_alt_sync_word()
+    bool ccsds_decoder_impl::compare_alt_sync_word(uint32_t alt_sync_word)
     {
         uint32_t nwrong = 0;
-        uint32_t wrong_bits = d_data_reg ^ d_alt_sync_word;
+        uint32_t wrong_bits = d_data_reg ^ alt_sync_word;
         volk_32u_popcnt(&nwrong, wrong_bits);
         return nwrong <= d_threshold;
     }
@@ -233,16 +260,23 @@ namespace gr {
         return x ^ mask;
     }
 
-    uint32_t ccsds_decoder_impl::reverse_and_invert(uint32_t x, uint8_t n, uint8_t mask, uint8_t length)
+    uint32_t ccsds_decoder_impl::sync_word_munge(uint8_t flavor, uint32_t x, uint8_t n, uint8_t mask, uint8_t length)
     {
         uint32_t temp = 0;
         uint32_t result = 0;
         uint8_t sym = 0;
 
         for (uint8_t i=0; i<(length/n); i++) {
-            sym = invert(reverse((x >> ((length-n) - n*i)) & 0x3, n), 0x02); // -Q I
-            //sym = reverse((x >> ((length-n) - n*i)) & 0x3, n); // Q I
-            //sym = invert((x >> ((length-n) - n*i)) & 0x3, 0x02); // Q -I
+            switch (flavor) {
+                case 1:
+                    sym = invert(reverse((x >> ((length-n) - n*i)) & 0x3, n), 0x02); // -Q I
+                    break;
+                case 2:
+                    sym = reverse((x >> ((length-n) - n*i)) & 0x3, n); // Q I
+                    break;
+                case 3:
+                    sym = invert((x >> ((length-n) - n*i)) & 0x3, 0x02); // Q -I
+            }
 
             //sym = reverse((x >> (30 - 2*i)) & 0x3, 2);
             //sym = invert(reverse((x >> (30 - 2*i)) & 0x3, 2), 0x01);
