@@ -275,6 +275,9 @@ namespace gr {
                     sym = reverse((x >> ((length-n) - n*i)) & 0x3, n); // Q I
                     break;
                 case 3:
+                    //sym = invert((x >> ((length-n) - n*i)) & 0x3, 0x02); // Q -I
+                    sym = invert((x >> ((length-n) - n*i)) & 0x3, 0x02); // Q -I
+                case 4:
                     sym = invert((x >> ((length-n) - n*i)) & 0x3, 0x02); // Q -I
             }
 
