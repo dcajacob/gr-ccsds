@@ -104,19 +104,19 @@ namespace gr {
                       enter_codeword();
                       break;
                   } else if (compare_alt_sync_word(d_alt_sync_word1)) {
-                      if (d_verbose) printf("\talternate sync word detected %zd\n", static_cast<uint64_t>(sync_word_munge(1, d_data_reg, 2, 0x02, 32)));
+                      if (d_verbose) printf("\talternate sync word detected %zd\t1\n", static_cast<uint64_t>(sync_word_munge(1, d_data_reg, 2, 0x02, 32)));
                       d_num_frames_received++;
                       d_alt_sync_state = 1;
                       enter_codeword();
                       break;
                   } else if (compare_alt_sync_word(d_alt_sync_word2)) {
-                      if (d_verbose) printf("\talternate sync word detected %zd\n", static_cast<uint64_t>(sync_word_munge(2, d_data_reg, 2, 0x02, 32)));
+                      if (d_verbose) printf("\talternate sync word detected %zd\t2\n", static_cast<uint64_t>(sync_word_munge(2, d_data_reg, 2, 0x02, 32)));
                       d_num_frames_received++;
                       d_alt_sync_state = 2;
                       enter_codeword();
                       break;
                   } else if (compare_alt_sync_word(d_alt_sync_word2)) {
-                      if (d_verbose) printf("\talternate sync word detected %zd\n", static_cast<uint64_t>(sync_word_munge(3, d_data_reg, 2, 0x02, 32)));
+                      if (d_verbose) printf("\talternate sync word detected %zd\t3\n", static_cast<uint64_t>(sync_word_munge(3, d_data_reg, 2, 0x02, 32)));
                       d_num_frames_received++;
                       d_alt_sync_state = 3;
                       enter_codeword();
