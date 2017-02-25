@@ -42,6 +42,8 @@ namespace gr {
          uint32_t d_alt_sync_word1;
          uint32_t d_alt_sync_word2;
          uint32_t d_alt_sync_word3;
+         uint32_t d_alt_sync_word4;
+         uint32_t d_alt_sync_word5;
          uint8_t d_alt_sync_state;
          uint8_t d_decoder_state;
          uint32_t d_data_reg;
@@ -60,7 +62,9 @@ namespace gr {
          bool compare_alt_sync_word(uint32_t alt_sync_word);
          bool decode_frame();
          uint8_t reverse(uint8_t x, uint8_t n);
+         uint8_t reverse_dibit(uint32_t x, uint8_t length, uint8_t i);
          uint8_t invert(uint8_t x, uint8_t mask);
+         uint8_t invert_dibit(uint8_t x, uint8_t length, uint8_t mask, uint8_t i);
          uint32_t sync_word_munge(uint8_t flavor, uint32_t x, uint8_t n, uint8_t mask, uint8_t length);
 
      public:
