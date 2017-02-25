@@ -61,7 +61,7 @@ namespace gr {
           d_sync_word = (d_sync_word << 8) | (SYNC_WORD[i] & 0xff);
       }
 
-      /*
+
       // Create an alternative sync word that corresponds to a 90 deg
       //  constellation rotation. Others covered by differential encoding.
       //d_alt_sync_word = reverse_and_invert(d_sync_word, 2, 0x02);
@@ -69,7 +69,7 @@ namespace gr {
       if (d_verbose) printf("\tNormal sync word:\t%Zd\n", static_cast<uint64_t>(d_sync_word));
       if (d_verbose) printf("\tFormed an alternate sync word:\t%zd\n", static_cast<uint64_t>(d_alt_sync_word));
       d_alt_sync_state = false;
-      */
+
 
       enter_sync_search();
     }
@@ -96,13 +96,13 @@ namespace gr {
                       d_num_frames_received++;
                       d_alt_sync_state = false;
                       enter_codeword();
-                  /*
+                      break;
                   } else if (compare_alt_sync_word()) {
                       if (d_verbose) printf("\talternate sync word detected %zd\n", static_cast<uint64_t>(reverse_and_invert(d_data_reg, 2, 0x02, 32)));
                       d_num_frames_received++;
                       d_alt_sync_state = true;
                       enter_codeword();
-                  */
+                      break;
                   }
                   break;
               case STATE_CODEWORD:
@@ -110,11 +110,11 @@ namespace gr {
                   d_data_reg = (d_data_reg << 1) | (in[count++] & 0x01);
                   d_bit_counter++;
                   if (d_bit_counter == 8) {
-                      /*
+
                       if (d_alt_sync_state) {
                           d_data_reg = reverse_and_invert(d_data_reg, 2, 0x02, 8) & 0xFF;
                       }
-                      */
+
                       d_codeword[d_byte_counter] = d_data_reg;
                       d_byte_counter++;
                       d_bit_counter = 0;
