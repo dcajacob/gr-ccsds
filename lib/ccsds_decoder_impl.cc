@@ -24,6 +24,7 @@
 
 #include <gnuradio/io_signature.h>
 #include <volk/volk.h>
+#include <gnuradio/digital/constellation.h>
 #include "ccsds_decoder_impl.h"
 #include "ccsds.h"
 #include "reed_solomon.h"
@@ -35,13 +36,13 @@ namespace gr {
   namespace ccsds {
 
     ccsds_decoder::sptr
-    ccsds_decoder::make(int threshold, bool rs_decode, bool deinterleave, bool descramble, bool verbose, bool printing)
+    ccsds_decoder::make(int threshold, bool rs_decode, bool deinterleave, bool descramble, bool verbose, bool printing, std::vector<gr::digital::constellation_sptr> constellations)
     {
       return gnuradio::get_initial_sptr
-        (new ccsds_decoder_impl(threshold, rs_decode, deinterleave, descramble, verbose, printing));
+        (new ccsds_decoder_impl(threshold, rs_decode, deinterleave, descramble, verbose, printing, constellations));
     }
 
-    ccsds_decoder_impl::ccsds_decoder_impl(int threshold, bool rs_decode, bool deinterleave, bool descramble, bool verbose, bool printing)
+    ccsds_decoder_impl::ccsds_decoder_impl(int threshold, bool rs_decode, bool deinterleave, bool descramble, bool verbose, bool printing, std::vector<gr::digital::constellation_sptr> constellations)
       : gr::sync_block("ccsds_decoder",
               gr::io_signature::make(1, 1, sizeof(uint8_t)),
               gr::io_signature::make(0, 0, 0)),
@@ -51,17 +52,33 @@ namespace gr {
         d_descramble(descramble),
         d_verbose(verbose),
         d_printing(printing),
+        d_num_frames_failed(0),
         d_num_frames_received(0),
         d_num_frames_decoded(0),
-        d_num_subframes_decoded(0)
+        d_num_subframes_decoded(0),
+        d_constellations(constellations)
     {
       message_port_register_out(pmt::mp("out"));
+      message_port_register_out(pmt::mp("constellation"));
 
       for (uint8_t i=0; i<SYNC_WORD_LEN; i++) {
           d_sync_word = (d_sync_word << 8) | (SYNC_WORD[i] & 0xff);
       }
 
+      d_hysteresis = 0;
+      d_constellation = constellations[0];
+      d_alt_constel_1 = constellations[1];
+      d_alt_constel_2 = constellations[2];
+      d_alt_constel_3 = constellations[3];
+      //gr::digital::constellation d_constellation;
+      //(gr_complex(-1, -1), gr_complex(1, -1), gr_complex(-1, 1), gr_complex(1, 1)), {0, 2, 1, 3}, 4, 1);
+      //(gr_complex(-1, -1), gr_complex(1, -1), gr_complex(-1, 1), gr_complex(1, 1)), (0, 2, 1, 3), 4, 1)
+      //gr::digital::constellation d_alt_constel_1 ((gr_complex(-1, -1), gr_complex(1, -1), gr_complex(-1, 1), gr_complex(1, 1)), (1, 3, 0, 2), 4, 1);
+      //gr::digital::constellation d_alt_constel_2 ((gr_complex(-1, -1), gr_complex(1, -1), gr_complex(-1, 1), gr_complex(1, 1)), (2, 0, 3, 1), 4, 1);
+      //gr::digital::constellation d_alt_constel_3 ((gr_complex(-1, -1), gr_complex(1, -1), gr_complex(-1, 1), gr_complex(1, 1)), (3, 1, 2, 0), 4, 1);
+      d_alt_constel_index = 0;
 
+      /*
       // Create an alternative sync word that corresponds to a 90 deg
       //  constellation rotation. Others covered by differential encoding.
       //d_alt_sync_word = reverse_and_invert(d_sync_word, 2, 0x02);
@@ -79,7 +96,7 @@ namespace gr {
           printf("\tFormed an alternate sync word:\t%zd\n", static_cast<uint64_t>(d_alt_sync_word5));
       }
       d_alt_sync_state = 0;
-
+      */
 
       enter_sync_search();
     }
@@ -103,10 +120,12 @@ namespace gr {
                   d_data_reg = (d_data_reg << 1) | (in[count++] & 0x01);
                   if (compare_sync_word()) {
                       if (d_verbose) printf("\tsync word detected\n");
+                      d_num_frames_failed = 0; // reset the nodetect counter
                       d_num_frames_received++;
                       d_alt_sync_state = 0;
                       enter_codeword();
                       break;
+                  /*
                   } else if (compare_alt_sync_word(d_alt_sync_word1)) {
                       if (d_verbose) printf("\talternate sync word detected %zd\t1\t-Q I\n", static_cast<uint64_t>(sync_word_munge(1, d_data_reg, 2, 0x02, 32)));
                       d_num_frames_received++;
@@ -137,6 +156,9 @@ namespace gr {
                       d_alt_sync_state = 5;
                       enter_codeword();
                       break;
+                  */
+                  } else {
+                      d_num_frames_failed++;
                   }
                   break;
               case STATE_CODEWORD:
@@ -145,6 +167,7 @@ namespace gr {
                   d_bit_counter++;
                   if (d_bit_counter == 8) {
 
+                    /*
                     switch (d_alt_sync_state) {
                         case 0:
                             break;
@@ -163,6 +186,7 @@ namespace gr {
                         case 5:
                             d_data_reg = sync_word_munge(5, d_data_reg, 2, 0x02, 8) & 0xFF;
                       }
+                      */
 
                       d_codeword[d_byte_counter] = d_data_reg;
                       d_byte_counter++;
@@ -177,6 +201,38 @@ namespace gr {
                       if (success) {
                           pmt::pmt_t pdu(pmt::cons(pmt::PMT_NIL, pmt::make_blob(d_payload, DATA_LEN)));
                           message_port_pub(pmt::mp("out"), pdu);
+                      } else {
+                          if ((d_num_frames_failed > 1000000) || ((d_num_frames_received > 100) && (d_num_frames_decoded < 50)) && (d_hysteresis == 0)) {
+                              gr::digital::constellation_sptr constel;
+                              d_alt_constel_index = (d_alt_constel_index + 1) % 4;
+                              constel = d_constellations[d_alt_constel_index];
+                              /*
+                              switch(d_alt_constel_index) {
+                                  case 0:
+                                      constel = d_constellation;
+                                      break;
+                                  case 1:
+                                      constel = d_alt_constel_1;
+                                      break;
+                                  case 2:
+                                      constel = d_alt_constel_2;
+                                      break;
+                                  case 3:
+                                      constel = d_alt_constel_3;
+                              }
+                              */
+
+                              //boost::any constellation_any = pmt::any_ref(constellation_pmt);
+                              //constellation_sptr constellation = boost::any_cast<constellation_sptr>(
+                              //  constellation_any);
+
+                              pmt::pmt_t pdu(pmt::cons(pmt::PMT_NIL, pmt::make_any(constel)));
+                              message_port_pub(pmt::mp("constellation"), pdu);
+
+                              d_hysteresis = 1000;
+                          } else {
+                              d_hysteresis--;
+                          }
                       }
 
                       if (d_verbose) {
@@ -330,18 +386,6 @@ namespace gr {
             temp = (temp << n) | (sym & 0xFF);
         }
         result = temp;
-
-/*
-        for (uint8_t i=(32/2); i>0; --i) {
-            sym = invert(reverse((x >> (2*i)) & 0x3, 2), 0x02);
-            temp = (temp >> 2) | (sym & 0xFF);
-        }
-        result = temp;
-*/
-        //for (uint8_t i=0; i<(32/2); i++) {
-        //    sym = (temp >> (2*i)) & 0x3;
-        //    result = (result << 2) | (sym & 0xFF);
-        //}
 
         return result;
     }

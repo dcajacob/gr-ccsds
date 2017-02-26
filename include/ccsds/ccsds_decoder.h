@@ -23,6 +23,7 @@
 #define INCLUDED_CCSDS_CCSDS_DECODER_H
 
 #include <ccsds/api.h>
+#include <gnuradio/digital/constellation.h>
 #include <gnuradio/sync_block.h>
 
 namespace gr {
@@ -42,7 +43,7 @@ namespace gr {
        * \brief Return a shared_ptr to a new instance of ccsds::ccsds_decoder.
        *
        */
-      static sptr make(int threshold=0, bool rs_decode=true, bool descramble=true, bool deinterleave=true, bool verbose=false, bool printing=false);
+      static sptr make(int threshold, bool rs_decode, bool descramble, bool deinterleave, bool verbose, bool printing, std::vector<gr::digital::constellation_sptr> constellations);
 
       /*!
        * \brief return number of received frames
@@ -63,4 +64,3 @@ namespace gr {
 } // namespace gr
 
 #endif /* INCLUDED_CCSDS_CCSDS_DECODER_H */
-

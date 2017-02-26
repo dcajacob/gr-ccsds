@@ -54,6 +54,11 @@
     </option>
   </param>
   <param>
+    <name>Alternate Constellation Objects (list)</name>
+    <key>constellations</key>
+    <type>raw</type>
+  </param>
+  <param>
     <name>Print packets</name>
     <key>printing</key>
     <value>False</value>
@@ -89,6 +94,11 @@
   </sink>
   <source>
     <name>out</name>
+    <type>message</type>
+    <optional>1</optional>
+  </source>
+  <source>
+    <name>constellation</name>
     <type>message</type>
     <optional>1</optional>
   </source>

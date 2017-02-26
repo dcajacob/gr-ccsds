@@ -50,7 +50,7 @@
     </param>
     <param>
       <key>max_nouts</key>
-      <value>0</value>
+      <value>int(samp_rate_tx/1000.)</value>
     </param>
     <param>
       <key>qt_qss_theme</key>
@@ -58,7 +58,7 @@
     </param>
     <param>
       <key>realtime_scheduling</key>
-      <value></value>
+      <value>1</value>
     </param>
     <param>
       <key>run_command</key>
@@ -214,6 +214,261 @@
     </param>
   </block>
   <block>
+    <key>variable_constellation</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>const_points</key>
+      <value>digital.psk_4_0x0_1_0()[0]</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>calcdist</value>
+    </param>
+    <param>
+      <key>dims</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1424, 192)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>constel</value>
+    </param>
+    <param>
+      <key>rot_sym</key>
+      <value>4</value>
+    </param>
+    <param>
+      <key>soft_dec_lut</key>
+      <value>'auto'</value>
+    </param>
+    <param>
+      <key>precision</key>
+      <value>8</value>
+    </param>
+    <param>
+      <key>sym_map</key>
+      <value>digital.psk_4_0x0_1_0()[1]</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_constellation</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>const_points</key>
+      <value>digital.psk_4_0x0_1_0()[0]</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>calcdist</value>
+    </param>
+    <param>
+      <key>dims</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1424, 344)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>constel_0</value>
+    </param>
+    <param>
+      <key>rot_sym</key>
+      <value>4</value>
+    </param>
+    <param>
+      <key>soft_dec_lut</key>
+      <value>'auto'</value>
+    </param>
+    <param>
+      <key>precision</key>
+      <value>8</value>
+    </param>
+    <param>
+      <key>sym_map</key>
+      <value>digital.psk_4_0x0_1_0()[1]</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_constellation</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>const_points</key>
+      <value>digital.psk_4_0x1_1_0()[0]</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>calcdist</value>
+    </param>
+    <param>
+      <key>dims</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1424, 496)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>constel_1</value>
+    </param>
+    <param>
+      <key>rot_sym</key>
+      <value>4</value>
+    </param>
+    <param>
+      <key>soft_dec_lut</key>
+      <value>'auto'</value>
+    </param>
+    <param>
+      <key>precision</key>
+      <value>8</value>
+    </param>
+    <param>
+      <key>sym_map</key>
+      <value>digital.psk_4_0x1_1_0()[1]</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_constellation</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>const_points</key>
+      <value>digital.psk_4_0x2_1_0()[0]</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>calcdist</value>
+    </param>
+    <param>
+      <key>dims</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1424, 648)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>constel_2</value>
+    </param>
+    <param>
+      <key>rot_sym</key>
+      <value>4</value>
+    </param>
+    <param>
+      <key>soft_dec_lut</key>
+      <value>'auto'</value>
+    </param>
+    <param>
+      <key>precision</key>
+      <value>8</value>
+    </param>
+    <param>
+      <key>sym_map</key>
+      <value>digital.psk_4_0x2_1_0()[1]</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_constellation</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>const_points</key>
+      <value>digital.psk_4_0x3_1_0()[0]</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>calcdist</value>
+    </param>
+    <param>
+      <key>dims</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1424, 800)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>constel_3</value>
+    </param>
+    <param>
+      <key>rot_sym</key>
+      <value>4</value>
+    </param>
+    <param>
+      <key>soft_dec_lut</key>
+      <value>'auto'</value>
+    </param>
+    <param>
+      <key>precision</key>
+      <value>8</value>
+    </param>
+    <param>
+      <key>sym_map</key>
+      <value>digital.psk_4_0x3_1_0()[1]</value>
+    </param>
+  </block>
+  <block>
     <key>variable</key>
     <param>
       <key>comment</key>
@@ -252,7 +507,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1008, 4)</value>
+      <value>(1008, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -458,6 +713,41 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
+    <key>variable_modulate_vector</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>data</key>
+      <value>[0x1a, 0xcf, 0xfc, 0x1d]</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>taps</key>
+      <value>[1]</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1336, 1296)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>modulated_sync_word</value>
+    </param>
+    <param>
+      <key>mod</key>
+      <value>rxmod</value>
+    </param>
+  </block>
+  <block>
     <key>variable</key>
     <param>
       <key>comment</key>
@@ -509,6 +799,33 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>value</key>
       <value>firdes.root_raised_cosine(nfilts, nfilts, 1.0/float(sps_rx), eb, 11*sps_rx*nfilts)</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1336, 1228)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>rxmod</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>digital.generic_mod(constel_0, False, sps_tx, False, eb, False, False)</value>
     </param>
   </block>
   <block>
@@ -589,7 +906,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>4*0+10</value>
+      <value>4*0+10/2</value>
     </param>
   </block>
   <block>
@@ -616,7 +933,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>4*0+10</value>
+      <value>4*0+10/2</value>
     </param>
   </block>
   <block>
@@ -643,70 +960,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>0.25e6*0+125e3</value>
-    </param>
-  </block>
-  <block>
-    <key>ais_zeropad_file_source</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>file</key>
-      <value>file_prefix + "/Downloads/shakespeare.txt"</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(16, 128)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>ais_zeropad_file_source_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>byte</value>
-    </param>
-    <param>
-      <key>repeat</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>slp</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>zeropad</key>
-      <value>100000</value>
+      <value>0.25e6*0+125e3/2+80000*0</value>
     </param>
   </block>
   <block>
@@ -1095,6 +1349,37 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
+    <key>blocks_message_debug</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1048, 1552)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_message_debug_0</value>
+    </param>
+  </block>
+  <block>
     <key>blocks_message_strobe_random</key>
     <param>
       <key>alias</key>
@@ -1147,6 +1432,226 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>std</key>
       <value>10</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_message_strobe_random</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>dist</key>
+      <value>blocks.STROBE_POISSON</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(280, 1680)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>90</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_message_strobe_random_0_0_1</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>mean</key>
+      <value>10000</value>
+    </param>
+    <param>
+      <key>msg</key>
+      <value>constel_0.as_pmt()</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>std</key>
+      <value>10</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_message_strobe_random</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>dist</key>
+      <value>blocks.STROBE_POISSON</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(400, 1680)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>90</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_message_strobe_random_0_0_1_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>mean</key>
+      <value>2000</value>
+    </param>
+    <param>
+      <key>msg</key>
+      <value>constel_1.as_pmt()</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>std</key>
+      <value>2000</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_message_strobe_random</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>dist</key>
+      <value>blocks.STROBE_POISSON</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(528, 1680)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>90</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_message_strobe_random_0_0_1_1</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>mean</key>
+      <value>4000</value>
+    </param>
+    <param>
+      <key>msg</key>
+      <value>constel_2.as_pmt()</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>std</key>
+      <value>4000</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_message_strobe_random</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>dist</key>
+      <value>blocks.STROBE_POISSON</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(656, 1680)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>90</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_message_strobe_random_0_0_1_1_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>mean</key>
+      <value>6000</value>
+    </param>
+    <param>
+      <key>msg</key>
+      <value>constel_3.as_pmt()</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>std</key>
+      <value>6000</value>
     </param>
   </block>
   <block>
@@ -1440,65 +1945,6 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
-    <key>blocks_socket_pdu</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(576, 104)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>host</key>
-      <value></value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_socket_pdu_0</value>
-    </param>
-    <param>
-      <key>mtu</key>
-      <value>1115</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>port</key>
-      <value>52001</value>
-    </param>
-    <param>
-      <key>tcp_no_delay</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>"TCP_SERVER"</value>
-    </param>
-  </block>
-  <block>
     <key>blocks_stream_to_tagged_stream</key>
     <param>
       <key>alias</key>
@@ -1577,7 +2023,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(800, 1372)</value>
+      <value>(1056, 1404)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1650,6 +2096,10 @@ For example (171,133) =&gt; (121,91)</value>
   <block>
     <key>ccsds_ccsds_decoder</key>
     <param>
+      <key>constellations</key>
+      <value>[constel_0, constel_1, constel_2, constel_3]</value>
+    </param>
+    <param>
       <key>alias</key>
       <value></value>
     </param>
@@ -1675,7 +2125,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(616, 1288)</value>
+      <value>(72, 1408)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1844,7 +2294,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>constellation</key>
-      <value>constel</value>
+      <value>constel_0</value>
     </param>
     <param>
       <key>affinity</key>
@@ -1966,7 +2416,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>constellation</key>
-      <value>constel</value>
+      <value>constel_0</value>
     </param>
     <param>
       <key>affinity</key>
@@ -1978,7 +2428,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(632, 1156)</value>
+      <value>(640, 1160)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1995,6 +2445,65 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>showports</key>
+      <value>False</value>
+    </param>
+  </block>
+  <block>
+    <key>digital_corr_est_cc</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(64, 920)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>digital_corr_est_cc_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>sps</key>
+      <value>sps_rx</value>
+    </param>
+    <param>
+      <key>symbols</key>
+      <value>modulated_sync_word</value>
+    </param>
+    <param>
+      <key>mark_delay</key>
+      <value>32*sps_rx</value>
+    </param>
+    <param>
+      <key>threshold</key>
+      <value>0.9</value>
     </param>
   </block>
   <block>
@@ -2287,7 +2796,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>rolloff</key>
@@ -2417,7 +2926,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(128, 1488)</value>
+      <value>(128, 1528)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2472,7 +2981,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(376, 1136)</value>
+      <value>(368, 1152)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2641,6 +3150,69 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
+    <key>he2pi_file_zeropad_source</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>file_prefix + "/Downloads/shakespeare.txt"</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(8, 128)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>he2pi_file_zeropad_source_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>repeat</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>slp</key>
+      <value>1000</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>zeropad</key>
+      <value>int(samp_rate_tx)</value>
+    </param>
+  </block>
+  <block>
     <key>import</key>
     <param>
       <key>alias</key>
@@ -2730,7 +3302,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(272, 1480)</value>
+      <value>(272, 1520)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2773,7 +3345,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(568, 1480)</value>
+      <value>(568, 1520)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2797,7 +3369,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>416e6</value>
+      <value>415e6</value>
     </param>
   </block>
   <block>
@@ -2816,7 +3388,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(424, 1480)</value>
+      <value>(424, 1520)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3511,7 +4083,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4334,7 +4906,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4470,7 +5042,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>stream_args</key>
-      <value></value>
+      <value>send_frame_size=128</value>
     </param>
     <param>
       <key>stream_chans</key>
@@ -5813,7 +6385,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>stream_args</key>
-      <value></value>
+      <value>recv_frame_size=128</value>
     </param>
     <param>
       <key>stream_chans</key>
@@ -7168,12 +7740,6 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <connection>
-    <source_block_id>ais_zeropad_file_source_0</source_block_id>
-    <sink_block_id>blocks_stream_to_tagged_stream_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
     <source_block_id>blocks_deinterleave_0</source_block_id>
     <sink_block_id>digital_diff_encoder_bb_0_0_0</sink_block_id>
     <source_key>0</source_key>
@@ -7214,6 +7780,30 @@ For example (171,133) =&gt; (121,91)</value>
     <sink_block_id>blocks_random_pdu_0</sink_block_id>
     <source_key>strobe</source_key>
     <sink_key>generate</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_message_strobe_random_0_0_1</source_block_id>
+    <sink_block_id>digital_constellation_soft_decoder_cf_0</sink_block_id>
+    <source_key>strobe</source_key>
+    <sink_key>set_constellation</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_message_strobe_random_0_0_1_0</source_block_id>
+    <sink_block_id>digital_constellation_soft_decoder_cf_0</sink_block_id>
+    <source_key>strobe</source_key>
+    <sink_key>set_constellation</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_message_strobe_random_0_0_1_1</source_block_id>
+    <sink_block_id>digital_constellation_soft_decoder_cf_0</sink_block_id>
+    <source_key>strobe</source_key>
+    <sink_key>set_constellation</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_message_strobe_random_0_0_1_1_0</source_block_id>
+    <sink_block_id>digital_constellation_soft_decoder_cf_0</sink_block_id>
+    <source_key>strobe</source_key>
+    <sink_key>set_constellation</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_multiply_const_vxx_0</source_block_id>
@@ -7258,12 +7848,6 @@ For example (171,133) =&gt; (121,91)</value>
     <sink_key>in</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_socket_pdu_0</source_block_id>
-    <sink_block_id>blocks_pdu_to_tagged_stream_1</sink_block_id>
-    <source_key>pdus</source_key>
-    <sink_key>pdus</sink_key>
-  </connection>
-  <connection>
     <source_block_id>blocks_stream_to_tagged_stream_0</source_block_id>
     <sink_block_id>ccsds_encoder</sink_block_id>
     <source_key>0</source_key>
@@ -7289,9 +7873,15 @@ For example (171,133) =&gt; (121,91)</value>
   </connection>
   <connection>
     <source_block_id>ccsds_decoder</source_block_id>
-    <sink_block_id>blocks_pdu_to_tagged_stream_0</sink_block_id>
-    <source_key>out</source_key>
-    <sink_key>pdus</sink_key>
+    <sink_block_id>blocks_message_debug_0</sink_block_id>
+    <source_key>constellation</source_key>
+    <sink_key>print_pdu</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>ccsds_decoder</source_block_id>
+    <sink_block_id>digital_constellation_soft_decoder_cf_0</sink_block_id>
+    <source_key>constellation</source_key>
+    <sink_key>set_constellation</sink_key>
   </connection>
   <connection>
     <source_block_id>ccsds_decoder</source_block_id>
@@ -7320,6 +7910,12 @@ For example (171,133) =&gt; (121,91)</value>
   <connection>
     <source_block_id>digital_constellation_soft_decoder_cf_0</source_block_id>
     <sink_block_id>fec_extended_decoder_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_corr_est_cc_0</source_block_id>
+    <sink_block_id>digital_pfb_clock_sync_xxx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -7367,6 +7963,12 @@ For example (171,133) =&gt; (121,91)</value>
   </connection>
   <connection>
     <source_block_id>digital_fll_band_edge_cc_0</source_block_id>
+    <sink_block_id>digital_corr_est_cc_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_fll_band_edge_cc_0</source_block_id>
     <sink_block_id>digital_correlate_and_sync_cc_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
@@ -7396,14 +7998,14 @@ For example (171,133) =&gt; (121,91)</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>uhd_usrp_source_0</source_block_id>
-    <sink_block_id>digital_fll_band_edge_cc_0</sink_block_id>
+    <source_block_id>he2pi_file_zeropad_source_0</source_block_id>
+    <sink_block_id>blocks_stream_to_tagged_stream_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>uhd_usrp_source_0</source_block_id>
-    <sink_block_id>digital_pfb_clock_sync_xxx_0</sink_block_id>
+    <sink_block_id>digital_fll_band_edge_cc_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

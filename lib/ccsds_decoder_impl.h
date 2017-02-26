@@ -22,6 +22,7 @@
 #define INCLUDED_CCSDS_CCSDS_DECODER_IMPL_H
 
 #include <ccsds/ccsds_decoder.h>
+#include <gnuradio/digital/constellation.h>
 #include "ccsds.h"
 #include "reed_solomon.h"
 
@@ -46,9 +47,17 @@ namespace gr {
          uint32_t d_alt_sync_word5;
          uint8_t d_alt_sync_state;
          uint8_t d_decoder_state;
+         uint16_t d_hysteresis;
+         std::vector<gr::digital::constellation_sptr> d_constellations;
+         gr::digital::constellation_sptr d_constellation;
+         gr::digital::constellation_sptr d_alt_constel_1;
+         gr::digital::constellation_sptr d_alt_constel_2;
+         gr::digital::constellation_sptr d_alt_constel_3;
+         uint8_t d_alt_constel_index;
          uint32_t d_data_reg;
          uint8_t d_bit_counter;
          uint16_t d_byte_counter;
+         uint32_t d_num_frames_failed;
          uint32_t d_num_frames_received;
          uint32_t d_num_frames_decoded;
          uint32_t d_num_subframes_decoded;
@@ -68,7 +77,7 @@ namespace gr {
          uint32_t sync_word_munge(uint8_t flavor, uint32_t x, uint8_t n, uint8_t mask, uint8_t length);
 
      public:
-      ccsds_decoder_impl(int threshold, bool rs_decode, bool deinterleave, bool descramble, bool verbose, bool printing);
+      ccsds_decoder_impl(int threshold, bool rs_decode, bool deinterleave, bool descramble, bool verbose, bool printing, std::vector<gr::digital::constellation_sptr> constellations);
       ~ccsds_decoder_impl();
 
       uint32_t num_frames_received() const {return d_num_frames_received;}
