@@ -24,7 +24,6 @@
 
 #include <gnuradio/io_signature.h>
 #include <volk/volk.h>
-#include <gnuradio/digital/constellation.h>
 #include "ccsds_decoder_impl.h"
 #include "ccsds.h"
 #include "reed_solomon.h"

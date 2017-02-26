@@ -22,7 +22,6 @@
 #define INCLUDED_CCSDS_CCSDS_DECODER_IMPL_H
 
 #include <ccsds/ccsds_decoder.h>
-#include <gnuradio/digital/constellation.h>
 #include "ccsds.h"
 #include "reed_solomon.h"
 
@@ -48,7 +47,7 @@ namespace gr {
          uint8_t d_alt_sync_state;
          uint8_t d_decoder_state;
          uint16_t d_hysteresis;
-         std::vector<gr::digital::constellation_sptr> d_constellations;
+         //std::vector<gr::digital::constellation_sptr> d_constellations;
          gr::digital::constellation_sptr d_constellation;
          gr::digital::constellation_sptr d_alt_constel_1;
          gr::digital::constellation_sptr d_alt_constel_2;
