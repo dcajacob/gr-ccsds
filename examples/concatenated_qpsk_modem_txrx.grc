@@ -2096,8 +2096,16 @@ For example (171,133) =&gt; (121,91)</value>
   <block>
     <key>ccsds_ccsds_decoder</key>
     <param>
-      <key>constellations</key>
-      <value>[constel_0, constel_1, constel_2, constel_3]</value>
+      <key>constellation_1</key>
+      <value>constel_1</value>
+    </param>
+    <param>
+      <key>constellation_2</key>
+      <value>constel_2</value>
+    </param>
+    <param>
+      <key>constellation_3</key>
+      <value>constel_3</value>
     </param>
     <param>
       <key>alias</key>
@@ -2142,6 +2150,10 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>constellation_0</key>
+      <value>constel_0</value>
     </param>
     <param>
       <key>printing</key>
