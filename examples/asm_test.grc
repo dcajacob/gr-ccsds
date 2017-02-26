@@ -1137,16 +1137,8 @@ For example (171,133) =&gt; (121,91)</value>
       <value></value>
     </param>
     <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
       <key>_enabled</key>
       <value>0</value>
-    </param>
-    <param>
-      <key>file</key>
-      <value>file_prefix + "/Downloads/shakespeare.txt"</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1161,6 +1153,14 @@ For example (171,133) =&gt; (121,91)</value>
       <value>ais_zeropad_file_source_0</value>
     </param>
     <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>file_prefix + "/Downloads/shakespeare.txt"</value>
+    </param>
+    <param>
       <key>maxoutbuf</key>
       <value>0</value>
     </param>
@@ -1169,16 +1169,16 @@ For example (171,133) =&gt; (121,91)</value>
       <value>0</value>
     </param>
     <param>
-      <key>type</key>
-      <value>byte</value>
-    </param>
-    <param>
       <key>repeat</key>
       <value>True</value>
     </param>
     <param>
       <key>slp</key>
       <value>10</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
     </param>
     <param>
       <key>vlen</key>
