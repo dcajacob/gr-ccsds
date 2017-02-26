@@ -77,7 +77,7 @@ namespace gr {
          uint32_t sync_word_munge(uint8_t flavor, uint32_t x, uint8_t n, uint8_t mask, uint8_t length);
 
      public:
-      ccsds_decoder_impl(int threshold, bool rs_decode, bool deinterleave, bool descramble, bool verbose, bool printing, std::vector<gr::digital::constellation_sptr> constellations);
+      ccsds_decoder_impl(int threshold, bool rs_decode, bool deinterleave, bool descramble, bool verbose, bool printing, gr::digital::constellation_sptr constellation_0, gr::digital::constellation_sptr constellation_1, gr::digital::constellation_sptr constellation_2, gr::digital::constellation_sptr constellation_3);
       ~ccsds_decoder_impl();
 
       uint32_t num_frames_received() const {return d_num_frames_received;}

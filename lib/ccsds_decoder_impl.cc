@@ -36,13 +36,13 @@ namespace gr {
   namespace ccsds {
 
     ccsds_decoder::sptr
-    ccsds_decoder::make(int threshold, bool rs_decode, bool deinterleave, bool descramble, bool verbose, bool printing, std::vector<gr::digital::constellation_sptr> constellations)
+    ccsds_decoder::make(int threshold, bool rs_decode, bool deinterleave, bool descramble, bool verbose, bool printing, gr::digital::constellation_sptr constellation_0, gr::digital::constellation_sptr constellation_1, gr::digital::constellation_sptr constellation_2, gr::digital::constellation_sptr constellation_3)
     {
       return gnuradio::get_initial_sptr
-        (new ccsds_decoder_impl(threshold, rs_decode, deinterleave, descramble, verbose, printing, constellations));
+        (new ccsds_decoder_impl(threshold, rs_decode, deinterleave, descramble, verbose, printing, constellation_0, constellation_1, constellation_2, constellation_3));
     }
 
-    ccsds_decoder_impl::ccsds_decoder_impl(int threshold, bool rs_decode, bool deinterleave, bool descramble, bool verbose, bool printing, std::vector<gr::digital::constellation_sptr> constellations)
+    ccsds_decoder_impl::ccsds_decoder_impl(int threshold, bool rs_decode, bool deinterleave, bool descramble, bool verbose, bool printing, gr::digital::constellation_sptr constellation_0, gr::digital::constellation_sptr constellation_1, gr::digital::constellation_sptr constellation_2, gr::digital::constellation_sptr constellation_3)
       : gr::sync_block("ccsds_decoder",
               gr::io_signature::make(1, 1, sizeof(uint8_t)),
               gr::io_signature::make(0, 0, 0)),
@@ -56,7 +56,11 @@ namespace gr {
         d_num_frames_received(0),
         d_num_frames_decoded(0),
         d_num_subframes_decoded(0),
-        d_constellations(constellations)
+        d_constellation(constellation_0),
+        d_alt_constel_1(constellation_1),
+        d_alt_constel_2(constellation_2),
+        d_alt_constel_3(constellation_3)
+        //d_constellations(constellations)
     {
       message_port_register_out(pmt::mp("out"));
       message_port_register_out(pmt::mp("constellation"));
@@ -66,10 +70,10 @@ namespace gr {
       }
 
       d_hysteresis = 0;
-      d_constellation = constellations[0];
-      d_alt_constel_1 = constellations[1];
-      d_alt_constel_2 = constellations[2];
-      d_alt_constel_3 = constellations[3];
+      //d_constellation = constellations[0];
+      //d_alt_constel_1 = constellations[1];
+      //d_alt_constel_2 = constellations[2];
+      //d_alt_constel_3 = constellations[3];
       //gr::digital::constellation d_constellation;
       //(gr_complex(-1, -1), gr_complex(1, -1), gr_complex(-1, 1), gr_complex(1, 1)), {0, 2, 1, 3}, 4, 1);
       //(gr_complex(-1, -1), gr_complex(1, -1), gr_complex(-1, 1), gr_complex(1, 1)), (0, 2, 1, 3), 4, 1)
@@ -205,8 +209,8 @@ namespace gr {
                           if ((d_num_frames_failed > 1000000) || ((d_num_frames_received > 100) && (d_num_frames_decoded < 50)) && (d_hysteresis == 0)) {
                               gr::digital::constellation_sptr constel;
                               d_alt_constel_index = (d_alt_constel_index + 1) % 4;
-                              constel = d_constellations[d_alt_constel_index];
-                              /*
+                              //constel = d_constellations[d_alt_constel_index];
+
                               switch(d_alt_constel_index) {
                                   case 0:
                                       constel = d_constellation;
@@ -220,7 +224,7 @@ namespace gr {
                                   case 3:
                                       constel = d_alt_constel_3;
                               }
-                              */
+
 
                               //boost::any constellation_any = pmt::any_ref(constellation_pmt);
                               //constellation_sptr constellation = boost::any_cast<constellation_sptr>(

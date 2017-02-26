@@ -4,7 +4,7 @@
   <key>ccsds_ccsds_decoder</key>
   <category>ccsds</category>
   <import>import ccsds</import>
-  <make>ccsds.ccsds_decoder($threshold, $rs_decode, $deinterleave, $descramble, $verbose, $printing, $constellations)</make>
+  <make>ccsds.ccsds_decoder($threshold, $rs_decode, $deinterleave, $descramble, $verbose, $printing, $constellation_0, $constellation_1, $constellation_2, $constellation_3)</make>
   <param>
     <name>Threshold</name>
     <key>threshold</key>
@@ -54,8 +54,23 @@
     </option>
   </param>
   <param>
-    <name>Alternate Constellation Objects (list)</name>
-    <key>constellations</key>
+    <name>Primary Constellation Object</name>
+    <key>constellation_0</key>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Alternate Constellation Object</name>
+    <key>constellation_1</key>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Alternate Constellation Object</name>
+    <key>constellation_2</key>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Alternate Constellation Object</name>
+    <key>constellation_3</key>
     <type>raw</type>
   </param>
   <param>
