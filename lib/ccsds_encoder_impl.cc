@@ -77,11 +77,12 @@ namespace gr {
 
             if (d_curr_len != 0) return 0;
 
-            pmt::pmt_t msg(delete_head_blocking(pmt::mp("in"), 10)); //100));
+            pmt::pmt_t msg(delete_head_blocking(pmt::mp("in"), 100)); //100));
             if (msg.get() == NULL) {
                 //return 0;
                 //return an IDLE frame
-                d_curr_meta = pmt::PMT_NIL;
+                //d_curr_meta = pmt::PMT_NIL;
+                d_curr_meta = pmt::make_dict();
                 d_curr_vec = pmt::make_u8vector(DATA_LEN, 0x00);
                 d_curr_len = pmt::length(d_curr_vec);
                 if (d_verbose) {
