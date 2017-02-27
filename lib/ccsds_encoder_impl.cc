@@ -77,7 +77,7 @@ namespace gr {
 
             if (d_curr_len != 0) return 0;
 
-            pmt::pmt_t msg(delete_head_blocking(pmt::mp("in"), 100)); //100));
+            pmt::pmt_t msg(delete_head_blocking(pmt::mp("in"), 75)); //100));
             if (msg.get() == NULL) {
                 //return 0;
                 //return an IDLE frame
