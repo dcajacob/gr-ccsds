@@ -209,7 +209,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -238,6 +238,360 @@
     <param>
       <key>sym_map</key>
       <value>digital.psk_2()[1]</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_chooser</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>constel_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(624, 760)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>constel</value>
+    </param>
+    <param>
+      <key>label0</key>
+      <value>Normal</value>
+    </param>
+    <param>
+      <key>label1</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>label2</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>label3</key>
+      <value>3</value>
+    </param>
+    <param>
+      <key>label4</key>
+      <value></value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>Constellation</value>
+    </param>
+    <param>
+      <key>labels</key>
+      <value>[]</value>
+    </param>
+    <param>
+      <key>num_opts</key>
+      <value>4</value>
+    </param>
+    <param>
+      <key>option0</key>
+      <value>constel_0</value>
+    </param>
+    <param>
+      <key>option1</key>
+      <value>constel_1</value>
+    </param>
+    <param>
+      <key>option2</key>
+      <value>constel_2</value>
+    </param>
+    <param>
+      <key>option3</key>
+      <value>constel_3</value>
+    </param>
+    <param>
+      <key>option4</key>
+      <value>4</value>
+    </param>
+    <param>
+      <key>options</key>
+      <value>[0, 1, 2]</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.QHBoxLayout</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>raw</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>radio_buttons</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_constellation</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>const_points</key>
+      <value>digital.psk_4_0x0_1_0()[0]</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>calcdist</value>
+    </param>
+    <param>
+      <key>dims</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1496, 232)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>constel_0</value>
+    </param>
+    <param>
+      <key>rot_sym</key>
+      <value>4</value>
+    </param>
+    <param>
+      <key>soft_dec_lut</key>
+      <value>'auto'</value>
+    </param>
+    <param>
+      <key>precision</key>
+      <value>8</value>
+    </param>
+    <param>
+      <key>sym_map</key>
+      <value>digital.psk_4_0x0_1_0()[1]</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_constellation</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>const_points</key>
+      <value>digital.psk_4_0x1_1_0()[0]</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>calcdist</value>
+    </param>
+    <param>
+      <key>dims</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1496, 384)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>constel_1</value>
+    </param>
+    <param>
+      <key>rot_sym</key>
+      <value>4</value>
+    </param>
+    <param>
+      <key>soft_dec_lut</key>
+      <value>'auto'</value>
+    </param>
+    <param>
+      <key>precision</key>
+      <value>8</value>
+    </param>
+    <param>
+      <key>sym_map</key>
+      <value>digital.psk_4_0x1_1_0()[1]</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_constellation</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>const_points</key>
+      <value>digital.psk_4_0x2_1_0()[0]</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>calcdist</value>
+    </param>
+    <param>
+      <key>dims</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1496, 536)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>constel_2</value>
+    </param>
+    <param>
+      <key>rot_sym</key>
+      <value>4</value>
+    </param>
+    <param>
+      <key>soft_dec_lut</key>
+      <value>'auto'</value>
+    </param>
+    <param>
+      <key>precision</key>
+      <value>8</value>
+    </param>
+    <param>
+      <key>sym_map</key>
+      <value>digital.psk_4_0x2_1_0()[1]</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_constellation</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>const_points</key>
+      <value>digital.psk_4_0x3_1_0()[0]</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>calcdist</value>
+    </param>
+    <param>
+      <key>dims</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1496, 688)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>constel_3</value>
+    </param>
+    <param>
+      <key>rot_sym</key>
+      <value>4</value>
+    </param>
+    <param>
+      <key>soft_dec_lut</key>
+      <value>'auto'</value>
+    </param>
+    <param>
+      <key>precision</key>
+      <value>8</value>
+    </param>
+    <param>
+      <key>sym_map</key>
+      <value>digital.psk_4_0x3_1_0()[1]</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_constellation</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>const_points</key>
+      <value>digital.psk_4_0x0_1_0()[0]</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>calcdist</value>
+    </param>
+    <param>
+      <key>dims</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1496, 80)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>constel_tx</value>
+    </param>
+    <param>
+      <key>rot_sym</key>
+      <value>4</value>
+    </param>
+    <param>
+      <key>soft_dec_lut</key>
+      <value>'auto'</value>
+    </param>
+    <param>
+      <key>precision</key>
+      <value>8</value>
+    </param>
+    <param>
+      <key>sym_map</key>
+      <value>digital.psk_4_0x0_1_0()[1]</value>
     </param>
   </block>
   <block>
@@ -1485,69 +1839,6 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
-    <key>ais_zeropad_file_source</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>file</key>
-      <value>file_prefix + "/Downloads/shakespeare.txt"</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(8, 96)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>ais_zeropad_file_source_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>byte</value>
-    </param>
-    <param>
-      <key>repeat</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>slp</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>zeropad</key>
-      <value>100000</value>
-    </param>
-  </block>
-  <block>
     <key>analog_random_source_x</key>
     <param>
       <key>alias</key>
@@ -1622,7 +1913,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1669,7 +1960,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1807,7 +2098,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>enabled</key>
@@ -1815,7 +2106,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(840, 212)</value>
+      <value>(872, 212)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1976,7 +2267,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2031,7 +2322,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>file</key>
@@ -2247,7 +2538,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2272,6 +2563,171 @@ in some situations.  Copy helped.</value>
     <param>
       <key>msg</key>
       <value>pmt.intern("TEST")</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>std</key>
+      <value>10</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_message_strobe_random</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>dist</key>
+      <value>blocks.STROBE_POISSON</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(56, 1040)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_message_strobe_random_0_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>mean</key>
+      <value>500</value>
+    </param>
+    <param>
+      <key>msg</key>
+      <value>constel.as_pmt()</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>std</key>
+      <value>10</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_message_strobe_random</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>dist</key>
+      <value>blocks.STROBE_POISSON</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(392, 904)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_message_strobe_random_0_0_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>mean</key>
+      <value>2000</value>
+    </param>
+    <param>
+      <key>msg</key>
+      <value>pmt.cons(pmt.dict_add(pmt.make_dict(), pmt.intern("constellation"), pmt.PMT_NIL), pmt.any_set(constel))</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>std</key>
+      <value>10</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_message_strobe_random</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>dist</key>
+      <value>blocks.STROBE_POISSON</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(32, 1352)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_message_strobe_random_0_0_1</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>mean</key>
+      <value>2000</value>
+    </param>
+    <param>
+      <key>msg</key>
+      <value>constel_1.as_pmt()</value>
     </param>
     <param>
       <key>minoutbuf</key>
@@ -2490,7 +2946,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2588,7 +3044,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2639,7 +3095,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2664,6 +3120,57 @@ in some situations.  Copy helped.</value>
     <param>
       <key>phase_inc</key>
       <value>3.14/160</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_skiphead</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(912, 540)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_skiphead_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>num_items</key>
+      <value>int(samp_rate_rx*0.5)</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
     </param>
   </block>
   <block>
@@ -2741,7 +3248,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2851,7 +3358,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2937,7 +3444,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2966,6 +3473,18 @@ in some situations.  Copy helped.</value>
   </block>
   <block>
     <key>ccsds_ccsds_decoder</key>
+    <param>
+      <key>constellation_1</key>
+      <value>constel_1</value>
+    </param>
+    <param>
+      <key>constellation_2</key>
+      <value>constel_2</value>
+    </param>
+    <param>
+      <key>constellation_3</key>
+      <value>constel_3</value>
+    </param>
     <param>
       <key>alias</key>
       <value></value>
@@ -3009,6 +3528,10 @@ in some situations.  Copy helped.</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>constellation_0</key>
+      <value>constel_0</value>
     </param>
     <param>
       <key>printing</key>
@@ -3059,7 +3582,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>type</key>
-      <value>message</value>
+      <value>byte</value>
     </param>
     <param>
       <key>interleave</key>
@@ -3177,7 +3700,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(320, 880)</value>
+      <value>(328, 888)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3224,7 +3747,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>constellation</key>
-      <value>constel</value>
+      <value>constel_tx</value>
     </param>
     <param>
       <key>affinity</key>
@@ -3347,7 +3870,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>constellation</key>
-      <value>constel</value>
+      <value>constel_tx</value>
     </param>
     <param>
       <key>affinity</key>
@@ -3359,7 +3882,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(576, 1100)</value>
+      <value>(584, 1088)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3376,6 +3899,10 @@ in some situations.  Copy helped.</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>showports</key>
+      <value>False</value>
     </param>
   </block>
   <block>
@@ -3936,6 +4463,120 @@ in some situations.  Copy helped.</value>
     </param>
   </block>
   <block>
+    <key>he2pi_file_zeropad_source</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>file_prefix + "/Downloads/shakespeare.txt"</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(8, 96)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>he2pi_file_zeropad_source_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>repeat</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>slp</key>
+      <value>1000</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>zeropad</key>
+      <value>int(samp_rate_tx)</value>
+    </param>
+  </block>
+  <block>
+    <key>he2pi_precisiontiming_pt_resampler</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>desired_path_length</key>
+      <value>32</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(576, 652)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>he2pi_precisiontiming_pt_resampler_0</value>
+    </param>
+    <param>
+      <key>input_sample_rate</key>
+      <value>int(samp_rate_tx)</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>output_sample_rate</key>
+      <value>int(samp_rate_rx)</value>
+    </param>
+  </block>
+  <block>
     <key>import</key>
     <param>
       <key>alias</key>
@@ -3995,57 +4636,6 @@ in some situations.  Copy helped.</value>
     <param>
       <key>import</key>
       <value>from math import pi</value>
-    </param>
-  </block>
-  <block>
-    <key>pt_resampler</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>desired_path_length</key>
-      <value>32</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(576, 652)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>180</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>pt_resampler_0</value>
-    </param>
-    <param>
-      <key>input_sample_rate</key>
-      <value>sps_tx</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>output_sample_rate</key>
-      <value>sps_rx</value>
     </param>
   </block>
   <block>
@@ -5503,7 +6093,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -6924,18 +7514,6 @@ in some situations.  Copy helped.</value>
     </param>
   </block>
   <connection>
-    <source_block_id>ais_zeropad_file_source_0</source_block_id>
-    <sink_block_id>blocks_stream_to_tagged_stream_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>ais_zeropad_file_source_0</source_block_id>
-    <sink_block_id>blocks_unpack_k_bits_bb_0_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
     <source_block_id>blocks_char_to_float_0_0_0</source_block_id>
     <sink_block_id>qtgui_time_sink_x_0_0</sink_block_id>
     <source_key>0</source_key>
@@ -7032,6 +7610,18 @@ in some situations.  Copy helped.</value>
     <sink_key>generate</sink_key>
   </connection>
   <connection>
+    <source_block_id>blocks_message_strobe_random_0_0</source_block_id>
+    <sink_block_id>digital_constellation_soft_decoder_cf_0</sink_block_id>
+    <source_key>strobe</source_key>
+    <sink_key>set_constellation</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_message_strobe_random_0_0_1</source_block_id>
+    <sink_block_id>digital_constellation_soft_decoder_cf_0</sink_block_id>
+    <source_key>strobe</source_key>
+    <sink_key>set_constellation</sink_key>
+  </connection>
+  <connection>
     <source_block_id>blocks_null_source_0</source_block_id>
     <sink_block_id>qtgui_time_sink_x_0_1</sink_block_id>
     <source_key>0</source_key>
@@ -7071,10 +7661,16 @@ in some situations.  Copy helped.</value>
     <source_block_id>blocks_random_pdu_0</source_block_id>
     <sink_block_id>ccsds_encoder</sink_block_id>
     <source_key>pdus</source_key>
-    <sink_key>in</sink_key>
+    <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_rotator_cc_0</source_block_id>
+    <sink_block_id>blocks_skiphead_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_skiphead_0</source_block_id>
     <sink_block_id>blocks_throttle_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
@@ -7089,11 +7685,11 @@ in some situations.  Copy helped.</value>
     <source_block_id>blocks_stream_to_tagged_stream_0</source_block_id>
     <sink_block_id>ccsds_encoder</sink_block_id>
     <source_key>0</source_key>
-    <sink_key>in</sink_key>
+    <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_throttle_0</source_block_id>
-    <sink_block_id>pt_resampler_0</sink_block_id>
+    <sink_block_id>he2pi_precisiontiming_pt_resampler_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -7260,7 +7856,19 @@ in some situations.  Copy helped.</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>pt_resampler_0</source_block_id>
+    <source_block_id>he2pi_file_zeropad_source_0</source_block_id>
+    <sink_block_id>blocks_stream_to_tagged_stream_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>he2pi_file_zeropad_source_0</source_block_id>
+    <sink_block_id>blocks_unpack_k_bits_bb_0_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>he2pi_precisiontiming_pt_resampler_0</source_block_id>
     <sink_block_id>digital_fll_band_edge_cc_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
