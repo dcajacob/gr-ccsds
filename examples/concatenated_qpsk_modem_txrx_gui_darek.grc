@@ -965,11 +965,11 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(128, 1224)</value>
+      <value>(120, 1224)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1008,11 +1008,11 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(120, 1288)</value>
+      <value>(112, 1288)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1487,11 +1487,11 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(304, 1220)</value>
+      <value>(296, 1220)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1538,11 +1538,11 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(312, 1284)</value>
+      <value>(304, 1284)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1589,7 +1589,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1942,7 +1942,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2441,7 +2441,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2500,7 +2500,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(584, 1128)</value>
+      <value>(576, 1128)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2594,7 +2594,10 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>Resolves 90 deg ambiguity.  
+Applies phase offset recovered 
+by corr est block.  Don't try 
+doing this before PFB CS</value>
     </param>
     <param>
       <key>affinity</key>
@@ -2618,7 +2621,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>w</key>
-      <value>phase_bw*0</value>
+      <value>phase_bw</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -4430,11 +4433,11 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(496, 1240)</value>
+      <value>(488, 1240)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -9487,6 +9490,12 @@ For example (171,133) =&gt; (121,91)</value>
   <connection>
     <source_block_id>digital_fll_band_edge_cc_0</source_block_id>
     <sink_block_id>analog_feedforward_agc_cc_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_fll_band_edge_cc_0</source_block_id>
+    <sink_block_id>blocks_multiply_const_vxx_1_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

@@ -2042,7 +2042,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(232, 840)</value>
+      <value>(208, 824)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3322,7 +3322,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4024,7 +4024,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4952,7 +4952,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -10485,6 +10485,12 @@ in some situations.  Copy helped.</value>
   </block>
   <connection>
     <source_block_id>analog_agc2_xx_0</source_block_id>
+    <sink_block_id>blocks_multiply_const_vxx_1_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>analog_agc2_xx_0</source_block_id>
     <sink_block_id>digital_corr_est_cc_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
@@ -10863,6 +10869,18 @@ in some situations.  Copy helped.</value>
   </connection>
   <connection>
     <source_block_id>digital_corr_est_cc_0_0</source_block_id>
+    <sink_block_id>blocks_complex_to_mag_squared_0</sink_block_id>
+    <source_key>1</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_corr_est_cc_0_0</source_block_id>
+    <sink_block_id>blocks_complex_to_arg_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_corr_est_cc_0_0</source_block_id>
     <sink_block_id>digital_costas_loop_cc_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
@@ -10942,6 +10960,12 @@ in some situations.  Copy helped.</value>
   <connection>
     <source_block_id>digital_fll_band_edge_cc_0</source_block_id>
     <sink_block_id>digital_correlate_and_sync_cc_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_fll_band_edge_cc_0</source_block_id>
+    <sink_block_id>digital_pfb_clock_sync_xxx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
