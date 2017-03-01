@@ -10,6 +10,7 @@
 %{
 #include "ccsds/ccsds_encoder.h"
 #include "ccsds/ccsds_decoder.h"
+#include "ccsds/digital_constellation_soft_decoder_cf.h"
 %}
 
 
@@ -17,3 +18,5 @@
 GR_SWIG_BLOCK_MAGIC2(ccsds, ccsds_encoder);
 %include "ccsds/ccsds_decoder.h"
 GR_SWIG_BLOCK_MAGIC2(ccsds, ccsds_decoder);
+%include "ccsds/digital_constellation_soft_decoder.h"
+GR_SWIG_BLOCK_MAGIC2(ccsds, digital_constellation_soft_decoder);

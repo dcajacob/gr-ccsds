@@ -56,10 +56,13 @@ namespace gr {
         d_num_subframes_decoded(0)
     {
       message_port_register_out(pmt::mp("out"));
+      message_port_register_out(pmt::mp("rotate_constellation"));
 
       for (uint8_t i=0; i<SYNC_WORD_LEN; i++) {
           d_sync_word = (d_sync_word << 8) | (SYNC_WORD[i] & 0xff);
       }
+
+      d_hysteresis = 0;
 
       /*
       // Create an alternative sync word that corresponds to a 90 deg
@@ -128,6 +131,16 @@ namespace gr {
                       if (success) {
                           pmt::pmt_t pdu(pmt::cons(pmt::PMT_NIL, pmt::make_blob(d_payload, DATA_LEN)));
                           message_port_pub(pmt::mp("out"), pdu);
+                      } else {
+                          if ((d_num_frames_failed > 1000000) || ((d_num_frames_received > 100) && (d_num_frames_decoded < 50)) && (d_hysteresis == 0)) {
+
+                              pmt::pmt_t pdu(pmt::cons(pmt::PMT_NIL, pmt::PMT_NIL));
+                              message_port_pub(pmt::mp("rotate_constellation"), pdu);
+
+                              d_hysteresis = 1000;
+                          } else {
+                              d_hysteresis--;
+                          }
                       }
 
                       if (d_verbose) {

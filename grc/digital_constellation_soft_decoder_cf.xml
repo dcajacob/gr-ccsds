@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+##Constellation Decoder, soft bits out
+###################################################
+ -->
+<block>
+	<name>Constellation Soft Decoder</name>
+	<key>digital_constellation_soft_decoder_cf</key>
+	<import>from gnuradio import digital</import>
+	<make>digital.constellation_soft_decoder_cf($constellation)</make>
+	<callback>set_constellation($constellation)</callback>
+	<param>
+		<name>Constellation Object</name>
+		<key>constellation</key>
+		<type>raw</type>
+	</param>
+
+	<param>
+    <name>Show Msg Ports</name>
+    <key>showports</key>
+    <value>True</value>
+    <type>enum</type>
+    <hide>part</hide>
+    <option>
+      <name>Yes</name>
+      <key>False</key>
+    </option>
+    <option>
+      <name>No</name>
+      <key>True</key>
+    </option>
+  </param>
+
+	<sink>
+		<name>in</name>
+		<type>complex</type>
+	</sink>
+
+	<sink>
+    <name>rotate_constellation</name>
+    <type>message</type>
+    <optional>1</optional>
+    <hide>$showports</hide>
+  </sink>
+
+	<source>
+		<name>out</name>
+		<type>float</type>
+	</source>
+</block>

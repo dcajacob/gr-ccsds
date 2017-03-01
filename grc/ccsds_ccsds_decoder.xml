@@ -92,4 +92,9 @@
     <type>message</type>
     <optional>1</optional>
   </source>
+  <source>
+    <name>rotate_constellation</name>
+    <type>message</type>
+    <optional>1</optional>
+  </source>
 </block>

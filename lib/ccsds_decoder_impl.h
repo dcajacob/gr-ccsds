@@ -45,6 +45,8 @@ namespace gr {
          uint32_t d_data_reg;
          uint8_t d_bit_counter;
          uint16_t d_byte_counter;
+         uint32_t d_num_frames_failed;
+         uint16_t d_hysteresis;
          uint32_t d_num_frames_received;
          uint32_t d_num_frames_decoded;
          uint32_t d_num_subframes_decoded;

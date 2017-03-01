@@ -19,5 +19,6 @@
 install(FILES
     ccsds_ccsds_encoder.xml
     ccsds_ccsds_decoder.xml
+    digital_constellation_soft_decoder_cf.xml
     DESTINATION share/gnuradio/grc/blocks
 )
