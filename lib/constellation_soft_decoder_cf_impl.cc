@@ -75,6 +75,11 @@ namespace gr {
     void
     constellation_soft_decoder_cf_impl::rotate_constellation()
     {
+      /*
+        Rotate the constellation on each call according to the
+        constellation's dihedral symmetry.
+      */
+
       // rotate the constellation vector by one element
       if (d_rotation_index < d_constellation->rotational_symmetry()) {}
         std::rotate(d_constellation->constellation().begin(),
@@ -93,7 +98,7 @@ namespace gr {
 
       if (d_rotation_index == 0) {
         // TODO: flip back to normal
-        //d_constellation = 
+        //  d_constellation =
       }
     }
 
