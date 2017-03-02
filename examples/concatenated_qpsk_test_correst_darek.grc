@@ -507,6 +507,60 @@
     </param>
     <param>
       <key>_coordinate</key>
+      <value>(1382, 1449)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>corr_sequence</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>((-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j))</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1382, 1516)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>corr_sequence_nodiff</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>((0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j))</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
       <value>(1064, 20)</value>
     </param>
     <param>
@@ -2152,7 +2206,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2485,7 +2539,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(712, 960)</value>
+      <value>(614, 873)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3063,7 +3117,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(896, 940)</value>
+      <value>(931, 950)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3173,7 +3227,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(784, 904)</value>
+      <value>(768, 763)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3263,7 +3317,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>const</key>
-      <value>1.0/20e3</value>
+      <value>1.0</value>
     </param>
     <param>
       <key>affinity</key>
@@ -3326,7 +3380,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(528, 852)</value>
+      <value>(412, 868)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3335,6 +3389,57 @@ in some situations.  Copy helped.</value>
     <param>
       <key>id</key>
       <value>blocks_multiply_const_vxx_1_1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_multiply_const_vxx</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>const</key>
+      <value>np.exp(1j*np.pi)</value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(556, 724)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_multiply_const_vxx_2</value>
     </param>
     <param>
       <key>type</key>
@@ -3998,6 +4103,61 @@ in some situations.  Copy helped.</value>
     <param>
       <key>name</key>
       <value>PFB</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_tag_debug</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>display</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(979, 825)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_tag_debug_1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>filter</key>
+      <value>"phase_est"</value>
+    </param>
+    <param>
+      <key>name</key>
+      <value></value>
     </param>
     <param>
       <key>num_inputs</key>
@@ -4931,10 +5091,6 @@ in some situations.  Copy helped.</value>
       <key>minoutbuf</key>
       <value>0</value>
     </param>
-    <param>
-      <key>showports</key>
-      <value>False</value>
-    </param>
   </block>
   <block>
     <key>digital_corr_est_cc</key>
@@ -5011,7 +5167,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(680, 1024)</value>
+      <value>(672, 1012)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5035,7 +5191,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>symbols</key>
-      <value>((-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j))</value>
+      <value>corr_sequence_nodiff</value>
     </param>
     <param>
       <key>mark_delay</key>
@@ -5043,7 +5199,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>threshold</key>
-      <value>0.999</value>
+      <value>0.985</value>
     </param>
   </block>
   <block>
@@ -5117,7 +5273,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(584, 1176)</value>
+      <value>(537, 1180)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5180,7 +5336,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>w</key>
-      <value>phase_bw*0</value>
+      <value>phase_bw*0.1</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -5215,7 +5371,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -5258,7 +5414,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -5301,7 +5457,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -5344,7 +5500,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -5713,7 +5869,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>file</key>
@@ -5784,7 +5940,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(576, 652)</value>
+      <value>(595, 604)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5809,6 +5965,37 @@ in some situations.  Copy helped.</value>
     <param>
       <key>output_sample_rate</key>
       <value>int(samp_rate_rx)</value>
+    </param>
+  </block>
+  <block>
+    <key>import</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(614, 792)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>import_0</value>
+    </param>
+    <param>
+      <key>import</key>
+      <value>import numpy as np</value>
     </param>
   </block>
   <block>
@@ -10124,7 +10311,7 @@ in some situations.  Copy helped.</value>
     <key>qtgui_time_sink_x</key>
     <param>
       <key>autoscale</key>
-      <value>False</value>
+      <value>True</value>
     </param>
     <param>
       <key>axislabels</key>
@@ -10502,6 +10689,18 @@ in some situations.  Copy helped.</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>analog_random_source_x_0</source_block_id>
+    <sink_block_id>blocks_stream_to_tagged_stream_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>analog_random_source_x_0</source_block_id>
+    <sink_block_id>blocks_unpack_k_bits_bb_0_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>blocks_char_to_float_0_0_0</source_block_id>
     <sink_block_id>qtgui_time_sink_x_0_0</sink_block_id>
     <source_key>0</source_key>
@@ -10654,6 +10853,12 @@ in some situations.  Copy helped.</value>
   <connection>
     <source_block_id>blocks_multiply_const_vxx_1_1</source_block_id>
     <sink_block_id>blocks_complex_to_mag_squared_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_multiply_const_vxx_2</source_block_id>
+    <sink_block_id>digital_fll_band_edge_cc_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -10881,6 +11086,12 @@ in some situations.  Copy helped.</value>
   </connection>
   <connection>
     <source_block_id>digital_corr_est_cc_0_0</source_block_id>
+    <sink_block_id>blocks_tag_debug_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_corr_est_cc_0_0</source_block_id>
     <sink_block_id>digital_costas_loop_cc_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
@@ -11025,7 +11236,7 @@ in some situations.  Copy helped.</value>
   </connection>
   <connection>
     <source_block_id>he2pi_precisiontiming_pt_resampler_0</source_block_id>
-    <sink_block_id>digital_fll_band_edge_cc_0</sink_block_id>
+    <sink_block_id>blocks_multiply_const_vxx_2</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
