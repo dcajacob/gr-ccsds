@@ -44,7 +44,7 @@ namespace gr {
        * \brief Return a shared_ptr to a new instance of ccsds::ccsds_encoder.
        *
        */
-      static sptr make(size_t itemsize=0, const std::string& len_tag_key="packet_len", bool rs_encode=true, bool interleave=true, bool scramble=true, bool printing=false, bool verbose=false);
+      static sptr make(size_t itemsize=0, const std::string& len_tag_key="packet_len", bool rs_encode=true, bool interleave=true, bool scramble=true, bool idle=true, float idle_block_time=50, bool printing=false, bool verbose=false);
 
       /*!
        * \brief return the number of frames sent
@@ -57,4 +57,3 @@ namespace gr {
 } // namespace gr
 
 #endif /* INCLUDED_CCSDS_CCSDS_ENCODER_H */
-

@@ -32,16 +32,16 @@ namespace gr {
   namespace ccsds {
 
     ccsds_encoder::sptr
-    ccsds_encoder::make(size_t itemsize, const std::string& len_tag_key, bool rs_encode, bool interleave, bool scramble, bool printing, bool verbose)
+    ccsds_encoder::make(size_t itemsize, const std::string& len_tag_key, bool rs_encode, bool interleave, bool scramble, bool idle, float idle_block_time, bool printing, bool verbose)
     {
       return gnuradio::get_initial_sptr
-        (new ccsds_encoder_impl(itemsize, len_tag_key, rs_encode, interleave, scramble, printing, verbose));
+        (new ccsds_encoder_impl(itemsize, len_tag_key, rs_encode, interleave, scramble, idle, idle_block_time, printing, verbose));
     }
 
     /*
      * The private constructor
      */
-    ccsds_encoder_impl::ccsds_encoder_impl(size_t itemsize, const std::string& len_tag_key, bool rs_encode, bool interleave, bool scramble, bool printing, bool verbose)
+    ccsds_encoder_impl::ccsds_encoder_impl(size_t itemsize, const std::string& len_tag_key, bool rs_encode, bool interleave, bool scramble, bool idle, float idle_block_time, bool printing, bool verbose)
       : gr::tagged_stream_block("ccsds_encoder",
               gr::io_signature::make(itemsize==0 ? 0:1, itemsize==0 ? 0:1, itemsize),
               gr::io_signature::make(1, 1, sizeof(uint8_t)), "packet_len"),
@@ -49,6 +49,8 @@ namespace gr {
         d_rs_encode(rs_encode),
         d_interleave(interleave),
         d_scramble(scramble),
+        d_idle(idle),
+        d_idle_block_time(idle_block_time),
         d_printing(printing),
         d_verbose(verbose),
         d_curr_len(0),
@@ -77,16 +79,19 @@ namespace gr {
 
             if (d_curr_len != 0) return 0;
 
-            pmt::pmt_t msg(delete_head_blocking(pmt::mp("in"), 50)); //100));
+            pmt::pmt_t msg(delete_head_blocking(pmt::mp("in"), d_idle_block_time)); //100));
             if (msg.get() == NULL) {
-                //return 0;
-                //return an IDLE frame
-                //d_curr_meta = pmt::PMT_NIL;
-                d_curr_meta = pmt::make_dict();
-                d_curr_vec = pmt::make_u8vector(DATA_LEN, 0x00);
-                d_curr_len = pmt::length(d_curr_vec);
-                if (d_verbose) {
-                    printf("Pushing an IDLE frame\n");
+                if (d_idle) {
+                  // return an IDLE frame
+                  d_curr_meta = pmt::make_dict();
+                  d_curr_vec = pmt::make_u8vector(DATA_LEN, 0x00);
+                  d_curr_len = pmt::length(d_curr_vec);
+
+                  if (d_verbose) {
+                      printf("Pushing an IDLE frame\n");
+                  }
+                } else {
+                  return 0;
                 }
                 return TOTAL_FRAME_LEN;
             }

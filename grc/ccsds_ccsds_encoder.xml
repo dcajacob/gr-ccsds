@@ -4,7 +4,7 @@
   <key>ccsds_ccsds_encoder</key>
   <category>ccsds</category>
   <import>import ccsds</import>
-  <make>ccsds.ccsds_encoder($type.size, $len_tag_key, $rs_encode, $interleave, $scramble, $printing, $verbose)</make>
+  <make>ccsds.ccsds_encoder($type.size, $len_tag_key, $rs_encode, $interleave, $scramble, $idle, $idle_block_time, $printing, $verbose)</make>
   <param>
       <name>Input type</name>
       <key>type</key>
@@ -68,6 +68,26 @@
         <name>No</name>
         <key>False</key>
     </option>
+  </param>
+  <param>
+    <name>Idle Frames</name>
+    <key>idle</key>
+    <value>True</value>
+    <type>enum</type>
+    <option>
+        <name>Yes</name>
+        <key>True</key>
+    </option>
+    <option>
+        <name>No</name>
+        <key>False</key>
+    </option>
+  </param>
+  <param>
+    <name>Idle Block Time (ms)</name>
+    <key>idle_block_time</key>
+    <value>50</value>
+    <type>float</type>
   </param>
   <param>
     <name>Print packets</name>
