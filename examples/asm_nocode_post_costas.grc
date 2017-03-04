@@ -140,11 +140,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(368, 12)</value>
+      <value>(400, 668)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -152,11 +152,11 @@
     </param>
     <param>
       <key>id</key>
-      <value>encoded_sync_word</value>
+      <value>corr_sequence</value>
     </param>
     <param>
       <key>value</key>
-      <value>((-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j))</value>
+      <value>((-0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j))</value>
     </param>
   </block>
   <block>
@@ -171,7 +171,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(374, 76)</value>
+      <value>(400, 732)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -179,11 +179,11 @@
     </param>
     <param>
       <key>id</key>
-      <value>encoded_sync_word_nodiff</value>
+      <value>corr_sequence_nodiff</value>
     </param>
     <param>
       <key>value</key>
-      <value>((-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j))</value>
+      <value>((-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j))</value>
     </param>
   </block>
   <block>
@@ -211,6 +211,33 @@
     <param>
       <key>value</key>
       <value>len(sync_word)*8</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(608, 732)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>same</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>corr_sequence == corr_sequence_nodiff</value>
     </param>
   </block>
   <block>
@@ -451,7 +478,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(640, 400)</value>
+      <value>(768, 400)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -561,7 +588,7 @@
     </param>
     <param>
       <key>vlen</key>
-      <value>length</value>
+      <value>length/2</value>
     </param>
   </block>
   <block>
@@ -611,6 +638,65 @@
     </param>
     <param>
       <key>l</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>endianness</key>
+      <value>gr.GR_MSB_FIRST</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(184, 132)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_repack_bits_bb_0</value>
+    </param>
+    <param>
+      <key>len_tag_key</key>
+      <value>""</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>align_output</key>
+      <value>False</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_repack_bits_bb</key>
+    <param>
+      <key>k</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>l</key>
       <value>2</value>
     </param>
     <param>
@@ -635,7 +721,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(172, 134)</value>
+      <value>(392, 212)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -643,7 +729,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>blocks_repack_bits_bb_0</value>
+      <value>blocks_repack_bits_bb_0_0</value>
     </param>
     <param>
       <key>len_tag_key</key>
@@ -706,7 +792,7 @@
     </param>
     <param>
       <key>num_items</key>
-      <value>length</value>
+      <value>length/2</value>
     </param>
     <param>
       <key>vlen</key>
@@ -784,7 +870,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(384, 308)</value>
+      <value>(384, 396)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -855,7 +941,7 @@
     </param>
     <param>
       <key>vlen</key>
-      <value>length</value>
+      <value>length/2</value>
     </param>
   </block>
   <block>
@@ -1019,7 +1105,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(392, 204)</value>
+      <value>(392, 292)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1709,7 +1795,7 @@
     </param>
     <param>
       <key>size</key>
-      <value>length</value>
+      <value>length/2</value>
     </param>
     <param>
       <key>srate</key>
@@ -2072,7 +2158,7 @@
     </param>
     <param>
       <key>size</key>
-      <value>length</value>
+      <value>length/2</value>
     </param>
     <param>
       <key>srate</key>
@@ -2146,7 +2232,7 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_repack_bits_bb_0</source_block_id>
+    <source_block_id>blocks_repack_bits_bb_0_0</source_block_id>
     <sink_block_id>digital_chunks_to_symbols_xx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
@@ -2202,6 +2288,12 @@
   <connection>
     <source_block_id>blocks_vector_source_x_1</source_block_id>
     <sink_block_id>blocks_head_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>ccsds_diff_encoder_0</source_block_id>
+    <sink_block_id>blocks_repack_bits_bb_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
