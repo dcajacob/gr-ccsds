@@ -225,7 +225,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1344, 964)</value>
+      <value>(1376, 956)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -252,7 +252,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1344, 1028)</value>
+      <value>(1376, 1020)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -291,7 +291,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>user_data_rate/R/R</value>
+      <value>user_data_rate/R*R</value>
     </param>
   </block>
   <block>
@@ -479,7 +479,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>0.35</value>
+      <value>0.35*2</value>
     </param>
   </block>
   <block>
@@ -529,7 +529,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>encoded_rs_idle_frame_no_diff</value>
+      <value>encoded_rs_idle_frame_nodiff</value>
     </param>
     <param>
       <key>value</key>
@@ -938,6 +938,33 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(800, 2244)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>modulated_idle_frame_trimmed_nodiff</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(19175-1, 29405+2-2+1)]</value>
+    </param>
+  </block>
+  <block>
     <key>variable_modulate_vector</key>
     <param>
       <key>comment</key>
@@ -1008,6 +1035,41 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
+    <key>variable_modulate_vector</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>data</key>
+      <value>list(encoded_rs_idle_frame_nodiff)+[0]*223*5+list(encoded_rs_idle_frame_nodiff)+[255]*223*5+list(encoded_rs_idle_frame_nodiff)+[0]*223*5</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>taps</key>
+      <value>[1]</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(576, 2224)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>modulated_preamble_untrimmed_nodiff</value>
+    </param>
+    <param>
+      <key>mod</key>
+      <value>digital.generic_mod(constellation=constel,differential=False,samples_per_symbol=sps_tx,pre_diff_code=True,excess_bw=eb,verbose=False,log=False)</value>
+    </param>
+  </block>
+  <block>
     <key>variable</key>
     <param>
       <key>comment</key>
@@ -1046,7 +1108,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(608, 2220)</value>
+      <value>(608, 2380)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1569,7 +1631,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>0.25e6*0+125e3</value>
+      <value>0.25e6*0+125e3*2</value>
     </param>
   </block>
   <block>
@@ -2384,7 +2446,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2439,7 +2501,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>mean</key>
-      <value>1000</value>
+      <value>100</value>
     </param>
     <param>
       <key>msg</key>
@@ -2627,7 +2689,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3078,7 +3140,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3408,7 +3470,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>vector</key>
-      <value>modulated_preamble_untrimmed</value>
+      <value>modulated_preamble_untrimmed_nodiff</value>
     </param>
   </block>
   <block>
@@ -3490,7 +3552,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3529,7 +3591,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3624,7 +3686,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>verbose</key>
-      <value>True</value>
+      <value>False</value>
     </param>
   </block>
   <block>
@@ -3659,7 +3721,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>modulated_vector</key>
-      <value>modulated_idle_frame_trimmed</value>
+      <value>modulated_idle_frame_trimmed_nodiff</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -3958,7 +4020,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(744, 992)</value>
+      <value>(768, 960)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4013,7 +4075,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(544, 1016)</value>
+      <value>(552, 1016)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4241,7 +4303,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>alpha</key>
@@ -5473,7 +5535,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1088, 1092)</value>
+      <value>(736, 876)</value>
     </param>
     <param>
       <key>gui_hint</key>

@@ -298,7 +298,7 @@
     <key>variable_function_probe</key>
     <param>
       <key>block_id</key>
-      <value>blocks_probe_signal_vx_0</value>
+      <value>symbols</value>
     </param>
     <param>
       <key>comment</key>
@@ -341,7 +341,7 @@
     <key>variable_function_probe</key>
     <param>
       <key>block_id</key>
-      <value>blocks_probe_signal_vx_0_1</value>
+      <value>dibits</value>
     </param>
     <param>
       <key>comment</key>
@@ -412,7 +412,7 @@
     </param>
     <param>
       <key>label</key>
-      <value>Blah</value>
+      <value>Symbols</value>
     </param>
     <param>
       <key>type</key>
@@ -451,7 +451,7 @@
     </param>
     <param>
       <key>label</key>
-      <value>Blah</value>
+      <value>dibits</value>
     </param>
     <param>
       <key>type</key>
@@ -550,84 +550,6 @@
     <param>
       <key>vlen</key>
       <value>1</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_probe_signal_vx</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(720, 484)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_probe_signal_vx_0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>length/2</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_probe_signal_vx</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(825, 52)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_probe_signal_vx_0_1</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>byte</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>length</value>
     </param>
   </block>
   <block>
@@ -1058,7 +980,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1079,6 +1001,45 @@
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_probe_signal_vx</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(825, 52)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>dibits</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>length</value>
     </param>
   </block>
   <block>
@@ -2213,6 +2174,45 @@
       <value>-1</value>
     </param>
   </block>
+  <block>
+    <key>blocks_probe_signal_vx</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(720, 484)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>symbols</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>length/2</value>
+    </param>
+  </block>
   <connection>
     <source_block_id>blocks_complex_to_arg_0</source_block_id>
     <sink_block_id>qtgui_time_sink_x_1_0_0</sink_block_id>
@@ -2239,25 +2239,25 @@
   </connection>
   <connection>
     <source_block_id>blocks_stream_to_vector_0</source_block_id>
-    <sink_block_id>blocks_probe_signal_vx_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_stream_to_vector_0</source_block_id>
     <sink_block_id>blocks_vector_sink_x_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_stream_to_vector_0_1</source_block_id>
-    <sink_block_id>blocks_probe_signal_vx_0_1</sink_block_id>
+    <source_block_id>blocks_stream_to_vector_0</source_block_id>
+    <sink_block_id>symbols</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_stream_to_vector_0_1</source_block_id>
     <sink_block_id>blocks_vector_sink_x_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_stream_to_vector_0_1</source_block_id>
+    <sink_block_id>dibits</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
