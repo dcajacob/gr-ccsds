@@ -431,7 +431,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1232, 116)</value>
+      <value>(1232, 108)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -458,7 +458,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1416, 116)</value>
+      <value>(1416, 108)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -466,7 +466,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>encoded_rs_idle_frame_no_diff</value>
+      <value>encoded_rs_idle_frame_nodiff</value>
     </param>
     <param>
       <key>value</key>
@@ -626,7 +626,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1456, 12)</value>
+      <value>(1432, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -638,7 +638,34 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>[modulated_preamble_untrimmed[i] for i in range(19175, 29405+2)]</value>
+      <value>[modulated_preamble_untrimmed[i] for i in range(19175-1, 29405+1)]</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1656, 196)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>modulated_idle_frame_trimmed_nodiff</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(19175-1, 29405+1)]</value>
     </param>
   </block>
   <block>
@@ -696,7 +723,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1232, 16)</value>
+      <value>(1232, 8)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -705,6 +732,41 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>id</key>
       <value>modulated_preamble_untrimmed</value>
+    </param>
+    <param>
+      <key>mod</key>
+      <value>digital.generic_mod(constellation=constel,differential=False,samples_per_symbol=sps_tx,pre_diff_code=True,excess_bw=eb,verbose=False,log=False)</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_modulate_vector</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>data</key>
+      <value>list(encoded_rs_idle_frame_nodiff)+[0]*223*5+list(encoded_rs_idle_frame_nodiff)+[255]*223*5+list(encoded_rs_idle_frame_nodiff)+[0]*223*5</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>taps</key>
+      <value>[1]</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1432, 192)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>modulated_preamble_untrimmed_nodiff</value>
     </param>
     <param>
       <key>mod</key>
@@ -1962,7 +2024,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2001,7 +2063,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2131,7 +2193,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>modulated_vector</key>
-      <value>modulated_idle_frame_trimmed</value>
+      <value>modulated_idle_frame_trimmed_nodiff</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -2445,7 +2507,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>symbols</key>
-      <value>corr_sequence</value>
+      <value>corr_sequence_nodiff</value>
     </param>
     <param>
       <key>mark_delay</key>

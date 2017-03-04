@@ -638,7 +638,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>[modulated_preamble_untrimmed[i] for i in range(19175, 29405+2)]</value>
+      <value>[modulated_preamble_untrimmed[i] for i in range(19175-1, 29405+1)]</value>
     </param>
   </block>
   <block>
