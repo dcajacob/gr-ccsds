@@ -934,7 +934,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>[modulated_preamble_untrimmed[i] for i in range(19175, 29405+2)]</value>
+      <value>[modulated_preamble_untrimmed[i] for i in range(19174, 29405+1)]</value>
     </param>
   </block>
   <block>
@@ -961,7 +961,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(19175-1, 29405+2-2+1)]</value>
+      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(19175-1, 29405+1)]</value>
     </param>
   </block>
   <block>
@@ -2689,7 +2689,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>2</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2987,7 +2987,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>2</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3030,7 +3030,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>2</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3140,7 +3140,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3752,7 +3752,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>2</value>
+      <value>1</value>
     </param>
     <param>
       <key>epsilon</key>
@@ -4044,7 +4044,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>symbols</key>
-      <value>corr_sequence</value>
+      <value>corr_sequence_nodiff</value>
     </param>
     <param>
       <key>mark_delay</key>
@@ -4052,7 +4052,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>threshold</key>
-      <value>0.985</value>
+      <value>0.985*0+0.95</value>
     </param>
   </block>
   <block>
@@ -7254,7 +7254,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>style1</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>width1</key>
@@ -7298,7 +7298,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>marker2</key>
-      <value>-1</value>
+      <value>0</value>
     </param>
     <param>
       <key>style2</key>
