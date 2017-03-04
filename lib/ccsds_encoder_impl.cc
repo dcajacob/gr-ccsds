@@ -71,6 +71,18 @@ namespace gr {
 
     }
 
+    void
+    ccsds_encoder_impl::set_idle(bool idle)
+    {
+      d_idle = idle;
+    }
+
+    void
+    ccsds_encoder_impl::set_idle_block_time(float idle_block_time)
+    {
+      d_idle_block_time = idle_block_time;
+    }
+
     int
     ccsds_encoder_impl::calculate_output_stream_length(const gr_vector_int &ninput_items)
     {

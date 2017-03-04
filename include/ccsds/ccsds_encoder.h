@@ -46,6 +46,9 @@ namespace gr {
        */
       static sptr make(size_t itemsize=0, const std::string& len_tag_key="packet_len", bool rs_encode=true, bool interleave=true, bool scramble=true, bool idle=true, float idle_block_time=50, bool printing=false, bool verbose=false);
 
+      virtual void set_idle(bool idle) = 0;
+      virtual void set_idle_block_time(float idle_block_time) = 0;
+
       /*!
        * \brief return the number of frames sent
        *

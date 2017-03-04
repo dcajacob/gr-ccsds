@@ -60,6 +60,9 @@ namespace gr {
 
       uint32_t num_frames() const {return d_num_frames;}
 
+      void set_idle(bool idle);
+      void set_idle_block_time(float idle_block_time);
+
       // Where all the action really happens
       int work(int noutput_items,
            gr_vector_int &ninput_items,
