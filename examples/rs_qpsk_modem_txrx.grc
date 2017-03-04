@@ -38,7 +38,7 @@
     </param>
     <param>
       <key>generate_options</key>
-      <value>qt_gui</value>
+      <value>no_gui</value>
     </param>
     <param>
       <key>hier_block_src_path</key>
@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>rs_qpsk_modem_txrx_gui</value>
+      <value>rs_qpsk_modem_txrx</value>
     </param>
     <param>
       <key>max_nouts</key>
@@ -225,7 +225,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1376, 804)</value>
+      <value>(1384, 804)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -252,7 +252,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1384, 868)</value>
+      <value>(1392, 868)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -431,7 +431,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1160, 132)</value>
+      <value>(1176, 148)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -458,7 +458,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1344, 132)</value>
+      <value>(1360, 148)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -579,7 +579,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>false</key>
@@ -626,7 +626,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1448, 12)</value>
+      <value>(1464, 28)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -696,7 +696,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1232, 16)</value>
+      <value>(1248, 32)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1033,7 +1033,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1119,7 +1119,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1452,7 +1452,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1503,7 +1503,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3208,7 +3208,7 @@ doing this before PFB CS</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3571,7 +3571,7 @@ doing this before PFB CS</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>fftsize</key>
@@ -4588,7 +4588,7 @@ doing this before PFB CS</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
