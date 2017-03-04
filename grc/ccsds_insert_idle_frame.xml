@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<block>
+  <name>insert_idle_frame</name>
+  <key>ccsds_insert_idle_frame</key>
+  <category>[ccsds]</category>
+  <import>import ccsds</import>
+  <make>ccsds.insert_idle_frame($modulated_vector)</make>
+  <param>
+    <name>Idle Frame symbols</name>
+    <key>modulated_vector</key>
+    <type>complex_vector</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>

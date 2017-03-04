@@ -24,5 +24,5 @@ install(FILES
     api.h
     ccsds_encoder.h
     ccsds_decoder.h
-    DESTINATION include/ccsds
+    insert_idle_frame.h DESTINATION include/ccsds
 )
