@@ -67,6 +67,7 @@ class decapsulate_net(gr.basic_block):
 
         buff = list()
         buff.extend(pmt.u8vector_elements(msg)[2:2+length])
+        #print buff
 
         # TODO: Check for pad byte if there are any
 

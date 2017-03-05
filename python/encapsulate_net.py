@@ -66,6 +66,7 @@ class encapsulate_net(gr.basic_block):
         length = pmt.length(msg)
         buff.append(length >> 8) # MSB
         buff.append(length & 0xFF) # LSB
+        buff.extend(pmt.u8vector_elements(msg))
 
         pad_length = self.mtu - len(buff)
         if pad_length:

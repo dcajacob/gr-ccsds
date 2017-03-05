@@ -2056,7 +2056,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>verbose</key>
-      <value>True</value>
+      <value>False</value>
     </param>
   </block>
   <block>
