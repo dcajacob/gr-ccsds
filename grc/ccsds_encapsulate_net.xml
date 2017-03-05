@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<block>
+  <name>encapsulate_net</name>
+  <key>ccsds_encapsulate_net</key>
+  <category>[ccsds]</category>
+  <import>import ccsds</import>
+  <make>ccsds.encapsulate_net($mtu, $pad_byte, $aggregate, $timeout)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>MTU Size</name>
+    <key>mtu</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Pad Byte</name>
+    <key>pad_byte</key>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Aggregate Packets</name>
+    <key>aggregate</key>
+    <type>bool</type>
+  </param>
+  <param>
+    <name>Timeout (ms)</name>
+    <key>timeout</key>
+    <type>int</type>
+  </param>
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in</name>
+    <type><!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type><!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
+  </source>
+</block>

@@ -2897,7 +2897,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>maxsize</key>
-      <value>223*5</value>
+      <value>223*5/2</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -2905,7 +2905,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>minsize</key>
-      <value>223*5</value>
+      <value>223*5/2</value>
     </param>
     <param>
       <key>minoutbuf</key>
@@ -3140,7 +3140,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3474,6 +3474,57 @@ in some situations.  Copy helped.</value>
     </param>
   </block>
   <block>
+    <key>ccsds_decapsulate_net</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>disaggregate</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(640, 1460)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>ccsds_decapsulate_net_0</value>
+    </param>
+    <param>
+      <key>mtu</key>
+      <value>1115</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>pad_byte</key>
+      <value>0x7E</value>
+    </param>
+  </block>
+  <block>
     <key>ccsds_ccsds_decoder</key>
     <param>
       <key>alias</key>
@@ -3612,6 +3663,61 @@ in some situations.  Copy helped.</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>ccsds_encapsulate_net</key>
+    <param>
+      <key>aggregate</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(288, 264)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>ccsds_encapsulate_net_0</value>
+    </param>
+    <param>
+      <key>mtu</key>
+      <value>1115</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>pad_byte</key>
+      <value>0x7E</value>
+    </param>
+    <param>
+      <key>timeout</key>
+      <value>100</value>
     </param>
   </block>
   <block>
@@ -8515,9 +8621,9 @@ in some situations.  Copy helped.</value>
   </connection>
   <connection>
     <source_block_id>blocks_random_pdu_0</source_block_id>
-    <sink_block_id>blocks_pdu_to_tagged_stream_1</sink_block_id>
+    <sink_block_id>ccsds_encapsulate_net_0</sink_block_id>
     <source_key>pdus</source_key>
-    <sink_key>pdus</sink_key>
+    <sink_key>in</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_repack_bits_bb_0</source_block_id>
@@ -8610,10 +8716,16 @@ in some situations.  Copy helped.</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>ccsds_decoder</source_block_id>
+    <source_block_id>ccsds_decapsulate_net_0</source_block_id>
     <sink_block_id>blocks_pdu_to_tagged_stream_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>pdus</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>ccsds_decoder</source_block_id>
+    <sink_block_id>ccsds_decapsulate_net_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>in</sink_key>
   </connection>
   <connection>
     <source_block_id>ccsds_diff_decoder_0</source_block_id>
@@ -8626,6 +8738,12 @@ in some situations.  Copy helped.</value>
     <sink_block_id>fec_extended_encoder_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>ccsds_encapsulate_net_0</source_block_id>
+    <sink_block_id>blocks_pdu_to_tagged_stream_1</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>pdus</sink_key>
   </connection>
   <connection>
     <source_block_id>ccsds_encoder</source_block_id>

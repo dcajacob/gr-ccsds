@@ -19,5 +19,7 @@
 install(FILES
     ccsds_ccsds_encoder.xml
     ccsds_ccsds_decoder.xml
-    ccsds_insert_idle_frame.xml DESTINATION share/gnuradio/grc/blocks
+    ccsds_insert_idle_frame.xml
+    ccsds_encapsulate_net.xml
+    ccsds_decapsulate_net.xml DESTINATION share/gnuradio/grc/blocks
 )

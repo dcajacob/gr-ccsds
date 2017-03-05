@@ -31,4 +31,7 @@ except ImportError:
 	pass
 
 # import any pure python here
+from encapsulate_net import encapsulate_net
+from decapsulate_net import decapsulate_net
+
 #
