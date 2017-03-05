@@ -28,7 +28,7 @@ import collections
 import pmt
 import array
 
-debug = False
+debug = True
 
 class encapsulate_net(gr.basic_block):
     """
@@ -54,7 +54,7 @@ class encapsulate_net(gr.basic_block):
             return
 
         if pmt.length(msg) + 2 > self.mtu:
-            print "[ERROR] Packet is too long.  Cannot exceed %d bytes." % (self.mtu - 2)
+            print "[ERROR] Transmitted frame is too long (%d bytes).  Cannot exceed %d bytes." % (pmt.length(msg), self.mtu - 2)
             return
 
         #length = struct.pack('h', pmt.length(msg))

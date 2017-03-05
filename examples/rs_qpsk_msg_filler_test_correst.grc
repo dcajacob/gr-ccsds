@@ -2897,7 +2897,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>maxsize</key>
-      <value>223*5/2</value>
+      <value>223*5+1</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -2905,7 +2905,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>minsize</key>
-      <value>223*5/2</value>
+      <value>223*5*0+32</value>
     </param>
     <param>
       <key>minoutbuf</key>
@@ -3584,7 +3584,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>verbose</key>
-      <value>True</value>
+      <value>False</value>
     </param>
   </block>
   <block>

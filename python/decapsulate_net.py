@@ -27,7 +27,7 @@ import collections
 import pmt
 import array
 
-debug = False
+debug = True
 
 class decapsulate_net(gr.basic_block):
     """
@@ -53,7 +53,7 @@ class decapsulate_net(gr.basic_block):
             return
 
         if pmt.length(msg) > self.mtu:
-            print "[ERROR] Frame is too long.  Cannot exceed %d bytes." % (self.mtu)
+            print "[ERROR] Received frame is too long (%d bytes).  Cannot exceed %d bytes." % (pmt.length(msg), self.mtu)
             return
 
         #print pmt.u8vector_elements(msg)[0:2]
