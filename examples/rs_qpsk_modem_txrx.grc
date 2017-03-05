@@ -1891,7 +1891,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>mtu</key>
-      <value>mtu</value>
+      <value>mtu-2</value>
     </param>
     <param>
       <key>maxoutbuf</key>
