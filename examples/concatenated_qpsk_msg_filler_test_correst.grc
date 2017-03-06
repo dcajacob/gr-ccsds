@@ -2501,7 +2501,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>mean</key>
-      <value>100</value>
+      <value>50</value>
     </param>
     <param>
       <key>msg</key>
@@ -3584,7 +3584,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>verbose</key>
-      <value>True</value>
+      <value>False</value>
     </param>
   </block>
   <block>

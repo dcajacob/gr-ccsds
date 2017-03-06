@@ -122,6 +122,10 @@ namespace gr {
             d_curr_vec = pmt::cdr(msg);
             d_curr_len = pmt::length(d_curr_vec);
         }
+
+        if (~d_started && d_asm_tail) {
+            return (TOTAL_FRAME_LEN + SYNC_WORD_LEN);
+        }
         return TOTAL_FRAME_LEN;
     }
 
@@ -219,18 +223,21 @@ namespace gr {
       }
 
       // copy data into output array
-      if (~d_started && d_asm_tail) {
+      if ((!d_started) && (d_asm_tail)) {
           // ASM + PACKET + ASM
           memcpy(out, &d_first_pkt, TOTAL_FRAME_LEN + SYNC_WORD_LEN);
           d_started = true;
+          //printf("\n\nFirst packet order\n\n");
 
           return (TOTAL_FRAME_LEN + SYNC_WORD_LEN);
       } else if (d_asm_tail) {
           // PACKET + ASM
           memcpy(out, &d_asm_tail_pkt, TOTAL_FRAME_LEN);
+          //printf("\n\nReverse packet order\n\n");
       } else {
           // ASM + PACKET
           memcpy(out, &d_pkt, TOTAL_FRAME_LEN);
+          //printf("\n\nNormal packet order\n\n");
       }
 
       // reset state
