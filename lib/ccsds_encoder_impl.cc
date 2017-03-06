@@ -229,6 +229,13 @@ namespace gr {
           d_started = true;
           //printf("\n\nFirst packet order\n\n");
 
+          /*
+          for (size_t i=0; i < (TOTAL_FRAME_LEN + SYNC_WORD_LEN); i++) {
+              printf("%d ", out[i]);
+          }
+          printf("\n");
+          */
+
           return (TOTAL_FRAME_LEN + SYNC_WORD_LEN);
       } else if (d_asm_tail) {
           // PACKET + ASM
@@ -239,6 +246,13 @@ namespace gr {
           memcpy(out, &d_pkt, TOTAL_FRAME_LEN);
           //printf("\n\nNormal packet order\n\n");
       }
+
+      /*
+      for (size_t i=0; i < (TOTAL_FRAME_LEN); i++) {
+          printf("%d ", out[i]);
+      }
+      printf("\n");
+      */
 
       // reset state
       d_curr_len = 0;

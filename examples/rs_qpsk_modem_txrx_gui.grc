@@ -2089,6 +2089,10 @@ For example (171,133) =&gt; (121,91)</value>
   <block>
     <key>ccsds_ccsds_encoder</key>
     <param>
+      <key>asm_tail</key>
+      <value>False</value>
+    </param>
+    <param>
       <key>alias</key>
       <value></value>
     </param>

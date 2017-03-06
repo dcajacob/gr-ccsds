@@ -3723,6 +3723,10 @@ in some situations.  Copy helped.</value>
   <block>
     <key>ccsds_ccsds_encoder</key>
     <param>
+      <key>asm_tail</key>
+      <value>False</value>
+    </param>
+    <param>
       <key>alias</key>
       <value></value>
     </param>
@@ -3756,7 +3760,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>idle</key>
-      <value>True</value>
+      <value>False</value>
     </param>
     <param>
       <key>type</key>
@@ -5641,7 +5645,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(736, 876)</value>
+      <value>(760, 876)</value>
     </param>
     <param>
       <key>gui_hint</key>
