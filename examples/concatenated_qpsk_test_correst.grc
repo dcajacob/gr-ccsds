@@ -3123,6 +3123,14 @@ in some situations.  Copy helped.</value>
       <value>ccsds_encoder</value>
     </param>
     <param>
+      <key>idle_block_time</key>
+      <value>50</value>
+    </param>
+    <param>
+      <key>idle</key>
+      <value>True</value>
+    </param>
+    <param>
       <key>type</key>
       <value>byte</value>
     </param>
@@ -3382,10 +3390,6 @@ in some situations.  Copy helped.</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
-    </param>
-    <param>
-      <key>showports</key>
-      <value>True</value>
     </param>
   </block>
   <block>

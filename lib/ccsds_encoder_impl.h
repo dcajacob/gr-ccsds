@@ -37,8 +37,10 @@ namespace gr {
          bool d_scramble;
          bool d_idle;
          float d_idle_block_time;
+         bool d_asm_tail;
          bool d_printing;
          bool d_verbose;
+         bool d_started;
 
          uint32_t d_num_frames;
 
@@ -47,6 +49,8 @@ namespace gr {
          size_t d_curr_len;
 
          struct ccsds_tx_pkt d_pkt;
+         struct ccsds_tx_first_pkt d_first_pkt;
+         struct ccsds_tx_asm_tail_pkt d_asm_tail_pkt;
          reed_solomon d_rs;
 
          void copy_stream_tags();
@@ -55,7 +59,7 @@ namespace gr {
       int calculate_output_stream_length(const gr_vector_int &ninput_items);
 
      public:
-      ccsds_encoder_impl(size_t itemsize, const std::string& len_tag_key, bool rs_encode, bool interleave, bool scramble, bool idle, float idle_block_time, bool printing, bool verbose);
+      ccsds_encoder_impl(size_t itemsize, const std::string& len_tag_key, bool rs_encode, bool interleave, bool scramble, bool idle, float idle_block_time, bool asm_tail, bool printing, bool verbose);
       ~ccsds_encoder_impl();
 
       uint32_t num_frames() const {return d_num_frames;}

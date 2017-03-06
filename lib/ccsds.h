@@ -47,6 +47,17 @@ struct ccsds_tx_pkt {
     uint8_t codeword[CODEWORD_LEN];
 }__attribute__((packed));
 
+struct ccsds_tx_first_pkt {
+    uint8_t sync_word[SYNC_WORD_LEN];
+    uint8_t codeword[CODEWORD_LEN];
+    uint8_t post_sync_word[SYNC_WORD_LEN];
+}__attribute__((packed));
+
+struct ccsds_tx_asm_tail_pkt {
+    uint8_t codeword[CODEWORD_LEN];
+    uint8_t sync_word[SYNC_WORD_LEN];
+}__attribute__((packed));
+
 const uint8_t SYNC_WORD[SYNC_WORD_LEN] = {0x1a, 0xcf, 0xfc, 0x1d};
 // generator polynome: 0x1a9 (x^8 + x^7 + x^5 + x^3 + 1)
 const uint8_t SCRAMBLER_POLY[SCRAMBLER_POLY_LEN] = {0xFF, 0x48, 0x0E, 0xC0, 0x9A, 0x0D, 0x70, 0xBC,

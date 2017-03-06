@@ -32,16 +32,16 @@ namespace gr {
   namespace ccsds {
 
     ccsds_encoder::sptr
-    ccsds_encoder::make(size_t itemsize, const std::string& len_tag_key, bool rs_encode, bool interleave, bool scramble, bool idle, float idle_block_time, bool printing, bool verbose)
+    ccsds_encoder::make(size_t itemsize, const std::string& len_tag_key, bool rs_encode, bool interleave, bool scramble, bool idle, float idle_block_time, bool asm_tail, bool printing, bool verbose)
     {
       return gnuradio::get_initial_sptr
-        (new ccsds_encoder_impl(itemsize, len_tag_key, rs_encode, interleave, scramble, idle, idle_block_time, printing, verbose));
+        (new ccsds_encoder_impl(itemsize, len_tag_key, rs_encode, interleave, scramble, idle, idle_block_time, asm_tail, printing, verbose));
     }
 
     /*
      * The private constructor
      */
-    ccsds_encoder_impl::ccsds_encoder_impl(size_t itemsize, const std::string& len_tag_key, bool rs_encode, bool interleave, bool scramble, bool idle, float idle_block_time, bool printing, bool verbose)
+    ccsds_encoder_impl::ccsds_encoder_impl(size_t itemsize, const std::string& len_tag_key, bool rs_encode, bool interleave, bool scramble, bool idle, float idle_block_time, bool asm_tail, bool printing, bool verbose)
       : gr::tagged_stream_block("ccsds_encoder",
               gr::io_signature::make(itemsize==0 ? 0:1, itemsize==0 ? 0:1, itemsize),
               gr::io_signature::make(1, 1, sizeof(uint8_t)), "packet_len"),
@@ -51,16 +51,24 @@ namespace gr {
         d_scramble(scramble),
         d_idle(idle),
         d_idle_block_time(idle_block_time),
+        d_asm_tail(asm_tail),
         d_printing(printing),
         d_verbose(verbose),
         d_curr_len(0),
-        d_num_frames(0)
+        d_num_frames(0),
+        d_started(false)
     {
       if (d_itemsize == 0) {
           message_port_register_in(pmt::mp("in"));
       }
 
-      memcpy(d_pkt.sync_word, SYNC_WORD, SYNC_WORD_LEN);
+      if (d_asm_tail) {
+        memcpy(d_first_pkt.sync_word, SYNC_WORD, SYNC_WORD_LEN);
+        memcpy(d_first_pkt.post_sync_word, SYNC_WORD, SYNC_WORD_LEN);
+        memcpy(d_asm_tail_pkt.sync_word, SYNC_WORD, SYNC_WORD_LEN);
+      } else {
+        memcpy(d_pkt.sync_word, SYNC_WORD, SYNC_WORD_LEN);
+      }
     }
 
     /*
@@ -157,17 +165,41 @@ namespace gr {
               memset(&rs_block[RS_DATA_LEN], 0, RS_PARITY_LEN);
           }
 
-          // data into output array
-          if (d_interleave) {
-              for (uint8_t j=0; j<RS_BLOCK_LEN; j++)
-                  d_pkt.codeword[i + (RS_NBLOCKS*j)] = rs_block[j];
+          if (~d_started && d_asm_tail) {
+              // data into output array
+              if (d_interleave) {
+                  for (uint8_t j=0; j<RS_BLOCK_LEN; j++)
+                      d_first_pkt.codeword[i + (RS_NBLOCKS*j)] = rs_block[j];
+              } else {
+                  memcpy(&d_first_pkt.codeword[i*RS_BLOCK_LEN], rs_block, RS_BLOCK_LEN);
+              }
+          } else if (d_asm_tail) {
+              // data into output array
+              if (d_interleave) {
+                  for (uint8_t j=0; j<RS_BLOCK_LEN; j++)
+                      d_asm_tail_pkt.codeword[i + (RS_NBLOCKS*j)] = rs_block[j];
+              } else {
+                  memcpy(&d_asm_tail_pkt.codeword[i*RS_BLOCK_LEN], rs_block, RS_BLOCK_LEN);
+              }
           } else {
-              memcpy(&d_pkt.codeword[i*RS_BLOCK_LEN], rs_block, RS_BLOCK_LEN);
+              // data into output array
+              if (d_interleave) {
+                  for (uint8_t j=0; j<RS_BLOCK_LEN; j++)
+                      d_pkt.codeword[i + (RS_NBLOCKS*j)] = rs_block[j];
+              } else {
+                  memcpy(&d_pkt.codeword[i*RS_BLOCK_LEN], rs_block, RS_BLOCK_LEN);
+              }
           }
       }
 
       if (d_scramble) {
-          scramble(d_pkt.codeword, CODEWORD_LEN);
+          if (~d_started && d_asm_tail) {
+              scramble(d_first_pkt.codeword, CODEWORD_LEN);
+          } else if (d_asm_tail) {
+              scramble(d_asm_tail_pkt.codeword, CODEWORD_LEN);
+          } else {
+              scramble(d_pkt.codeword, CODEWORD_LEN);
+          }
       }
 
       d_num_frames++;
@@ -177,11 +209,29 @@ namespace gr {
       }
 
       if (d_printing) {
-          print_bytes(d_pkt.codeword, CODEWORD_LEN);
+          if (~d_started && d_asm_tail) {
+              print_bytes(d_first_pkt.codeword, CODEWORD_LEN);
+          } else if (d_asm_tail) {
+              print_bytes(d_asm_tail_pkt.codeword, CODEWORD_LEN);
+          } else {
+              print_bytes(d_pkt.codeword, CODEWORD_LEN);
+          }
       }
 
       // copy data into output array
-      memcpy(out, &d_pkt, TOTAL_FRAME_LEN);
+      if (~d_started && d_asm_tail) {
+          // ASM + PACKET + ASM
+          memcpy(out, &d_first_pkt, TOTAL_FRAME_LEN + SYNC_WORD_LEN);
+          d_started = true;
+
+          return (TOTAL_FRAME_LEN + SYNC_WORD_LEN);
+      } else if (d_asm_tail) {
+          // PACKET + ASM
+          memcpy(out, &d_asm_tail_pkt, TOTAL_FRAME_LEN);
+      } else {
+          // ASM + PACKET
+          memcpy(out, &d_pkt, TOTAL_FRAME_LEN);
+      }
 
       // reset state
       d_curr_len = 0;

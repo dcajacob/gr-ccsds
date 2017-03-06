@@ -4,7 +4,7 @@
   <key>ccsds_ccsds_encoder</key>
   <category>ccsds</category>
   <import>import ccsds</import>
-  <make>ccsds.ccsds_encoder($type.size, $len_tag_key, $rs_encode, $interleave, $scramble, $idle, $idle_block_time, $printing, $verbose)</make>
+  <make>ccsds.ccsds_encoder($type.size, $len_tag_key, $rs_encode, $interleave, $scramble, $idle, $idle_block_time, $asm_tail, $printing, $verbose)</make>
   <callback>set_idle($idle)</callback>
 	<callback>set_idle_block_time($idle_block_time)</callback>
   <param>
@@ -82,6 +82,21 @@
     <key>idle_block_time</key>
     <value>50</value>
     <type>float</type>
+  </param>
+  <param>
+    <name>Add ASM to Tail</name>
+    <key>asm_tail</key>
+    <value>False</value>
+    <type>enum</type>
+    <hide>part</hide>
+    <option>
+        <name>Yes</name>
+        <key>True</key>
+    </option>
+    <option>
+        <name>No</name>
+        <key>False</key>
+    </option>
   </param>
   <param>
     <name>Print packets</name>
