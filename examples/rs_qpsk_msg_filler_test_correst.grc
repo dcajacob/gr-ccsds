@@ -3756,7 +3756,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>idle</key>
-      <value>True</value>
+      <value>False</value>
     </param>
     <param>
       <key>type</key>
