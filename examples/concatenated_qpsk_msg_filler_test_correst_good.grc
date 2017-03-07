@@ -3287,7 +3287,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>2</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3671,7 +3671,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>2</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4582,7 +4582,7 @@ Therefore add/sub 24 offset to fillframe mod</value>
     <key>ccsds_ccsds_encoder</key>
     <param>
       <key>asm_tail</key>
-      <value>False</value>
+      <value>True</value>
     </param>
     <param>
       <key>alias</key>
