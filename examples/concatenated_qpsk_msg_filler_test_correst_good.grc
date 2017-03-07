@@ -792,6 +792,92 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>function_name</key>
+      <value>num_fillframes_decoded</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(560, 1952)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>fillframes_decoded</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>poll_rate</key>
+      <value>10</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_function_probe</key>
+    <param>
+      <key>block_id</key>
+      <value>ccsds_insert_idle_frame</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>function_args</key>
+      <value></value>
+    </param>
+    <param>
+      <key>function_name</key>
+      <value>num_fillframes_added</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(56, 1944)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>fillframes_sent</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>poll_rate</key>
+      <value>10</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_function_probe</key>
+    <param>
+      <key>block_id</key>
+      <value>ccsds_decoder</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>function_args</key>
+      <value></value>
+    </param>
+    <param>
+      <key>function_name</key>
       <value>num_frames_decoded</value>
     </param>
     <param>
@@ -1880,7 +1966,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(240, 1939)</value>
+      <value>(152, 1596)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1897,6 +1983,135 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>label</key>
       <value>frames sent minus received</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>raw</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_label</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>fillframes_sent - fillframes_decoded</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>formatter</key>
+      <value>None</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(392, 1596)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>variable_qtgui_label_0_1_1_0</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>fill frames sent minus received</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>raw</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_label</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>fillframes_sent</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>formatter</key>
+      <value>None</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(248, 1948)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>qtgui@2:3,0</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>variable_qtgui_label_0_1_1_0_0</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>fill frames sent</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>raw</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_label</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>fillframes_sent - fillframes_decoded</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>formatter</key>
+      <value>None</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(392, 1948)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>qtgui@2:3,1</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>variable_qtgui_label_0_1_1_0_0_0</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>fill frames received</value>
     </param>
     <param>
       <key>type</key>
@@ -3060,7 +3275,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(432, 428)</value>
+      <value>(448, 428)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3406,7 +3621,7 @@ Therefore add/sub 24 offset to fillframe mod</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(585, 427)</value>
+      <value>(592, 428)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3453,7 +3668,7 @@ Therefore add/sub 24 offset to fillframe mod</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>2</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4147,7 +4362,7 @@ Therefore add/sub 24 offset to fillframe mod</value>
     <key>ccsds_ccsds_encoder</key>
     <param>
       <key>asm_tail</key>
-      <value>True</value>
+      <value>False</value>
     </param>
     <param>
       <key>alias</key>
@@ -4250,7 +4465,7 @@ Therefore add/sub 24 offset to fillframe mod</value>
     </param>
     <param>
       <key>id</key>
-      <value>ccsds_insert_idle_frame_0</value>
+      <value>ccsds_insert_idle_frame</value>
     </param>
     <param>
       <key>modulated_vector</key>
@@ -4484,10 +4699,6 @@ Therefore add/sub 24 offset to fillframe mod</value>
       <key>minoutbuf</key>
       <value>0</value>
     </param>
-    <param>
-      <key>showports</key>
-      <value>True</value>
-    </param>
   </block>
   <block>
     <key>digital_constellation_modulator</key>
@@ -4594,10 +4805,6 @@ Therefore add/sub 24 offset to fillframe mod</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
-    </param>
-    <param>
-      <key>showports</key>
-      <value>True</value>
     </param>
   </block>
   <block>
@@ -9564,7 +9771,7 @@ Therefore add/sub 24 offset to fillframe mod</value>
   </connection>
   <connection>
     <source_block_id>blocks_skiphead_1_0</source_block_id>
-    <sink_block_id>ccsds_insert_idle_frame_0</sink_block_id>
+    <sink_block_id>ccsds_insert_idle_frame</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -9671,7 +9878,7 @@ Therefore add/sub 24 offset to fillframe mod</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>ccsds_insert_idle_frame_0</source_block_id>
+    <source_block_id>ccsds_insert_idle_frame</source_block_id>
     <sink_block_id>channels_channel_model_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>

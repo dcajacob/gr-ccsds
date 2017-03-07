@@ -47,6 +47,11 @@ namespace gr {
        * creating new instances.
        */
       static sptr make(const std::vector<gr_complex> &modulated_vector);
+
+      /*!
+       * \brief return number of fill frames added
+       */
+      virtual uint32_t num_fillframes_added() const = 0;
     };
 
   } // namespace ccsds

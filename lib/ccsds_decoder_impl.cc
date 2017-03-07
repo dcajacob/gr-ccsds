@@ -53,7 +53,8 @@ namespace gr {
         d_printing(printing),
         d_num_frames_received(0),
         d_num_frames_decoded(0),
-        d_num_subframes_decoded(0)
+        d_num_subframes_decoded(0),
+        d_num_fillframes_decoded(0)
     {
       message_port_register_out(pmt::mp("out"));
 
@@ -130,11 +131,19 @@ namespace gr {
                           message_port_pub(pmt::mp("out"), pdu);
                       }
 
+                      if (is_fill_frame()) {
+                          // detect and drop fill frames
+                          d_num_fillframes_decoded++;
+
+                          return 0;
+                      }
+
                       if (d_verbose) {
-                          printf("\tframes received: %i\n\tframes decoded: %i\n\tsubframes decoded: %i\n",
+                          printf("\tframes received: %i\n\tframes decoded: %i\n\tsubframes decoded: %i\n\tfillframes decoded: %i\n",
                                   d_num_frames_received,
                                   d_num_frames_decoded,
-                                  d_num_subframes_decoded);
+                                  d_num_subframes_decoded,
+                                  d_num_fillframes_decoded);
                       }
                       enter_sync_search();
                   }
@@ -213,6 +222,17 @@ namespace gr {
         if (success) d_num_frames_decoded++;
 
         return success;
+    }
+
+    bool ccsds_decoder_impl::is_fill_frame()
+    {
+        uint16_t sum = 0;
+
+        for (size_t i=0; i < CODEWORD_LEN; i++) {
+            sum += d_codeword[i];
+        }
+
+        return (sum == 0);
     }
 
     uint8_t ccsds_decoder_impl::reverse(uint8_t x, uint8_t n)

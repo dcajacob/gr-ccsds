@@ -57,10 +57,14 @@ namespace gr {
        */
       virtual uint32_t num_subframes_decoded() const = 0;
 
+      /*!
+       * \brief return number of fill frames decoded
+       */
+      virtual uint32_t num_fillframes_decoded() const = 0;
+
     };
 
   } // namespace ccsds
 } // namespace gr
 
 #endif /* INCLUDED_CCSDS_CCSDS_DECODER_H */
-
