@@ -1015,7 +1015,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(29411-4, 49867+4)]</value>
+      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(29411-4-12, 49867+4-12)]</value>
     </param>
   </block>
   <block>
@@ -3393,7 +3393,8 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>Darek wants this to be 12+64 (76)
+Therefore add/sub 24 offset to fillframe mod</value>
     </param>
     <param>
       <key>affinity</key>
@@ -4483,6 +4484,10 @@ in some situations.  Copy helped.</value>
       <key>minoutbuf</key>
       <value>0</value>
     </param>
+    <param>
+      <key>showports</key>
+      <value>True</value>
+    </param>
   </block>
   <block>
     <key>digital_constellation_modulator</key>
@@ -4589,6 +4594,10 @@ in some situations.  Copy helped.</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>showports</key>
+      <value>True</value>
     </param>
   </block>
   <block>

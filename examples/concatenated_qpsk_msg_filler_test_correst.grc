@@ -3151,6 +3151,57 @@ in some situations.  Copy helped.</value>
     </param>
   </block>
   <block>
+    <key>blocks_skiphead</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(56, 420)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_skiphead_0_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>num_items</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
     <key>blocks_stream_to_tagged_stream</key>
     <param>
       <key>alias</key>
@@ -3904,7 +3955,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(52, 440)</value>
+      <value>(28, 488)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4087,6 +4138,10 @@ in some situations.  Copy helped.</value>
       <key>minoutbuf</key>
       <value>0</value>
     </param>
+    <param>
+      <key>showports</key>
+      <value>True</value>
+    </param>
   </block>
   <block>
     <key>digital_constellation_modulator</key>
@@ -4193,6 +4248,10 @@ in some situations.  Copy helped.</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>showports</key>
+      <value>True</value>
     </param>
   </block>
   <block>
@@ -8739,6 +8798,12 @@ in some situations.  Copy helped.</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>blocks_skiphead_0_0</source_block_id>
+    <sink_block_id>ccsds_insert_idle_frame_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>blocks_stream_to_tagged_stream_0</source_block_id>
     <sink_block_id>ccsds_encoder</sink_block_id>
     <source_key>0</source_key>
@@ -8872,7 +8937,7 @@ in some situations.  Copy helped.</value>
   </connection>
   <connection>
     <source_block_id>digital_constellation_modulator_0</source_block_id>
-    <sink_block_id>ccsds_insert_idle_frame_0</sink_block_id>
+    <sink_block_id>blocks_skiphead_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

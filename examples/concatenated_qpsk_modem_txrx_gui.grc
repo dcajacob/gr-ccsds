@@ -1572,7 +1572,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(400, 436)</value>
+      <value>(272, 436)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1640,6 +1640,108 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_skiphead</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(48, 516)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_skiphead_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>num_items</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_skiphead</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(416, 436)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_skiphead_1</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>num_items</key>
+      <value>12+64+12</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
     </param>
   </block>
   <block>
@@ -1788,7 +1890,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>mtu</key>
-      <value>mtu</value>
+      <value>mtu-2</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1840,6 +1942,57 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>ccsds_decapsulate_net</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>disaggregate</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(448, 1588)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>ccsds_decapsulate_net_0</value>
+    </param>
+    <param>
+      <key>mtu</key>
+      <value>1115</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>pad_byte</key>
+      <value>0x7E</value>
     </param>
   </block>
   <block>
@@ -1902,7 +2055,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>verbose</key>
-      <value>True</value>
+      <value>False</value>
     </param>
   </block>
   <block>
@@ -1981,6 +2134,61 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>ccsds_encapsulate_net</key>
+    <param>
+      <key>aggregate</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(856, 1664)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>ccsds_encapsulate_net_0</value>
+    </param>
+    <param>
+      <key>mtu</key>
+      <value>1115</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>pad_byte</key>
+      <value>0x7E</value>
+    </param>
+    <param>
+      <key>timeout</key>
+      <value>100</value>
     </param>
   </block>
   <block>
@@ -2192,7 +2400,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(152, 416)</value>
+      <value>(48, 416)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2264,6 +2472,10 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>showports</key>
+      <value>True</value>
     </param>
   </block>
   <block>
@@ -9468,6 +9680,18 @@ doing this before PFB CS</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>blocks_skiphead_0</source_block_id>
+    <sink_block_id>ccsds_insert_idle_frame_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_skiphead_1</source_block_id>
+    <sink_block_id>blocks_pack_k_bits_bb_0_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>blocks_stream_to_tagged_stream_0</source_block_id>
     <sink_block_id>ccsds_encoder</sink_block_id>
     <source_key>0</source_key>
@@ -9481,7 +9705,7 @@ doing this before PFB CS</value>
   </connection>
   <connection>
     <source_block_id>blocks_tuntap_pdu_0_0</source_block_id>
-    <sink_block_id>virtual_sink_0</sink_block_id>
+    <sink_block_id>ccsds_encapsulate_net_0</sink_block_id>
     <source_key>pdus</source_key>
     <sink_key>in</sink_key>
   </connection>
@@ -9492,6 +9716,12 @@ doing this before PFB CS</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>ccsds_decapsulate_net_0</source_block_id>
+    <sink_block_id>blocks_tuntap_pdu_0_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>pdus</sink_key>
+  </connection>
+  <connection>
     <source_block_id>ccsds_decoder</source_block_id>
     <sink_block_id>blocks_pdu_to_tagged_stream_0</sink_block_id>
     <source_key>out</source_key>
@@ -9499,9 +9729,9 @@ doing this before PFB CS</value>
   </connection>
   <connection>
     <source_block_id>ccsds_decoder</source_block_id>
-    <sink_block_id>blocks_tuntap_pdu_0_0</sink_block_id>
+    <sink_block_id>ccsds_decapsulate_net_0</sink_block_id>
     <source_key>out</source_key>
-    <sink_key>pdus</sink_key>
+    <sink_key>in</sink_key>
   </connection>
   <connection>
     <source_block_id>ccsds_diff_decoder_0</source_block_id>
@@ -9514,6 +9744,12 @@ doing this before PFB CS</value>
     <sink_block_id>fec_extended_encoder_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>ccsds_encapsulate_net_0</source_block_id>
+    <sink_block_id>virtual_sink_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>in</sink_key>
   </connection>
   <connection>
     <source_block_id>ccsds_encoder</source_block_id>
@@ -9535,7 +9771,7 @@ doing this before PFB CS</value>
   </connection>
   <connection>
     <source_block_id>digital_constellation_modulator_0</source_block_id>
-    <sink_block_id>ccsds_insert_idle_frame_0</sink_block_id>
+    <sink_block_id>blocks_skiphead_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -9619,7 +9855,7 @@ doing this before PFB CS</value>
   </connection>
   <connection>
     <source_block_id>fec_extended_encoder_0</source_block_id>
-    <sink_block_id>blocks_pack_k_bits_bb_0_0_0</sink_block_id>
+    <sink_block_id>blocks_skiphead_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
