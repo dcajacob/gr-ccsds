@@ -123,7 +123,7 @@ namespace gr {
             d_curr_len = pmt::length(d_curr_vec);
         }
 
-        if (~d_started && d_asm_tail) {
+        if (!d_started && d_asm_tail) {
             return (TOTAL_FRAME_LEN + SYNC_WORD_LEN);
         }
         return TOTAL_FRAME_LEN;
@@ -169,7 +169,7 @@ namespace gr {
               memset(&rs_block[RS_DATA_LEN], 0, RS_PARITY_LEN);
           }
 
-          if (~d_started && d_asm_tail) {
+          if (!d_started && d_asm_tail) {
               // data into output array
               if (d_interleave) {
                   for (uint8_t j=0; j<RS_BLOCK_LEN; j++)
@@ -197,7 +197,7 @@ namespace gr {
       }
 
       if (d_scramble) {
-          if (~d_started && d_asm_tail) {
+          if (!d_started && d_asm_tail) {
               scramble(d_first_pkt.codeword, CODEWORD_LEN);
           } else if (d_asm_tail) {
               scramble(d_asm_tail_pkt.codeword, CODEWORD_LEN);
@@ -213,7 +213,7 @@ namespace gr {
       }
 
       if (d_printing) {
-          if (~d_started && d_asm_tail) {
+          if (!d_started && d_asm_tail) {
               print_bytes(d_first_pkt.codeword, CODEWORD_LEN);
           } else if (d_asm_tail) {
               print_bytes(d_asm_tail_pkt.codeword, CODEWORD_LEN);
