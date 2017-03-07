@@ -135,7 +135,7 @@ namespace gr {
                           // detect and drop fill frames
                           d_num_fillframes_decoded++;
 
-                          return 0;
+                          //return 0;
                       }
 
                       if (d_verbose) {

@@ -622,6 +622,69 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
   </block>
   <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>-12+8+4</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1720, 16)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>qtgui@0:6,0,1,2</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>idle_frame_shift</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>Idle Frame Shift</value>
+    </param>
+    <param>
+      <key>min_len</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.Horizontal</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>-64</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>64</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
     <key>variable</key>
     <param>
       <key>comment</key>
@@ -633,7 +696,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1496, 4)</value>
+      <value>(1488, 28)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -660,7 +723,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1504, 84)</value>
+      <value>(1488, 108)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -672,7 +735,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(29411-4, 49867+4)]</value>
+      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(29411-4+idle_frame_shift, 49867+4+idle_frame_shift)]</value>
     </param>
   </block>
   <block>
@@ -1658,7 +1721,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2195,7 +2258,7 @@ For example (171,133) =&gt; (121,91)</value>
     <key>ccsds_ccsds_encoder</key>
     <param>
       <key>asm_tail</key>
-      <value>True</value>
+      <value>False</value>
     </param>
     <param>
       <key>alias</key>
@@ -2472,10 +2535,6 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
-    </param>
-    <param>
-      <key>showports</key>
-      <value>True</value>
     </param>
   </block>
   <block>

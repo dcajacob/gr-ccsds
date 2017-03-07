@@ -629,11 +629,38 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1640, 60)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>idle_frame_shift</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>-12+8+4</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
       <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1464, 12)</value>
+      <value>(1448, 28)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -660,7 +687,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1472, 92)</value>
+      <value>(1448, 108)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -672,7 +699,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(29411-4, 49867+4)]</value>
+      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(29411-4+idle_frame_shift, 49867+4+idle_frame_shift)]</value>
     </param>
   </block>
   <block>
@@ -1177,7 +1204,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1608,7 +1635,7 @@ For example (171,133) =&gt; (121,91)</value>
     <key>ccsds_ccsds_encoder</key>
     <param>
       <key>asm_tail</key>
-      <value>True</value>
+      <value>False</value>
     </param>
     <param>
       <key>alias</key>
@@ -1885,10 +1912,6 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
-    </param>
-    <param>
-      <key>showports</key>
-      <value>True</value>
     </param>
   </block>
   <block>
