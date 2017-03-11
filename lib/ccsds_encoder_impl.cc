@@ -56,7 +56,7 @@ namespace gr {
         d_verbose(verbose),
         d_curr_len(0),
         d_num_frames(0),
-        d_started(false)
+        d_started(true)
     {
       if (d_itemsize == 0) {
           message_port_register_in(pmt::mp("in"));
