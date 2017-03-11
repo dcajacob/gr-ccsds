@@ -423,6 +423,33 @@
     <key>variable</key>
     <param>
       <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1664, 28)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>enc_idle_frame_len</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>len(encoded_concat_idle_frame_nodiff)</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
       <value>Trim the first ASM off</value>
     </param>
     <param>
@@ -431,7 +458,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1352, 260)</value>
+      <value>(1480, 268)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -458,7 +485,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1544, 260)</value>
+      <value>(1672, 268)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -485,7 +512,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1544, 188)</value>
+      <value>(1672, 196)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -512,7 +539,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1352, 188)</value>
+      <value>(1480, 196)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -633,15 +660,15 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1720, 16)</value>
+      <value>(1872, 16)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value>qtgui@0:6,0,1,2</value>
+      <value>6,0,1,2</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -692,11 +719,11 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1488, 28)</value>
+      <value>(1656, 60)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -704,11 +731,11 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>id</key>
-      <value>modulated_idle_frame_trimmed</value>
+      <value>idle_frame_shift</value>
     </param>
     <param>
       <key>value</key>
-      <value>[modulated_preamble_untrimmed[i] for i in range(29411-4, 49867+4)]</value>
+      <value>-12+8+4-4</value>
     </param>
   </block>
   <block>
@@ -723,7 +750,34 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1488, 108)</value>
+      <value>(1456, 100)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>modulated_idle_frame_trimmed</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>[modulated_preamble_untrimmed[i] for i in range(len(pad)*8+24, len(pad)*8+24+enc_idle_frame_len*8+1-1)]</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1456, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -735,7 +789,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(29411-4+idle_frame_shift, 49867+4+idle_frame_shift)]</value>
+      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(len(pad)*8+24, len(pad)*8+24+enc_idle_frame_len*8+1-1)]</value>
     </param>
   </block>
   <block>
@@ -777,11 +831,14 @@ For example (171,133) =&gt; (121,91)</value>
     <key>variable_modulate_vector</key>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>Packed bytes get modulated.
+Samples come out.
+Since we're QPSK, you get
+8*sps/bps out.</value>
     </param>
     <param>
       <key>data</key>
-      <value>list(encoded_concat_idle_frame)+[0]*223*5+list(encoded_concat_idle_frame)+[255]*223*5+list(encoded_concat_idle_frame)+[0]*223*5</value>
+      <value>pad + list(encoded_concat_idle_frame) + pad</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -793,7 +850,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1280, 8)</value>
+      <value>(1256, 96)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -816,7 +873,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>data</key>
-      <value>list(encoded_concat_idle_frame_nodiff)+[0]*223*5+list(encoded_concat_idle_frame_nodiff)+[255]*223*5+list(encoded_concat_idle_frame_nodiff)+[0]*223*5</value>
+      <value>pad + list(encoded_concat_idle_frame_nodiff) + pad</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -828,7 +885,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1280, 96)</value>
+      <value>(1256, 8)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -895,6 +952,33 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>value</key>
       <value>32</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1664, 100)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>pad</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>[0]*223*5</value>
     </param>
   </block>
   <block>
@@ -1721,7 +1805,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>2</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1745,7 +1829,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>num_items</key>
-      <value>1</value>
+      <value>(1*0+(704+1)/2*sps_tx+(10232-316-32)*sps_tx)*0+12</value>
     </param>
     <param>
       <key>type</key>
@@ -1796,7 +1880,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>num_items</key>
-      <value>12+64+12</value>
+      <value>12</value>
     </param>
     <param>
       <key>type</key>

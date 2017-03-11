@@ -50,7 +50,7 @@
     </param>
     <param>
       <key>max_nouts</key>
-      <value>0</value>
+      <value>1279*8*2/8</value>
     </param>
     <param>
       <key>qt_qss_theme</key>
@@ -423,6 +423,33 @@
     <key>variable</key>
     <param>
       <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1792, 12)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>enc_idle_frame_len</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>len(encoded_concat_idle_frame_nodiff)</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
       <value>Trim the first ASM off</value>
     </param>
     <param>
@@ -431,7 +458,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1320, 260)</value>
+      <value>(1464, 268)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -458,7 +485,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1512, 260)</value>
+      <value>(1656, 268)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -485,7 +512,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1512, 188)</value>
+      <value>(1656, 196)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -512,7 +539,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1320, 188)</value>
+      <value>(1464, 196)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -645,7 +672,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>-12+8+4</value>
+      <value>-12+8+4-4</value>
     </param>
   </block>
   <block>
@@ -660,7 +687,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1448, 28)</value>
+      <value>(1440, 100)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -672,7 +699,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>[modulated_preamble_untrimmed[i] for i in range(29411-4, 49867+4)]</value>
+      <value>[modulated_preamble_untrimmed[i] for i in range(len(pad)*8+24, len(pad)*8+24+enc_idle_frame_len*8+1-1)]</value>
     </param>
   </block>
   <block>
@@ -687,7 +714,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1448, 108)</value>
+      <value>(1440, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -699,7 +726,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(29411-4+idle_frame_shift, 49867+4+idle_frame_shift)]</value>
+      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(len(pad)*8+24, len(pad)*8+24+enc_idle_frame_len*8+1-1)]</value>
     </param>
   </block>
   <block>
@@ -741,11 +768,14 @@ For example (171,133) =&gt; (121,91)</value>
     <key>variable_modulate_vector</key>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>Packed bytes get modulated.
+Samples come out.
+Since we're QPSK, you get
+8*sps/bps out.</value>
     </param>
     <param>
       <key>data</key>
-      <value>list(encoded_concat_idle_frame)+[0]*223*5+list(encoded_concat_idle_frame)+[255]*223*5+list(encoded_concat_idle_frame)+[0]*223*5</value>
+      <value>pad + list(encoded_concat_idle_frame) + pad</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -757,7 +787,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1248, 8)</value>
+      <value>(1240, 96)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -780,7 +810,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>data</key>
-      <value>list(encoded_concat_idle_frame_nodiff)+[0]*223*5+list(encoded_concat_idle_frame_nodiff)+[255]*223*5+list(encoded_concat_idle_frame_nodiff)+[0]*223*5</value>
+      <value>pad + list(encoded_concat_idle_frame_nodiff) + pad</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -792,7 +822,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1248, 96)</value>
+      <value>(1240, 8)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -859,6 +889,33 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>value</key>
       <value>32</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1792, 84)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>pad</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>[0]*223*5</value>
     </param>
   </block>
   <block>
@@ -1204,7 +1261,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>2</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1228,7 +1285,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>num_items</key>
-      <value>1</value>
+      <value>(1*0+(704+1)/2*sps_tx+(10232-316-32)*sps_tx)*0+12</value>
     </param>
     <param>
       <key>type</key>
@@ -1279,7 +1336,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>num_items</key>
-      <value>12+64+12</value>
+      <value>12</value>
     </param>
     <param>
       <key>type</key>
