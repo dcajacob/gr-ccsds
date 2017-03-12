@@ -81,7 +81,7 @@ namespace gr {
         consume_each (num_frames*d_frame_size);
 
         return (num_frames*d_frame_size);
-      } else {
+      } else if (d_frame_size >= noutput_items) {
         // Push out a single idle frame
         //printf("%d input items available. %d output items available.\n", ninput_items[0], noutput_items);
         //printf("Pushing an idle packet of size %d.\n", d_frame_size);
@@ -93,6 +93,8 @@ namespace gr {
         d_num_fillframes_added++;
 
         return d_frame_size;
+      } else {
+        return 0;
       }
     }
 
