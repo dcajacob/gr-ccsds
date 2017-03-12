@@ -71,12 +71,16 @@ namespace gr {
       const gr_complex *in = (const gr_complex *) input_items[0];
       gr_complex *out = (gr_complex *) output_items[0];
 
-      if (ninput_items[0] >= d_frame_size) {
-        //printf("\nProcessing %d items from input.\n\n", d_frame_size);
-        memcpy(out, &in[0], sizeof(gr_complex)*d_frame_size);
-        consume_each (d_frame_size);
+      if ((ninput_items[0] >= d_frame_size) && (d_frame_size >= noutput_items)) {
 
-        return d_frame_size;
+        uint8_t num_frames = ninput_items[0] / d_frame_size;
+        num_frames = num_frames*d_frame_size / noutput_items;
+
+        printf("\nProcessing %d items in %d frames from input.\n\n", num_frames*d_frame_size, num_frames);
+        memcpy(out, &in[0], sizeof(gr_complex)*num_frames*d_frame_size);
+        consume_each (num_frames*d_frame_size);
+
+        return (num_frames*d_frame_size);
       } else {
         // Push out a single idle frame
         //printf("%d input items available. %d output items available.\n", ninput_items[0], noutput_items);

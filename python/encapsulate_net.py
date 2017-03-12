@@ -73,6 +73,7 @@ class encapsulate_net(gr.basic_block):
             buff.extend([self.pad_byte] * pad_length)
 
         if debug:
+            # FIXME: This printing out a value 1 byte short of what it should be...
             print "Pushing a packet of length %d bytes" % length
 
         self.message_port_pub(pmt.intern('out'), pmt.cons(pmt.PMT_NIL, pmt.init_u8vector(len(buff), buff)))
