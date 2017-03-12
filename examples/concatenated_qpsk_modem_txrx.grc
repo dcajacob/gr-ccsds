@@ -1285,7 +1285,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>num_items</key>
-      <value>(1*0+(704+1)/2*sps_tx+(10232-316-32)*sps_tx)*0+12</value>
+      <value>(1*0+(704+1)/2*sps_tx+(10232-316-32)*sps_tx)*0+1210232*2</value>
     </param>
     <param>
       <key>type</key>
