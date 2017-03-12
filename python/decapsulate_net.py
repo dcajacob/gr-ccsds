@@ -65,6 +65,11 @@ class decapsulate_net(gr.basic_block):
         if length == 0: # caught a Filler packet, drop it
             return
 
+        if length > (self.mtu - 2):
+            print "[ERROR] Received frame reported length is too long (%d bytes).  Cannot exceed %d bytes." % (length, (self.mtu - 2))
+            print pmt.u8vector_elements(msg)
+            return
+
         buff = list()
         buff.extend(pmt.u8vector_elements(msg)[2:2+length])
         #print buff
