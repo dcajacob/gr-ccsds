@@ -59,7 +59,7 @@ namespace gr {
     void
     insert_idle_frame_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
     {
-      ninput_items_required[0] = noutput_items;
+      /* <+forecast+> e.g.ninput_items_required[0] = noutput_items */
     }
 
     int
