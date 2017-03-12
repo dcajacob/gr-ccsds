@@ -3906,7 +3906,7 @@ Therefore add/sub 24 offset to fillframe mod</value>
     </param>
     <param>
       <key>num_items</key>
-      <value>12*2*2*0+1279*16+24</value>
+      <value>1279*16+24</value>
     </param>
     <param>
       <key>type</key>
