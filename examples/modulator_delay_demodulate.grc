@@ -357,7 +357,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(64, 956)</value>
+      <value>(48, 1004)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -562,6 +562,69 @@
     </param>
     <param>
       <key>value</key>
+      <value>0.01</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(744, 672)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>eq_gain</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>Equalizer: rate</value>
+    </param>
+    <param>
+      <key>min_len</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.Horizontal</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>0.0</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>0.001</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>0.1</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
       <value>24</value>
     </param>
     <param>
@@ -598,7 +661,7 @@
     </param>
     <param>
       <key>start</key>
-      <value>-len(sync_word)*8</value>
+      <value>-len(sync_word)*16</value>
     </param>
     <param>
       <key>step</key>
@@ -606,7 +669,7 @@
     </param>
     <param>
       <key>stop</key>
-      <value>len(sync_word)*8</value>
+      <value>len(sync_word)*16</value>
     </param>
     <param>
       <key>rangeType</key>
@@ -615,6 +678,33 @@
     <param>
       <key>widget</key>
       <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(32, 908)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>len_mod_vec</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>len(modulated_idle_frame_trimmed_nodiff)</value>
     </param>
   </block>
   <block>
@@ -823,6 +913,33 @@ Since we're QPSK, you get
     <param>
       <key>value</key>
       <value>[0]*223*5</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(536, 380)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>pad_len</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>len(pad)</value>
     </param>
   </block>
   <block>
@@ -2248,7 +2365,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_enabled</key>
-      <value>2</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
