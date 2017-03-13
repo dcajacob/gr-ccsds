@@ -1035,7 +1035,7 @@
     </param>
     <param>
       <key>vector</key>
-      <value>encoded_sync_word</value>
+      <value>encoded_sync_word_nodiff</value>
     </param>
   </block>
   <block>

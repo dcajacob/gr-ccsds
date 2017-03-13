@@ -353,7 +353,7 @@
     </param>
     <param>
       <key>framebits</key>
-      <value>2048</value>
+      <value>2048*0+1279*8*2</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -627,7 +627,7 @@ Less and it goes down.</value>
     </param>
     <param>
       <key>value</key>
-      <value>24-4</value>
+      <value>24-24</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -2241,7 +2241,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2269,7 +2269,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>propagate_tags</key>
-      <value>False</value>
+      <value>True</value>
     </param>
     <param>
       <key>vlen</key>
@@ -2806,7 +2806,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(680, 1084)</value>
+      <value>(672, 1084)</value>
     </param>
     <param>
       <key>_rotation</key>
