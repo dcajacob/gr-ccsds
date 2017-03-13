@@ -64,21 +64,15 @@ class encapsulate_net(gr.basic_block):
         #buff.extend([x for x in length])
         #buff.extend(pmt.u8vector_elements(msg))
         length = pmt.length(msg)
-
-        #buff.append(length >> 8) # MSB
-        #buff.append(length & 0xFF) # LSB
-        length_bytes = [ord(x) for x in struct.pack(">h", 340)]
-
-        for x in length_bytes:
-            buff.append(x)
+        buff.append(length >> 8) # MSB
+        buff.append(length & 0xFF) # LSB
         buff.extend(pmt.u8vector_elements(msg))
 
         pad_length = self.mtu - len(buff)
-        if pad_length > 0:
+        if pad_length:
             buff.extend([self.pad_byte] * pad_length)
 
         if debug:
-            # FIXME: This printing out a value 1 byte short of what it should be...
             print "Pushing a packet of length %d bytes" % length
 
         self.message_port_pub(pmt.intern('out'), pmt.cons(pmt.PMT_NIL, pmt.init_u8vector(len(buff), buff)))
