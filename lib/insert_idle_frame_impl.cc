@@ -76,9 +76,14 @@ namespace gr {
         uint8_t num_frames = ninput_items[0] / d_frame_size;
         num_frames = num_frames*d_frame_size / noutput_items;
 
-        printf("\nProcessing %d items in %d frames from input.\n\n", num_frames*d_frame_size, num_frames);
-        memcpy(out, &in[0], sizeof(gr_complex)*num_frames*d_frame_size);
-        consume_each (num_frames*d_frame_size);
+        //printf("\nProcessing %d items in %d frames from input.\n\n", num_frames*d_frame_size, num_frames);
+        //memcpy(out, &in[0], sizeof(gr_complex)*num_frames*d_frame_size);
+        //consume_each (num_frames*d_frame_size);
+
+        printf("\nProcessing %d items from input.\n\n", d_frame_size);
+        memcpy(out, &in[0], sizeof(gr_complex)*d_frame_size);
+        consume_each (d_frame_size);
+
 
         return (num_frames*d_frame_size);
       } else if (d_frame_size >= noutput_items) {
