@@ -4320,7 +4320,7 @@ Therefore add/sub 24 offset to fillframe mod</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>2</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4344,7 +4344,7 @@ Therefore add/sub 24 offset to fillframe mod</value>
     </param>
     <param>
       <key>num_items</key>
-      <value>1279*16+24</value>
+      <value>1279*8*sps_tx</value>
     </param>
     <param>
       <key>type</key>
@@ -5035,7 +5035,7 @@ Therefore add/sub 24 offset to fillframe mod</value>
     </param>
     <param>
       <key>threshold</key>
-      <value>1</value>
+      <value>4</value>
     </param>
     <param>
       <key>verbose</key>
