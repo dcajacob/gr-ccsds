@@ -50,7 +50,7 @@
     </param>
     <param>
       <key>max_nouts</key>
-      <value>1279*8*2/8</value>
+      <value>1279*8*sps_tx</value>
     </param>
     <param>
       <key>qt_qss_theme</key>
@@ -646,33 +646,6 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>mode</key>
       <value>fec.CC_STREAMING</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1624, 20)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>idle_frame_shift</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>24-24</value>
     </param>
   </block>
   <block>
@@ -1489,7 +1462,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>ifn</key>
-      <value>tun0</value>
+      <value>tun3</value>
     </param>
     <param>
       <key>mtu</key>
@@ -1658,7 +1631,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>verbose</key>
-      <value>False</value>
+      <value>True</value>
     </param>
   </block>
   <block>
@@ -2075,6 +2048,10 @@ Since we're QPSK, you get
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>showports</key>
+      <value>True</value>
     </param>
   </block>
   <block>
@@ -2710,6 +2687,49 @@ doing this before PFB CS</value>
     <param>
       <key>value</key>
       <value>50</value>
+    </param>
+  </block>
+  <block>
+    <key>parameter</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1640, 40)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>idle_frame_shift</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>Idle Frame Shift</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value></value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>intx</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0</value>
     </param>
   </block>
   <block>

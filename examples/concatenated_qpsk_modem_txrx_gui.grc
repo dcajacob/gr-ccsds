@@ -50,7 +50,7 @@
     </param>
     <param>
       <key>max_nouts</key>
-      <value>0</value>
+      <value>1279*8*sps_tx</value>
     </param>
     <param>
       <key>qt_qss_theme</key>
@@ -120,7 +120,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1320, 372)</value>
+      <value>(1320, 364)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -225,7 +225,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1272, 924)</value>
+      <value>(1136, 916)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -252,7 +252,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1272, 988)</value>
+      <value>(1136, 980)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -353,7 +353,7 @@
     </param>
     <param>
       <key>framebits</key>
-      <value>2048</value>
+      <value>1279*8</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -431,7 +431,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1784, 12)</value>
+      <value>(1784, 4)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -458,7 +458,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1472, 276)</value>
+      <value>(1472, 268)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -485,7 +485,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1664, 276)</value>
+      <value>(1664, 268)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -512,7 +512,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1664, 204)</value>
+      <value>(1664, 196)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -539,7 +539,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1472, 204)</value>
+      <value>(1472, 196)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -568,7 +568,7 @@ encoded sync word.
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1392, 660)</value>
+      <value>(1344, 684)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -613,7 +613,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>framebits</key>
-      <value>2048</value>
+      <value>1279*8</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -746,38 +746,11 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1616, 20)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>idle_frame_shift</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>24-24</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
       <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1432, 92)</value>
+      <value>(1432, 84)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -804,7 +777,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1432, 20)</value>
+      <value>(1432, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -993,7 +966,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1784, 84)</value>
+      <value>(1784, 76)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1409,7 +1382,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(744, 564)</value>
+      <value>(640, 564)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1495,7 +1468,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(592, 708)</value>
+      <value>(592, 772)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1746,7 +1719,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(272, 436)</value>
+      <value>(328, 460)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1836,7 +1809,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(48, 516)</value>
+      <value>(96, 540)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1887,7 +1860,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(416, 436)</value>
+      <value>(464, 460)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1993,7 +1966,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(96, 1148)</value>
+      <value>(96, 1212)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2048,7 +2021,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(976, 1588)</value>
+      <value>(1424, 1568)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2060,7 +2033,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>ifn</key>
-      <value>tun0</value>
+      <value>tun3</value>
     </param>
     <param>
       <key>mtu</key>
@@ -2095,7 +2068,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(912, 316)</value>
+      <value>(912, 340)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2142,7 +2115,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(728, 1588)</value>
+      <value>(1176, 1568)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2197,7 +2170,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(520, 1480)</value>
+      <value>(1000, 1464)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2229,7 +2202,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>verbose</key>
-      <value>False</value>
+      <value>True</value>
     </param>
   </block>
   <block>
@@ -2252,7 +2225,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(192, 1504)</value>
+      <value>(672, 1488)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2291,7 +2264,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(808, 440)</value>
+      <value>(824, 464)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2334,7 +2307,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1168, 1584)</value>
+      <value>(1632, 1568)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2389,7 +2362,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(696, 280)</value>
+      <value>(688, 304)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2464,7 +2437,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(72, 580)</value>
+      <value>(88, 596)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2507,7 +2480,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(568, 912)</value>
+      <value>(568, 984)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2574,7 +2547,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(48, 416)</value>
+      <value>(80, 440)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2590,7 +2563,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>maxoutbuf</key>
-      <value>mtu</value>
+      <value>0</value>
     </param>
     <param>
       <key>minoutbuf</key>
@@ -2629,7 +2602,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(704, 1332)</value>
+      <value>(704, 1396)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2646,6 +2619,10 @@ Since we're QPSK, you get
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>showports</key>
+      <value>True</value>
     </param>
   </block>
   <block>
@@ -2723,7 +2700,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(296, 1128)</value>
+      <value>(296, 1200)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2778,7 +2755,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(800, 936)</value>
+      <value>(808, 1008)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2832,7 +2809,7 @@ doing this before PFB CS</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(528, 1136)</value>
+      <value>(584, 1272)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2887,7 +2864,7 @@ doing this before PFB CS</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(360, 712)</value>
+      <value>(360, 784)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2946,7 +2923,7 @@ doing this before PFB CS</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(320, 936)</value>
+      <value>(320, 1024)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3064,7 +3041,7 @@ doing this before PFB CS</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(464, 1312)</value>
+      <value>(464, 1384)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3119,7 +3096,7 @@ doing this before PFB CS</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(560, 420)</value>
+      <value>(600, 444)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3336,6 +3313,49 @@ doing this before PFB CS</value>
     <param>
       <key>value</key>
       <value>50</value>
+    </param>
+  </block>
+  <block>
+    <key>parameter</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1632, 16)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>idle_frame_shift</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>Idle Frame Shift</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value></value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>intx</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0</value>
     </param>
   </block>
   <block>
@@ -3881,7 +3901,7 @@ doing this before PFB CS</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1128, 780)</value>
+      <value>(1128, 828)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -6845,7 +6865,7 @@ doing this before PFB CS</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(304, 528)</value>
+      <value>(328, 544)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -8180,7 +8200,7 @@ doing this before PFB CS</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(32, 816)</value>
+      <value>(32, 888)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -9729,7 +9749,7 @@ doing this before PFB CS</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1392, 1604)</value>
+      <value>(1864, 1584)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -9756,7 +9776,7 @@ doing this before PFB CS</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(472, 244)</value>
+      <value>(488, 268)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -9862,12 +9882,6 @@ doing this before PFB CS</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_stream_to_tagged_stream_0</source_block_id>
-    <sink_block_id>ccsds_encoder</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>in</sink_key>
-  </connection>
-  <connection>
     <source_block_id>blocks_tag_gate_0</source_block_id>
     <sink_block_id>digital_corr_est_cc_0_0_0</sink_block_id>
     <source_key>0</source_key>
@@ -9888,12 +9902,6 @@ doing this before PFB CS</value>
   <connection>
     <source_block_id>ccsds_decapsulate_net_0</source_block_id>
     <sink_block_id>blocks_tuntap_pdu_0_0</sink_block_id>
-    <source_key>out</source_key>
-    <sink_key>pdus</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>ccsds_decoder</source_block_id>
-    <sink_block_id>blocks_pdu_to_tagged_stream_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>pdus</sink_key>
   </connection>
@@ -9988,14 +9996,14 @@ doing this before PFB CS</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>digital_costas_loop_cc_0_0</source_block_id>
-    <sink_block_id>digital_constellation_soft_decoder_cf_0</sink_block_id>
+    <source_block_id>digital_costas_loop_cc_0</source_block_id>
+    <sink_block_id>qtgui_const_sink_x_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>digital_costas_loop_cc_0_0</source_block_id>
-    <sink_block_id>qtgui_const_sink_x_1</sink_block_id>
+    <sink_block_id>digital_constellation_soft_decoder_cf_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -10008,12 +10016,6 @@ doing this before PFB CS</value>
   <connection>
     <source_block_id>digital_pfb_clock_sync_xxx_0</source_block_id>
     <sink_block_id>digital_cma_equalizer_cc_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>fec_extended_decoder_0</source_block_id>
-    <sink_block_id>blocks_char_to_float_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

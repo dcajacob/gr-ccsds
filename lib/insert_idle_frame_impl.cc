@@ -42,7 +42,8 @@ namespace gr {
       : gr::block("insert_idle_frame",
               gr::io_signature::make(1, 1, sizeof(gr_complex)),
               gr::io_signature::make(1, 1, sizeof(gr_complex))),
-      d_frame_size(modulated_vector.size())
+      d_frame_size(modulated_vector.size()),
+      d_num_fillframes_added(0)
     {
       set_output_multiple(d_frame_size);
       d_symbols = modulated_vector;
@@ -83,6 +84,7 @@ namespace gr {
         for(size_t i = 0; i < d_frame_size; i++) {
           out[i] = d_symbols[i];
         }
+        d_num_fillframes_added++;
         //consume_each (d_frame_size);
 
         return d_frame_size;
