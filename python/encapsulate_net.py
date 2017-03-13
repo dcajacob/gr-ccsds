@@ -64,12 +64,17 @@ class encapsulate_net(gr.basic_block):
         #buff.extend([x for x in length])
         #buff.extend(pmt.u8vector_elements(msg))
         length = pmt.length(msg)
-        buff.append(length >> 8) # MSB
-        buff.append(length & 0xFF) # LSB
+
+        #buff.append(length >> 8) # MSB
+        #buff.append(length & 0xFF) # LSB
+        length_bytes = [ord(x) for x in struct.pack(">h", 340)]
+
+        for x in length_bytes:
+            buff.append(x)
         buff.extend(pmt.u8vector_elements(msg))
 
         pad_length = self.mtu - len(buff)
-        if pad_length:
+        if pad_length > 0:
             buff.extend([self.pad_byte] * pad_length)
 
         if debug:
