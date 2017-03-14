@@ -357,7 +357,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1200, 580)</value>
+      <value>(1200, 707)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -681,7 +681,18 @@
       <key>comment</key>
       <value>Polynomials are often provided in octal.  
 The blocks generally take decimals, though.
-For example (171,133) =&gt; (121,91)</value>
+For example (171,133) =&gt; (121,91)
+
+Polynomials are read as if the shift register
+goes from right to left... e.g.,
+output &lt;- [convolve 1001111] &lt;- input
+corresponds to the polynomial
+0x4f=79d=0117.
+
+This is equivalent but "bit-reversed" from
+the left to right:
+input -&gt; [convolve 1111001] -&gt; output
+which woud be 0x79=121d=0171.</value>
     </param>
     <param>
       <key>k</key>
@@ -1081,7 +1092,11 @@ For example (171,133) =&gt; (121,91)</value>
     <key>variable_qtgui_range</key>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>Since the modulator
+delay is 22, shift the
+modulated vector
+by 22 samples to
+the left.</value>
     </param>
     <param>
       <key>value</key>
@@ -1298,7 +1313,9 @@ Since we're QPSK, you get
     <key>variable_modulate_vector</key>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>This modulator delays the
+center of the first symbol
+by 22 samples.</value>
     </param>
     <param>
       <key>data</key>
@@ -4142,7 +4159,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>2</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4237,7 +4254,16 @@ in some situations.  Copy helped.</value>
     <param>
       <key>comment</key>
       <value>Darek wants this to be 12+64 (76)
-Therefore add/sub 24 offset to fillframe mod</value>
+Therefore add/sub 24 offset to fillframe mod
+
+The 64 came from the extra asm in front back
+when we were thinking of doing
+asm/data/asm for the first frame.
+The 12 came from the convolutional flush, but
+it actually isn't necessary, because even though
+the first 12 bits are garbage, the last known
+bits of the ASM line up correctly without any
+correction.  --DK</value>
     </param>
     <param>
       <key>affinity</key>
@@ -4339,7 +4365,11 @@ Therefore add/sub 24 offset to fillframe mod</value>
     </param>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>Since the modulator
+delay is 22, shift the
+modulated vector
+by 22 samples to
+the left.</value>
     </param>
     <param>
       <key>affinity</key>
@@ -4351,7 +4381,7 @@ Therefore add/sub 24 offset to fillframe mod</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(100, 428)</value>
+      <value>(100, 385)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5552,7 +5582,9 @@ Therefore add/sub 24 offset to fillframe mod</value>
     </param>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>This modulator delays the
+center of the first symbol
+by 22 samples.</value>
     </param>
     <param>
       <key>constellation</key>
@@ -5576,7 +5608,7 @@ Therefore add/sub 24 offset to fillframe mod</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(264, 408)</value>
+      <value>(264, 364)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -12814,6 +12846,12 @@ Therefore add/sub 24 offset to fillframe mod</value>
   </connection>
   <connection>
     <source_block_id>blocks_pdu_to_tagged_stream_1</source_block_id>
+    <sink_block_id>blocks_pack_k_bits_bb_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_pdu_to_tagged_stream_1</source_block_id>
     <sink_block_id>blocks_unpack_k_bits_bb_0_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
@@ -13169,12 +13207,6 @@ Therefore add/sub 24 offset to fillframe mod</value>
   <connection>
     <source_block_id>fec_extended_decoder_0</source_block_id>
     <sink_block_id>ccsds_diff_decoder_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>fec_extended_encoder_0</source_block_id>
-    <sink_block_id>blocks_pack_k_bits_bb_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
