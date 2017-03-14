@@ -343,7 +343,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>polys</key>
-      <value>[0133,0171]</value>
+      <value>[0117,0155]</value>
     </param>
     <param>
       <key>rate</key>
@@ -1437,7 +1437,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>k</key>
-      <value>8</value>
+      <value>4</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1892,7 +1892,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>vector</key>
-      <value>(0x1a, 0xcf, 0xfc, 0x1d)*128</value>
+      <value>(0,0,0,0,0x1a, 0xcf, 0xfc, 0x1d)*128</value>
     </param>
   </block>
   <block>

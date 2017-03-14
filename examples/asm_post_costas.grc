@@ -264,7 +264,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>(74L, 61L, 79L, 242L, 152L, 87L)</value>
+      <value>(0x49, 0xc2, 0x4f, 0xf2, 0x68, 0x6b)</value>
     </param>
   </block>
   <block>
@@ -861,7 +861,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>2</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -889,7 +889,7 @@
     </param>
     <param>
       <key>samples_per_second</key>
-      <value>samp_rate_rx</value>
+      <value>256</value>
     </param>
     <param>
       <key>type</key>
