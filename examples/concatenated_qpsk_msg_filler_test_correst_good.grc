@@ -3993,7 +3993,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(48, 158)</value>
+      <value>(21, 185)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4009,7 +4009,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>maxsize</key>
-      <value>(223*5-2)*0+84</value>
+      <value>(223*5-2)*0+84*0+1113</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -4017,7 +4017,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>minsize</key>
-      <value>(223*5-2)*0+84</value>
+      <value>(223*5-2)*0+84*0+1113</value>
     </param>
     <param>
       <key>minoutbuf</key>
