@@ -294,6 +294,60 @@
     </param>
   </block>
   <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1120, 628)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>encoded_sync_word</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>(246L, 168L, 195L, 206L, 128L, 109L)</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1120, 556)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>encoded_sync_word_nodiff</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>(73L, 194L, 79L, 242L, 104L, 107L)</value>
+    </param>
+  </block>
+  <block>
     <key>variable_cc_encoder_def</key>
     <param>
       <key>padding</key>
@@ -323,7 +377,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>framebits</key>
-      <value>2048</value>
+      <value>1279*8</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -343,7 +397,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>polys</key>
-      <value>[0133,0171]</value>
+      <value>[epy_tools.reverse_bits(0171), epy_tools.reverse_bits(0133)]</value>
     </param>
     <param>
       <key>rate</key>
@@ -611,6 +665,33 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>widget</key>
       <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1120, 484)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>hand_encoded_asm</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>(0xD, 0x49, 0xC2, 0x4F, 0xF2, 0x68, 0x6B)</value>
     </param>
   </block>
   <block>
@@ -896,7 +977,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1064, 816)</value>
+      <value>(1136, 712)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1856,7 +1937,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(24, 364)</value>
+      <value>(24, 196)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1880,7 +1961,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>repeat</key>
-      <value>False</value>
+      <value>True</value>
     </param>
     <param>
       <key>tags</key>
@@ -1932,6 +2013,41 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>epy_module</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>source_code</key>
+      <value>
+def reverse_bits(x):
+    return int(bin(x)[2:][::-1], base=2)
+
+</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(488, 12)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>epy_tools</value>
     </param>
   </block>
   <block>
@@ -2057,6 +2173,37 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>import</key>
       <value>from os.path import expanduser</value>
+    </param>
+  </block>
+  <block>
+    <key>import</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(480, 12)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>import_tools</value>
+    </param>
+    <param>
+      <key>import</key>
+      <value>import tools</value>
     </param>
   </block>
   <block>
