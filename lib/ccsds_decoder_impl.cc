@@ -127,7 +127,8 @@ namespace gr {
 
                       bool success = decode_frame();
                       if (success) {
-                          if (is_fill_frame()) {
+                          //if (is_fill_frame()) {
+                          if (is_fill_frame_fast()) {
                               // detect and drop fill frames
                               d_num_fillframes_decoded++;
 
@@ -233,6 +234,11 @@ namespace gr {
         }
 
         return (sum == 0);
+    }
+
+    bool ccsds_decoder_impl::is_fill_frame_fast()
+    {
+        return ((d_payload[0] == 0) && (d_payload[1] == 0));
     }
 
     uint8_t ccsds_decoder_impl::reverse(uint8_t x, uint8_t n)
