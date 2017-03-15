@@ -1973,7 +1973,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>vector</key>
-      <value>(0x1a, 0xcf, 0xfc, 0x1d)*128</value>
+      <value>(0,0,0,0,0x1a, 0xcf, 0xfc, 0x1d)*128</value>
     </param>
   </block>
   <block>

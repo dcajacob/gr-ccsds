@@ -532,7 +532,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(662, 355)</value>
+      <value>(632, 360)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -541,6 +541,49 @@
     <param>
       <key>id</key>
       <value>blocks_complex_to_arg_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_float_to_complex</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(944, 360)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_float_to_complex_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -600,6 +643,57 @@
     <param>
       <key>type</key>
       <value>byte</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_multiply_const_vxx</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>const</key>
+      <value>1./pi</value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(792, 356)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_multiply_const_vxx_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
     </param>
     <param>
       <key>vlen</key>
@@ -681,7 +775,7 @@
     </param>
     <param>
       <key>vlen</key>
-      <value>48</value>
+      <value>length</value>
     </param>
   </block>
   <block>
@@ -838,7 +932,7 @@
     </param>
     <param>
       <key>num_items</key>
-      <value>48</value>
+      <value>length</value>
     </param>
     <param>
       <key>vlen</key>
@@ -975,7 +1069,7 @@
     </param>
     <param>
       <key>vlen</key>
-      <value>48</value>
+      <value>length</value>
     </param>
   </block>
   <block>
@@ -1095,6 +1189,37 @@
     <param>
       <key>symbol_table</key>
       <value>constel.points()</value>
+    </param>
+  </block>
+  <block>
+    <key>import</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(528, 12)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>import_pi</value>
+    </param>
+    <param>
+      <key>import</key>
+      <value>from math import pi</value>
     </param>
   </block>
   <block>
@@ -1480,7 +1605,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(928, 280)</value>
+      <value>(1136, 256)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1616,7 +1741,7 @@
     </param>
     <param>
       <key>style4</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>width4</key>
@@ -1748,7 +1873,7 @@
     </param>
     <param>
       <key>nconnections</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>size</key>
@@ -1800,11 +1925,11 @@
     </param>
     <param>
       <key>ymax</key>
-      <value>1</value>
+      <value>4</value>
     </param>
     <param>
       <key>ymin</key>
-      <value>-1</value>
+      <value>-4</value>
     </param>
   </block>
   <block>
@@ -1839,7 +1964,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2172,13 +2297,25 @@
   </block>
   <connection>
     <source_block_id>blocks_complex_to_arg_0</source_block_id>
-    <sink_block_id>qtgui_time_sink_x_1_0_0</sink_block_id>
+    <sink_block_id>blocks_multiply_const_vxx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>blocks_float_to_complex_0</source_block_id>
+    <sink_block_id>qtgui_time_sink_x_1_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
     <source_block_id>blocks_head_0</source_block_id>
     <sink_block_id>blocks_repack_bits_bb_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_multiply_const_vxx_0</source_block_id>
+    <sink_block_id>blocks_float_to_complex_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
