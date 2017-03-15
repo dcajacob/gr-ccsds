@@ -225,34 +225,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1024, 1108)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>corr_sequence</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>((-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j))</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1024, 1172)</value>
+      <value>(1072, 1052)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -264,7 +237,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>((0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j))</value>
+      <value>((0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j))</value>
     </param>
   </block>
   <block>
@@ -349,7 +322,7 @@
     </param>
     <param>
       <key>state_end</key>
-      <value>-1</value>
+      <value>0</value>
     </param>
     <param>
       <key>framebits</key>
@@ -357,7 +330,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1104, 516)</value>
+      <value>(1072, 668)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -377,7 +350,7 @@
     </param>
     <param>
       <key>polys</key>
-      <value>[0133,0171]</value>
+      <value>[0117,0155]</value>
     </param>
     <param>
       <key>rate</key>
@@ -593,7 +566,18 @@ encoded sync word.
       <key>comment</key>
       <value>Polynomials are often provided in octal.  
 The blocks generally take decimals, though.
-For example (171,133) =&gt; (121,91)</value>
+For example (171,133) =&gt; (121,91)
+
+Polynomials are read as if the shift register
+goes from right to left... e.g.,
+output &lt;- [convolve 1001111] &lt;- input
+corresponds to the polynomial
+0x4f=79d=0117.
+
+This is equivalent but "bit-reversed" from
+the left to right:
+input -&gt; [convolve 1111001] -&gt; output
+which woud be 0x79=121d=0171.</value>
     </param>
     <param>
       <key>k</key>
@@ -617,7 +601,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1096, 276)</value>
+      <value>(1064, 284)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -633,7 +617,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>polys</key>
-      <value>[0133,0171]</value>
+      <value>[0117,0155]</value>
     </param>
     <param>
       <key>rate</key>
@@ -660,34 +644,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1440, 92)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>modulated_idle_frame_trimmed</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>[modulated_preamble_untrimmed[i] for i in range(len(pad)*8+idle_frame_shift, len(pad)*8+enc_idle_frame_len*8+idle_frame_shift)]</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1440, 20)</value>
+      <value>(1440, 28)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -699,7 +656,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(len(pad)*8+idle_frame_shift, len(pad)*8+enc_idle_frame_len*8+idle_frame_shift)]</value>
+      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(enc_idle_frame_len*8+idle_frame_shift, 2*enc_idle_frame_len*8+idle_frame_shift)]</value>
     </param>
   </block>
   <block>
@@ -741,14 +698,13 @@ For example (171,133) =&gt; (121,91)</value>
     <key>variable_modulate_vector</key>
     <param>
       <key>comment</key>
-      <value>Packed bytes get modulated.
-Samples come out.
-Since we're QPSK, you get
-8*sps/bps out.</value>
+      <value>This modulator delays the
+center of the first symbol
+by 22 samples.</value>
     </param>
     <param>
       <key>data</key>
-      <value>pad + list(encoded_concat_idle_frame) + pad</value>
+      <value>list(encoded_concat_idle_frame_nodiff)+ list(encoded_concat_idle_frame_nodiff) + list(encoded_concat_idle_frame_nodiff)</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -760,42 +716,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1240, 16)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>modulated_preamble_untrimmed</value>
-    </param>
-    <param>
-      <key>mod</key>
-      <value>digital.generic_mod(constellation=constel,differential=False,samples_per_symbol=sps_tx,pre_diff_code=True,excess_bw=eb,verbose=False,log=False)</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_modulate_vector</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>data</key>
-      <value>pad + list(encoded_concat_idle_frame_nodiff) + pad</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>taps</key>
-      <value>[1]</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1240, 184)</value>
+      <value>(1248, 24)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1258,7 +1179,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>num_items</key>
-      <value>1279*8*sps_tx</value>
+      <value>idle_frame_shift</value>
     </param>
     <param>
       <key>type</key>
@@ -2049,10 +1970,6 @@ Since we're QPSK, you get
       <key>minoutbuf</key>
       <value>0</value>
     </param>
-    <param>
-      <key>showports</key>
-      <value>True</value>
-    </param>
   </block>
   <block>
     <key>digital_corr_est_cc</key>
@@ -2102,7 +2019,7 @@ Since we're QPSK, you get
     </param>
     <param>
       <key>mark_delay</key>
-      <value>len(corr_sequence)-1</value>
+      <value>len(corr_sequence_nodiff)-1</value>
     </param>
     <param>
       <key>threshold</key>
@@ -2729,7 +2646,7 @@ doing this before PFB CS</value>
     </param>
     <param>
       <key>value</key>
-      <value>0</value>
+      <value>22</value>
     </param>
   </block>
   <block>
