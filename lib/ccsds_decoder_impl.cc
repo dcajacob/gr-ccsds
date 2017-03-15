@@ -127,15 +127,15 @@ namespace gr {
 
                       bool success = decode_frame();
                       if (success) {
-                          pmt::pmt_t pdu(pmt::cons(pmt::PMT_NIL, pmt::make_blob(d_payload, DATA_LEN)));
-                          message_port_pub(pmt::mp("out"), pdu);
-                      }
+                          if (is_fill_frame()) {
+                              // detect and drop fill frames
+                              d_num_fillframes_decoded++;
 
-                      if (is_fill_frame()) {
-                          // detect and drop fill frames
-                          d_num_fillframes_decoded++;
-
-                          //return 0;
+                              //return 0;
+                          } else {
+                              pmt::pmt_t pdu(pmt::cons(pmt::PMT_NIL, pmt::make_blob(d_payload, DATA_LEN)));
+                              message_port_pub(pmt::mp("out"), pdu);
+                          }
                       }
 
                       if (d_verbose) {
@@ -228,8 +228,8 @@ namespace gr {
     {
         uint16_t sum = 0;
 
-        for (size_t i=0; i < CODEWORD_LEN; i++) {
-            sum += d_codeword[i];
+        for (size_t i=0; i < DATA_LEN; i++) {
+            sum += d_payload[i];
         }
 
         return (sum == 0);
