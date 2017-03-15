@@ -59,6 +59,7 @@ namespace gr {
          bool compare_alt_sync_word();
          bool decode_frame();
          bool is_fill_frame();
+         bool is_fill_frame_fast();
          uint8_t reverse(uint8_t x, uint8_t n);
          uint8_t invert(uint8_t x, uint8_t mask);
          uint32_t reverse_and_invert(uint32_t x, uint8_t n, uint8_t mask, uint8_t length);
