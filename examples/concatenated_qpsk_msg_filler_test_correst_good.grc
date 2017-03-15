@@ -1202,7 +1202,7 @@ which woud be 0x79=121d=0171.</value>
     </param>
     <param>
       <key>value</key>
-      <value>[modulated_preamble_untrimmed[i] for i in range(len(pad)*8+idle_frame_shift, len(pad)*8+enc_idle_frame_len*8+idle_frame_shift)]</value>
+      <value>[modulated_preamble_untrimmed[i] for i in range(enc_idle_frame_len*8+idle_frame_shift, 2*enc_idle_frame_len*8+idle_frame_shift)]</value>
     </param>
   </block>
   <block>
@@ -1229,7 +1229,7 @@ which woud be 0x79=121d=0171.</value>
     </param>
     <param>
       <key>value</key>
-      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(len(pad)*8+idle_frame_shift, len(pad)*8+enc_idle_frame_len*8+idle_frame_shift)]</value>
+      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(enc_idle_frame_len*8+idle_frame_shift, 2*enc_idle_frame_len*8+idle_frame_shift)]</value>
     </param>
   </block>
   <block>
@@ -1282,7 +1282,7 @@ by 22 samples.</value>
     </param>
     <param>
       <key>data</key>
-      <value>pad + list(encoded_concat_idle_frame) + pad</value>
+      <value>list(encoded_concat_idle_frame)*3</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -1317,7 +1317,7 @@ by 22 samples.</value>
     </param>
     <param>
       <key>data</key>
-      <value>pad + list(encoded_concat_idle_frame_nodiff) + pad</value>
+      <value>list(encoded_concat_idle_frame_nodiff)*3</value>
     </param>
     <param>
       <key>_enabled</key>
