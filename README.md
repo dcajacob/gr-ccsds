@@ -76,4 +76,12 @@ ServerAliveCountMax 4
 TCPKeepAlive no
 Cipher blowfish-cbc
 
+More fun:
+
+rsync -rzhPit --bwlimit=45k --stats --sockopts tcp_frto=1,tcp_frto_response=3,tcp_slow_start_after_idle=0,tcp_keepalive_probes=100,tcp_keepalive_intvl=3,tcp_low_latency=1,TCP_CONGESTION=vegas,TCP_MAXSEG=1113 Downloads/AIS.SampleData.zip  usrp:~/Downloads/
+
+It's often a good idea to keep some backround pinging going.  Try not to overwhelm the link though, unless you're using some sort of QOS
+
+ping -i 1 10.11.10.2
+
 
