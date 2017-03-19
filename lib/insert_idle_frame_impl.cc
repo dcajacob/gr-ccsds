@@ -75,10 +75,10 @@ namespace gr {
       if (ninput_items[0] >= d_frame_size) {
         if (!d_started) {
           d_started = true;
-          printf("\nProcessing %d items from input.\n\n", d_frame_size+22);
+          printf("\nProcessing %d items from input.\n\n", d_frame_size-22);
           printf("\nInput buffer size: %d items.\n\n", ninput_items[0]);
-          memcpy(out, &in[0], sizeof(gr_complex)*d_frame_size+sizeof(gr_complex)*22);
-          consume_each (d_frame_size+22);
+          memcpy(out, &in[0], sizeof(gr_complex)*d_frame_size-sizeof(gr_complex)*22);
+          consume_each (d_frame_size-22);
 
           return d_frame_size+22;
         }
