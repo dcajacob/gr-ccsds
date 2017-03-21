@@ -33,7 +33,6 @@ namespace gr {
       std::vector<gr_complex> d_symbols;
       uint16_t d_frame_size;
       uint32_t d_num_fillframes_added;
-      bool d_started;
 
      public:
       insert_idle_frame_impl(const std::vector<gr_complex> &modulated_vector);

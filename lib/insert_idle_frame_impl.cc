@@ -43,8 +43,7 @@ namespace gr {
               gr::io_signature::make(1, 1, sizeof(gr_complex)),
               gr::io_signature::make(1, 1, sizeof(gr_complex))),
       d_frame_size(modulated_vector.size()),
-      d_num_fillframes_added(0),
-      d_started(false)
+      d_num_fillframes_added(0)
     {
       set_output_multiple(d_frame_size);
       d_symbols = modulated_vector;
@@ -73,15 +72,6 @@ namespace gr {
       gr_complex *out = (gr_complex *) output_items[0];
 
       if (ninput_items[0] >= d_frame_size) {
-        if (!d_started) {
-          d_started = true;
-          printf("\nProcessing %d items from input.\n\n", d_frame_size-22);
-          printf("\nInput buffer size: %d items.\n\n", ninput_items[0]);
-          memcpy(out, &in[0], sizeof(gr_complex)*d_frame_size-sizeof(gr_complex)*22);
-          consume_each (d_frame_size-22);
-
-          return d_frame_size+22;
-        }
         printf("\nProcessing %d items from input.\n\n", d_frame_size);
         printf("\nInput buffer size: %d items.\n\n", ninput_items[0]);
         memcpy(out, &in[0], sizeof(gr_complex)*d_frame_size);

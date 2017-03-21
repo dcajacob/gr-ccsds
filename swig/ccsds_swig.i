@@ -20,3 +20,4 @@ GR_SWIG_BLOCK_MAGIC2(ccsds, ccsds_encoder);
 GR_SWIG_BLOCK_MAGIC2(ccsds, ccsds_decoder);
 %include "ccsds/insert_idle_frame.h"
 GR_SWIG_BLOCK_MAGIC2(ccsds, insert_idle_frame);
+

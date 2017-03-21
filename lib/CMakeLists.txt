@@ -32,7 +32,8 @@ list(APPEND ccsds_sources
     reed_solomon.cc
     ccsds_encoder_impl.cc
     ccsds_decoder_impl.cc
-    insert_idle_frame_impl.cc )
+    insert_idle_frame_impl.cc
+    )
 
 set(ccsds_sources "${ccsds_sources}" PARENT_SCOPE)
 if(NOT ccsds_sources)
