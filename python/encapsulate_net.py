@@ -28,7 +28,7 @@ import collections
 import pmt
 import array
 
-debug = True
+debug = False
 
 class encapsulate_net(gr.basic_block):
     """

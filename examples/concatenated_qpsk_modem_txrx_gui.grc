@@ -2129,7 +2129,7 @@ by 22 samples.</value>
     </param>
     <param>
       <key>verbose</key>
-      <value>True</value>
+      <value>False</value>
     </param>
   </block>
   <block>

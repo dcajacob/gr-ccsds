@@ -72,16 +72,16 @@ namespace gr {
       gr_complex *out = (gr_complex *) output_items[0];
 
       if (ninput_items[0] >= d_frame_size) {
-        printf("\nProcessing %d items from input.\n\n", d_frame_size);
-        printf("\nInput buffer size: %d items.\n\n", ninput_items[0]);
+        //printf("\nProcessing %d items from input.\n\n", d_frame_size);
+        //printf("\nInput buffer size: %d items.\n\n", ninput_items[0]);
         memcpy(out, &in[0], sizeof(gr_complex)*d_frame_size);
         consume_each (d_frame_size);
 
         return d_frame_size;
       } else {
         // Push out a single idle frame
-        printf("%d input items available. %d output items available.\n", ninput_items[0], noutput_items);
-        printf("Pushing an idle packet of size %d.\n", d_frame_size);
+        //printf("%d input items available. %d output items available.\n", ninput_items[0], noutput_items);
+        //printf("Pushing an idle packet of size %d.\n", d_frame_size);
         for(size_t i = 0; i < d_frame_size; i++) {
           out[i] = d_symbols[i];
         }
