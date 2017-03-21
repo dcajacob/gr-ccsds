@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>concatenated_qpsk_msg_test</value>
+      <value>concatenated_qpsk_loopback</value>
     </param>
     <param>
       <key>max_nouts</key>
