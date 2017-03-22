@@ -685,7 +685,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1432, 92)</value>
+      <value>(1440, 100)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -697,7 +697,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>[modulated_preamble_untrimmed[i] for i in range(enc_idle_frame_len*8+idle_frame_shift, 2*enc_idle_frame_len*8+idle_frame_shift)]</value>
+      <value>[modulated_preamble_untrimmed[i] for i in range(enc_idle_frame_len*sps_tx/bps*8+idle_frame_shift, 2*enc_idle_frame_len*sps_tx/bps*8+idle_frame_shift)]</value>
     </param>
   </block>
   <block>
@@ -712,7 +712,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1432, 20)</value>
+      <value>(1440, 28)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -724,7 +724,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>value</key>
-      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(enc_idle_frame_len*8+idle_frame_shift, 2*enc_idle_frame_len*8+idle_frame_shift)]</value>
+      <value>[modulated_preamble_untrimmed_nodiff[i] for i in range(enc_idle_frame_len*sps_tx/bps*8+idle_frame_shift, 2*enc_idle_frame_len*sps_tx/bps*8+idle_frame_shift)]</value>
     </param>
   </block>
   <block>
