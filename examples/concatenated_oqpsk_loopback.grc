@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>concatenated_qpsk_loopback</value>
+      <value>concatenated_oqpsk_loopback</value>
     </param>
     <param>
       <key>max_nouts</key>
@@ -1190,7 +1190,7 @@ which woud be 0x79=121d=0171.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(808, 2212)</value>
+      <value>(824, 2212)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1217,7 +1217,7 @@ which woud be 0x79=121d=0171.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(808, 2140)</value>
+      <value>(824, 2140)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2848,7 +2848,7 @@ by 22 samples.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(576, 544)</value>
+      <value>(656, 544)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2887,7 +2887,7 @@ by 22 samples.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(784, 544)</value>
+      <value>(864, 544)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3676,7 +3676,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(584, 636)</value>
+      <value>(600, 644)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4142,7 +4142,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(352, 540)</value>
+      <value>(432, 540)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4185,7 +4185,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(976, 540)</value>
+      <value>(1056, 540)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4448,7 +4448,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(864, 636)</value>
+      <value>(824, 644)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5186,7 +5186,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(24, 547)</value>
+      <value>(20, 456)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5241,7 +5241,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(160, 512)</value>
+      <value>(240, 512)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -6259,7 +6259,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(344, 644)</value>
+      <value>(344, 668)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -6377,6 +6377,92 @@ def reverse_bits(x):
     <param>
       <key>import</key>
       <value>from math import pi</value>
+    </param>
+  </block>
+  <block>
+    <key>oqpsk_deshift</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(48, 892)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>oqpsk_deshift_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>sps</key>
+      <value>sps_rx</value>
+    </param>
+  </block>
+  <block>
+    <key>oqpsk_shift</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(40, 460)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>oqpsk_shift_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>sps</key>
+      <value>sps_tx</value>
     </param>
   </block>
   <block>
@@ -7583,7 +7669,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(888, 716)</value>
+      <value>(848, 724)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -13334,7 +13420,7 @@ def reverse_bits(x):
   </connection>
   <connection>
     <source_block_id>ccsds_insert_idle_frame</source_block_id>
-    <sink_block_id>channels_channel_model_0</sink_block_id>
+    <sink_block_id>oqpsk_shift_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -13357,6 +13443,12 @@ def reverse_bits(x):
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>channels_channel_model_0</source_block_id>
+    <sink_block_id>qtgui_const_sink_x_1_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>digital_chunks_to_symbols_xx_0</source_block_id>
     <sink_block_id>blocks_interleave_0</sink_block_id>
     <source_key>0</source_key>
@@ -13365,12 +13457,6 @@ def reverse_bits(x):
   <connection>
     <source_block_id>digital_cma_equalizer_cc_0</source_block_id>
     <sink_block_id>digital_costas_loop_cc_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>digital_cma_equalizer_cc_0</source_block_id>
-    <sink_block_id>qtgui_const_sink_x_1_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -13466,13 +13552,13 @@ def reverse_bits(x):
   </connection>
   <connection>
     <source_block_id>digital_fll_band_edge_cc_0</source_block_id>
-    <sink_block_id>digital_pfb_clock_sync_xxx_0</sink_block_id>
+    <sink_block_id>digital_probe_mpsk_snr_est_c_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>digital_fll_band_edge_cc_0</source_block_id>
-    <sink_block_id>digital_probe_mpsk_snr_est_c_0</sink_block_id>
+    <sink_block_id>oqpsk_deshift_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -13527,6 +13613,18 @@ def reverse_bits(x):
   <connection>
     <source_block_id>he2pi_precisiontiming_pt_resampler_0</source_block_id>
     <sink_block_id>digital_fll_band_edge_cc_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>oqpsk_deshift_0</source_block_id>
+    <sink_block_id>digital_pfb_clock_sync_xxx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>oqpsk_shift_0</source_block_id>
+    <sink_block_id>channels_channel_model_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
