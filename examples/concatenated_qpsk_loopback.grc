@@ -93,7 +93,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1176, 92)</value>
+      <value>(1312, 100)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -186,7 +186,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(888, 12)</value>
+      <value>(744, 108)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -265,60 +265,6 @@
     <param>
       <key>value</key>
       <value>((0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095-0.7071070075035095j), (0.7071070075035095-0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (-0.7071070075035095+0.7071070075035095j), (0.7071070075035095+0.7071070075035095j))</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1064, 20)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>data_rate</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>user_data_rate/R</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1160, 12)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>data_rate_sps</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>data_rate/bps</value>
     </param>
   </block>
   <block>
@@ -1680,7 +1626,7 @@ by 22 samples.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(288, 12)</value>
+      <value>(1056, 92)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1688,11 +1634,11 @@ by 22 samples.</value>
     </param>
     <param>
       <key>id</key>
-      <value>samp_rate_rx</value>
+      <value>rx_data_rate</value>
     </param>
     <param>
       <key>value</key>
-      <value>data_rate*sps_rx</value>
+      <value>rx_user_data_rate/R</value>
     </param>
   </block>
   <block>
@@ -1707,7 +1653,61 @@ by 22 samples.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(288, 76)</value>
+      <value>(1160, 92)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>rx_data_rate_sps</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>rx_data_rate/bps</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(296, 12)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>samp_rate_rx</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>rx_data_rate*sps_rx</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(296, 76)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1719,7 +1719,7 @@ by 22 samples.</value>
     </param>
     <param>
       <key>value</key>
-      <value>data_rate*sps_tx</value>
+      <value>tx_data_rate*sps_tx</value>
     </param>
   </block>
   <block>
@@ -1921,7 +1921,7 @@ by 22 samples.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1056, 92)</value>
+      <value>(1056, 28)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1929,11 +1929,38 @@ by 22 samples.</value>
     </param>
     <param>
       <key>id</key>
-      <value>user_data_rate</value>
+      <value>tx_data_rate</value>
     </param>
     <param>
       <key>value</key>
-      <value>0.25e6*0+125e3*2</value>
+      <value>tx_user_data_rate/R</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1160, 28)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>tx_data_rate_sps</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>tx_data_rate/bps</value>
     </param>
   </block>
   <block>
@@ -3766,7 +3793,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(576, 196)</value>
+      <value>(576, 228)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3989,7 +4016,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1096, 196)</value>
+      <value>(1096, 228)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4342,7 +4369,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(912, 196)</value>
+      <value>(912, 228)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5428,6 +5455,10 @@ in some situations.  Copy helped.</value>
       <key>minoutbuf</key>
       <value>0</value>
     </param>
+    <param>
+      <key>showports</key>
+      <value>True</value>
+    </param>
   </block>
   <block>
     <key>digital_constellation_modulator</key>
@@ -5534,6 +5565,10 @@ in some situations.  Copy helped.</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>showports</key>
+      <value>True</value>
     </param>
   </block>
   <block>
@@ -6302,7 +6337,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(776, 108)</value>
+      <value>(584, 132)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -6364,7 +6399,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(920, 100)</value>
+      <value>(664, 132)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -12850,6 +12885,92 @@ def reverse_bits(x):
     <param>
       <key>ymin</key>
       <value>-1</value>
+    </param>
+  </block>
+  <block>
+    <key>parameter</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(928, 112)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>rx_user_data_rate</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>RX Data Rate</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value>r</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>intx</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>250000</value>
+    </param>
+  </block>
+  <block>
+    <key>parameter</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(928, 8)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>tx_user_data_rate</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>TX Data Rate</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value>t</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>intx</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>250000</value>
     </param>
   </block>
   <block>
