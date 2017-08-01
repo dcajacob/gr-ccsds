@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<?grc format='1' created='3.7.11'?>
+<?grc format='1' created='3.7.12'?>
 <flow_graph>
   <timestamp>Thu Feb  9 22:53:51 2017</timestamp>
   <block>
@@ -3129,6 +3129,10 @@ in some situations.  Copy helped.</value>
   <block>
     <key>blocks_file_source</key>
     <param>
+      <key>begin_tag</key>
+      <value>pmt.PMT_NIL</value>
+    </param>
+    <param>
       <key>alias</key>
       <value></value>
     </param>
@@ -4891,7 +4895,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(640, 1460)</value>
+      <value>(640, 1524)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5455,10 +5459,6 @@ in some situations.  Copy helped.</value>
       <key>minoutbuf</key>
       <value>0</value>
     </param>
-    <param>
-      <key>showports</key>
-      <value>True</value>
-    </param>
   </block>
   <block>
     <key>digital_constellation_modulator</key>
@@ -5566,10 +5566,6 @@ in some situations.  Copy helped.</value>
       <key>minoutbuf</key>
       <value>0</value>
     </param>
-    <param>
-      <key>showports</key>
-      <value>True</value>
-    </param>
   </block>
   <block>
     <key>digital_corr_est_cc</key>
@@ -5629,6 +5625,57 @@ in some situations.  Copy helped.</value>
   <block>
     <key>digital_correlate_access_code_tag_bb</key>
     <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(184, 1460)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>digital_correlate_access_code_tag_bb_0_0_0</value>
+    </param>
+    <param>
+      <key>access_code</key>
+      <value>''.join([bin(x)[2:].zfill(8) for x in sync_word])</value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>tagname</key>
+      <value>syncword</value>
+    </param>
+    <param>
+      <key>threshold</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>digital_correlate_access_code_tag_xx</key>
+    <param>
       <key>access_code</key>
       <value>''.join([bin(x)[2:].zfill(8) for x in sync_word])</value>
     </param>
@@ -5650,7 +5697,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(184, 1460)</value>
+      <value>(392, 1444)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5658,7 +5705,11 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>id</key>
-      <value>digital_correlate_access_code_tag_bb_0_0_0</value>
+      <value>digital_correlate_access_code_tag_xx_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -6197,6 +6248,10 @@ def reverse_bits(x):
     <param>
       <key>short_id</key>
       <value></value>
+    </param>
+    <param>
+      <key>hide</key>
+      <value>none</value>
     </param>
     <param>
       <key>type</key>
@@ -10745,7 +10800,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1064, 1432)</value>
+      <value>(1096, 1440)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -12922,6 +12977,10 @@ def reverse_bits(x):
       <value>r</value>
     </param>
     <param>
+      <key>hide</key>
+      <value>none</value>
+    </param>
+    <param>
       <key>type</key>
       <value>intx</value>
     </param>
@@ -12963,6 +13022,10 @@ def reverse_bits(x):
     <param>
       <key>short_id</key>
       <value>t</value>
+    </param>
+    <param>
+      <key>hide</key>
+      <value>none</value>
     </param>
     <param>
       <key>type</key>
@@ -13430,6 +13493,12 @@ def reverse_bits(x):
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>ccsds_diff_decoder_0</source_block_id>
+    <sink_block_id>digital_correlate_access_code_tag_xx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>ccsds_diff_encoder_0</source_block_id>
     <sink_block_id>fec_extended_encoder_0</sink_block_id>
     <source_key>0</source_key>
@@ -13557,6 +13626,12 @@ def reverse_bits(x):
   </connection>
   <connection>
     <source_block_id>digital_correlate_access_code_tag_bb_0_0_0</source_block_id>
+    <sink_block_id>blocks_pack_k_bits_bb_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_correlate_access_code_tag_xx_0</source_block_id>
     <sink_block_id>blocks_pack_k_bits_bb_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
