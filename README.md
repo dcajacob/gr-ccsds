@@ -28,7 +28,7 @@ On system 1:
 
 On system 2:
 
-./concatenated_qpsk_modem_txrx.py --mtu 1115 --rx-freq=415M --tx-freq=400M --gain 45 --rx-user-data-rate=500000 --tx-user-data-rate=500000
+./concatenated_qpsk_modem_txrx.py --mtu 1115 --rx-freq=400M --rx-freq=415M --gain 45 --rx-user-data-rate=500000 --tx-user-data-rate=500000
 
 Now you need to setup the TUN devices' properties.  This sets up a point-to-point network between
 the systems.  You can adjust the IP addresses to avoid conflicts with any network you are using.
