@@ -362,7 +362,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>0.7</value>
+      <value>0.7/2.</value>
     </param>
   </block>
   <block>
@@ -1061,7 +1061,7 @@ by 22 samples.</value>
     </param>
     <param>
       <key>value</key>
-      <value>rx_data_rate*sps_rx</value>
+      <value>rx_data_rate*sps_rx*0+rx_data_rate_sps*sps_rx</value>
     </param>
   </block>
   <block>
@@ -1088,7 +1088,7 @@ by 22 samples.</value>
     </param>
     <param>
       <key>value</key>
-      <value>tx_data_rate*sps_tx</value>
+      <value>tx_data_rate*sps_tx*0+tx_data_rate_sps*sps_tx</value>
     </param>
   </block>
   <block>
@@ -4236,7 +4236,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>fftsize</key>
