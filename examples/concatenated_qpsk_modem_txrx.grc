@@ -971,7 +971,7 @@ by 22 samples.</value>
     </param>
     <param>
       <key>value</key>
-      <value>rx_data_rate*sps_rx*0+rx_data_rate_sps*sps_rx</value>
+      <value>rx_data_rate_sps*sps_rx</value>
     </param>
   </block>
   <block>
@@ -998,7 +998,7 @@ by 22 samples.</value>
     </param>
     <param>
       <key>value</key>
-      <value>tx_data_rate*sps_tx*0+tx_data_rate_sps*sps_tx</value>
+      <value>tx_data_rate_sps*sps_tx</value>
     </param>
   </block>
   <block>
