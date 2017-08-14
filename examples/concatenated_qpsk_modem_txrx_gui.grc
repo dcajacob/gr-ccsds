@@ -299,7 +299,7 @@
     </param>
     <param>
       <key>framebits</key>
-      <value>1279*8</value>
+      <value>1279</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -584,7 +584,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>framebits</key>
-      <value>1279*8</value>
+      <value>1279</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1115,7 +1115,7 @@ by 22 samples.</value>
     </param>
     <param>
       <key>value</key>
-      <value>2</value>
+      <value>4</value>
     </param>
   </block>
   <block>
@@ -1142,7 +1142,7 @@ by 22 samples.</value>
     </param>
     <param>
       <key>value</key>
-      <value>2</value>
+      <value>4</value>
     </param>
   </block>
   <block>
