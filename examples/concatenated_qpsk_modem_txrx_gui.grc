@@ -7349,11 +7349,11 @@ def reverse_bits(x):
     </param>
     <param>
       <key>dev_addr</key>
-      <value>""</value>
+      <value>type=b200</value>
     </param>
     <param>
       <key>dev_args</key>
-      <value>""</value>
+      <value>send_frame_size=512,num_send_frames=256</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -8684,7 +8684,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>dev_addr</key>
-      <value>""</value>
+      <value>type=b200</value>
     </param>
     <param>
       <key>dev_args</key>

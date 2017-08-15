@@ -4689,7 +4689,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>dev_addr</key>
-      <value>""</value>
+      <value>type=b200</value>
     </param>
     <param>
       <key>dev_args</key>
