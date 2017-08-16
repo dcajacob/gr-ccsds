@@ -4429,7 +4429,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>psize</key>
-      <value>512</value>
+      <value>1472</value>
     </param>
     <param>
       <key>eof</key>
@@ -4492,7 +4492,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>psize</key>
-      <value>512</value>
+      <value>1472</value>
     </param>
     <param>
       <key>port</key>
@@ -5190,7 +5190,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>epsilon</key>
