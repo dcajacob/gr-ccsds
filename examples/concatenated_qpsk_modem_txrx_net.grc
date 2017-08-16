@@ -4386,6 +4386,124 @@ in some situations.  Copy helped.</value>
     </param>
   </block>
   <block>
+    <key>blocks_udp_sink</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>ipaddr</key>
+      <value>dest_ip</value>
+    </param>
+    <param>
+      <key>port</key>
+      <value>int(dest_port)</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(320, 808)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_udp_sink_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>psize</key>
+      <value>512</value>
+    </param>
+    <param>
+      <key>eof</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_udp_source</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(320, 904)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_udp_source_0</value>
+    </param>
+    <param>
+      <key>ipaddr</key>
+      <value>source_ip</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>eof</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>psize</key>
+      <value>512</value>
+    </param>
+    <param>
+      <key>port</key>
+      <value>int(source_port)</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
     <key>blocks_unpack_k_bits_bb</key>
     <param>
       <key>alias</key>
@@ -5288,7 +5406,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(336, 992)</value>
+      <value>(336, 1008)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5705,7 +5823,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(72, 864)</value>
+      <value>(72, 880)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5764,7 +5882,7 @@ in some situations.  Copy helped.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(88, 1016)</value>
+      <value>(88, 1032)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -12168,11 +12286,11 @@ def reverse_bits(x):
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(336, 812)</value>
+      <value>(336, 804)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -12321,69 +12439,6 @@ def reverse_bits(x):
       <value>1</value>
     </param>
   </block>
-  <block>
-    <key>zeromq_sub_source</key>
-    <param>
-      <key>address</key>
-      <value>"tcp://%s:%s" % (dest_ip, dest_port)</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(336, 892)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>180</value>
-    </param>
-    <param>
-      <key>hwm</key>
-      <value>-1</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>zeromq_sub_source_0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>pass_tags</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>timeout</key>
-      <value>100</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-  </block>
   <connection>
     <source_block_id>analog_const_source_x_0</source_block_id>
     <sink_block_id>blocks_interleave_0</sink_block_id>
@@ -12489,6 +12544,12 @@ def reverse_bits(x):
   <connection>
     <source_block_id>blocks_multiply_const_vxx_0</source_block_id>
     <sink_block_id>qtgui_time_sink_x_1_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_multiply_const_vxx_1</source_block_id>
+    <sink_block_id>blocks_udp_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -12641,6 +12702,12 @@ def reverse_bits(x):
     <sink_block_id>ccsds_encapsulate_net_0_0_0</sink_block_id>
     <source_key>pdus</source_key>
     <sink_key>in</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_udp_source_0</source_block_id>
+    <sink_block_id>digital_fll_band_edge_cc_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_unpack_k_bits_bb_0_0_0</source_block_id>
@@ -12926,12 +12993,6 @@ def reverse_bits(x):
   </connection>
   <connection>
     <source_block_id>zeromq_req_source_0</source_block_id>
-    <sink_block_id>digital_fll_band_edge_cc_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>zeromq_sub_source_0</source_block_id>
     <sink_block_id>digital_fll_band_edge_cc_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
