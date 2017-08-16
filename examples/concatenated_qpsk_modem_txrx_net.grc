@@ -2931,6 +2931,37 @@ in some situations.  Copy helped.</value>
     </param>
   </block>
   <block>
+    <key>blocks_ctrlport_monitor_performance</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>en</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(376, 200)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_ctrlport_monitor_performance_0_0</value>
+    </param>
+  </block>
+  <block>
     <key>blocks_delay</key>
     <param>
       <key>alias</key>
@@ -12118,7 +12149,7 @@ def reverse_bits(x):
     </param>
   </block>
   <block>
-    <key>zeromq_rep_sink</key>
+    <key>zeromq_pub_sink</key>
     <param>
       <key>address</key>
       <value>"tcp://%s:%s" % (source_ip, source_port)</value>
@@ -12138,6 +12169,61 @@ def reverse_bits(x):
     <param>
       <key>_enabled</key>
       <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(336, 812)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>hwm</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>zeromq_pub_sink_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>pass_tags</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>timeout</key>
+      <value>100</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>zeromq_rep_sink</key>
+    <param>
+      <key>address</key>
+      <value>"tcp://%s:%s" % (source_ip, source_port)</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -12192,7 +12278,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -12209,6 +12295,69 @@ def reverse_bits(x):
     <param>
       <key>id</key>
       <value>zeromq_req_source_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>pass_tags</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>timeout</key>
+      <value>100</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>zeromq_sub_source</key>
+    <param>
+      <key>address</key>
+      <value>"tcp://%s:%s" % (dest_ip, dest_port)</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(336, 892)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>hwm</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>zeromq_sub_source_0</value>
     </param>
     <param>
       <key>type</key>
@@ -12340,6 +12489,12 @@ def reverse_bits(x):
   <connection>
     <source_block_id>blocks_multiply_const_vxx_0</source_block_id>
     <sink_block_id>qtgui_time_sink_x_1_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_multiply_const_vxx_1</source_block_id>
+    <sink_block_id>zeromq_pub_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -12771,6 +12926,12 @@ def reverse_bits(x):
   </connection>
   <connection>
     <source_block_id>zeromq_req_source_0</source_block_id>
+    <sink_block_id>digital_fll_band_edge_cc_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>zeromq_sub_source_0</source_block_id>
     <sink_block_id>digital_fll_band_edge_cc_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>

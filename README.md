@@ -84,4 +84,8 @@ It's often a good idea to keep some backround pinging going.  Try not to overwhe
 
 ping -i 1 10.11.10.2
 
+# Network Test (no hardware)
 
+./concatenated_qpsk_modem_txrx_net.py --mtu 1115 --source-ip 192.168.1.231 --dest-ip 192.168.1.223 --source-port 52001 --dest-port 52002 --rx-user-data-rate 1000000 --tx-user-data-rate 1000000
+
+./concatenated_qpsk_modem_txrx_net.py --mtu 1115 --source-ip 192.168.1.223 --dest-ip 192.168.1.231 --dest-port 52001 --source-port 52002 --rx-user-data-rate 1000000 --tx-user-data-rate 1000000
