@@ -1534,7 +1534,7 @@
     </param>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>Plot input and decoded symbols.</value>
     </param>
     <param>
       <key>ctrlpanel</key>
