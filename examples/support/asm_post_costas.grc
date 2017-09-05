@@ -163,7 +163,7 @@
     <key>variable</key>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>Or this.</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -171,7 +171,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(232, 580)</value>
+      <value>(232, 612)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -190,7 +190,7 @@
     <key>variable</key>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>Copy this.</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -225,7 +225,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(56, 580)</value>
+      <value>(56, 612)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -306,7 +306,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(184, 652)</value>
+      <value>(96, 692)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -333,7 +333,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 92)</value>
+      <value>(616, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -466,7 +466,7 @@
     </param>
     <param>
       <key>label</key>
-      <value>Complex Symbols</value>
+      <value>Complex Symbols (Copy this)</value>
     </param>
     <param>
       <key>type</key>
@@ -575,7 +575,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1032, 472)</value>
+      <value>(1000, 472)</value>
     </param>
     <param>
       <key>_rotation</key>

@@ -174,7 +174,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(120, 84)</value>
+      <value>(120, 116)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -386,7 +386,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(440, 84)</value>
+      <value>(440, 116)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -405,7 +405,7 @@
     <key>variable</key>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>Or this.</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -432,7 +432,7 @@
     <key>variable</key>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>Copy this.</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -440,7 +440,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1008, 412)</value>
+      <value>(1008, 380)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -788,7 +788,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1008, 284)</value>
+      <value>(1008, 252)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1011,7 +1011,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(264, 84)</value>
+      <value>(264, 116)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1113,7 +1113,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1104, 576)</value>
+      <value>(912, 648)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1148,7 +1148,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(944, 580)</value>
+      <value>(1088, 652)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1164,7 +1164,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>label</key>
-      <value>Blah</value>
+      <value>Conv Encoded Sync Word (Copy this)</value>
     </param>
     <param>
       <key>type</key>
@@ -1355,7 +1355,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 84)</value>
+      <value>(8, 116)</value>
     </param>
     <param>
       <key>_rotation</key>
