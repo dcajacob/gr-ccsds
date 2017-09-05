@@ -120,7 +120,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(680, 20)</value>
+      <value>(672, 20)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -372,6 +372,33 @@
     <param>
       <key>widget</key>
       <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(440, 84)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>enc_asm_len</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>(2 * len(asm) * 8 - 16) / 8</value>
     </param>
   </block>
   <block>
@@ -1512,7 +1539,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(144, 540)</value>
+      <value>(320, 540)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1830,7 +1857,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>vlen</key>
-      <value>4*2*4*0+6</value>
+      <value>enc_asm_len</value>
     </param>
   </block>
   <block>
@@ -2042,7 +2069,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>num_items</key>
-      <value>4*2*4*0+6</value>
+      <value>enc_asm_len</value>
     </param>
     <param>
       <key>vlen</key>
@@ -2183,7 +2210,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>vlen</key>
-      <value>4*2*4*0+6</value>
+      <value>enc_asm_len</value>
     </param>
   </block>
   <block>
