@@ -353,11 +353,11 @@
     </param>
     <param>
       <key>framebits</key>
-      <value>1279*0+80</value>
+      <value>frame_bits</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1104, 580)</value>
+      <value>(1096, 580)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -584,7 +584,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>framebits</key>
-      <value>1279*0+80</value>
+      <value>frame_bits</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -617,6 +617,33 @@ For example (171,133) =&gt; (121,91)</value>
     <param>
       <key>mode</key>
       <value>fec.CC_STREAMING</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1752, 116)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>frame_bits</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>1279*2</value>
     </param>
   </block>
   <block>
@@ -1153,7 +1180,7 @@ by 22 samples.</value>
     </param>
     <param>
       <key>en</key>
-      <value>True</value>
+      <value>False</value>
     </param>
     <param>
       <key>_coordinate</key>
