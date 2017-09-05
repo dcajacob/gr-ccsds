@@ -89,6 +89,60 @@
     </param>
     <param>
       <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(584, 20)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>K</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>7</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(680, 20)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>R</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>1/2.</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
       <value>0</value>
     </param>
     <param>
@@ -106,6 +160,33 @@
     <param>
       <key>value</key>
       <value>4</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(120, 84)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>asm</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>[0x1a, 0xcf, 0xfc, 0x1d] </value>
     </param>
   </block>
   <block>
@@ -361,7 +442,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>k</key>
-      <value>7</value>
+      <value>K</value>
     </param>
     <param>
       <key>dim1</key>
@@ -377,7 +458,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>framebits</key>
-      <value>1279*8*0+80</value>
+      <value>80</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -401,7 +482,7 @@ For example (171,133) =&gt; (121,91)</value>
     </param>
     <param>
       <key>rate</key>
-      <value>2</value>
+      <value>int(1/R)</value>
     </param>
     <param>
       <key>state_start</key>
@@ -892,6 +973,33 @@ auto-encoded ASM.</value>
     </param>
   </block>
   <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(264, 84)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>test_vector</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>(zero_pad + asm) * 3</value>
+    </param>
+  </block>
+  <block>
     <key>variable_qtgui_range</key>
     <param>
       <key>comment</key>
@@ -1220,7 +1328,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(296, 12)</value>
+      <value>(8, 84)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1229,6 +1337,33 @@ auto-encoded ASM.</value>
     <param>
       <key>id</key>
       <value>zero_pad</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>[0x00] * zero_pad_len</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(296, 12)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>zero_pad_len</value>
     </param>
     <param>
       <key>value</key>
@@ -1377,7 +1512,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(144, 452)</value>
+      <value>(144, 540)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1483,7 +1618,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(400, 548)</value>
+      <value>(400, 636)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1589,7 +1724,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(72, 548)</value>
+      <value>(72, 636)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1679,7 +1814,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(760, 612)</value>
+      <value>(760, 700)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1773,7 +1908,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(232, 548)</value>
+      <value>(232, 636)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1793,7 +1928,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>num_items</key>
-      <value>(2 * zero_pad * 8 + 16) / 8</value>
+      <value>(int(1/R) * zero_pad_len * 8 + 16) / 8</value>
     </param>
     <param>
       <key>type</key>
@@ -1883,7 +2018,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(552, 548)</value>
+      <value>(552, 636)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1934,7 +2069,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(272, 132)</value>
+      <value>(272, 220)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1989,7 +2124,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(504, 132)</value>
+      <value>(504, 220)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2032,7 +2167,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(760, 548)</value>
+      <value>(760, 636)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2071,7 +2206,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 116)</value>
+      <value>(8, 204)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2095,7 +2230,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>repeat</key>
-      <value>False</value>
+      <value>True</value>
     </param>
     <param>
       <key>tags</key>
@@ -2107,7 +2242,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>vector</key>
-      <value>[0] * zero_pad + [0x1a, 0xcf, 0xfc, 0x1d] * 6</value>
+      <value>test_vector</value>
     </param>
   </block>
   <block>
@@ -2130,7 +2265,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(456, 240)</value>
+      <value>(456, 328)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2173,7 +2308,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(488, 12)</value>
+      <value>(416, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2214,7 +2349,7 @@ This leads to the observed unreliable first 10 bytes (80 bits).
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(48, 220)</value>
+      <value>(48, 308)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2411,7 +2546,7 @@ This leads to the observed unreliable first 10 bytes (80 bits).
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(608, 340)</value>
+      <value>(608, 428)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -2567,7 +2702,7 @@ This leads to the observed unreliable first 10 bytes (80 bits).
     </param>
     <param>
       <key>ncols</key>
-      <value>32*2*2*6</value>
+      <value>(int(1/R) *len(test_vector)) * 8</value>
     </param>
     <param>
       <key>nrows</key>
@@ -2630,7 +2765,7 @@ This leads to the observed unreliable first 10 bytes (80 bits).
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(608, 436)</value>
+      <value>(608, 524)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -2902,7 +3037,7 @@ This leads to the observed unreliable first 10 bytes (80 bits).
     </param>
     <param>
       <key>size</key>
-      <value>32*2*2*7</value>
+      <value>(int(1/R) *len(test_vector)) * 8</value>
     </param>
     <param>
       <key>srate</key>
