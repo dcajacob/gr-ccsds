@@ -10,7 +10,7 @@
     </param>
     <param>
       <key>window_size</key>
-      <value></value>
+      <value>2048, 2048</value>
     </param>
     <param>
       <key>category</key>
@@ -171,7 +171,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(480, 628)</value>
+      <value>(232, 580)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -198,7 +198,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(480, 708)</value>
+      <value>(232, 508)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -225,7 +225,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(264, 700)</value>
+      <value>(56, 580)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -252,7 +252,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(264, 628)</value>
+      <value>(48, 508)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -306,7 +306,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(696, 668)</value>
+      <value>(184, 652)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -372,7 +372,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(920, 544)</value>
+      <value>(968, 576)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -415,7 +415,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1113, 158)</value>
+      <value>(904, 128)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -450,7 +450,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(920, 452)</value>
+      <value>(1144, 580)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -466,7 +466,7 @@
     </param>
     <param>
       <key>label</key>
-      <value>Blah</value>
+      <value>Complex Symbols</value>
     </param>
     <param>
       <key>type</key>
@@ -489,7 +489,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1017, 57)</value>
+      <value>(1080, 132)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -505,7 +505,7 @@
     </param>
     <param>
       <key>label</key>
-      <value>Blah</value>
+      <value>Symbols</value>
     </param>
     <param>
       <key>type</key>
@@ -532,7 +532,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(632, 360)</value>
+      <value>(592, 472)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -575,7 +575,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(944, 360)</value>
+      <value>(1032, 472)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -592,57 +592,6 @@
     <param>
       <key>minoutbuf</key>
       <value>0</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_head</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>2</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(72, 228)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_head_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>num_items</key>
-      <value>len(encoded_sync_word)</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>byte</value>
     </param>
     <param>
       <key>vlen</key>
@@ -673,7 +622,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(792, 356)</value>
+      <value>(800, 468)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -720,7 +669,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(720, 436)</value>
+      <value>(808, 540)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -759,7 +708,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(825, 52)</value>
+      <value>(744, 132)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -810,7 +759,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(176, 116)</value>
+      <value>(240, 180)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -857,7 +806,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(504, 508)</value>
+      <value>(528, 580)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -908,7 +857,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(604, 139)</value>
+      <value>(488, 188)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -955,11 +904,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>2</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(384, 308)</value>
+      <value>(344, 420)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -983,7 +932,7 @@
     </param>
     <param>
       <key>samples_per_second</key>
-      <value>samp_rate_rx</value>
+      <value>samp_rate</value>
     </param>
     <param>
       <key>type</key>
@@ -1014,7 +963,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(712, 508)</value>
+      <value>(808, 612)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1053,7 +1002,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(835, 100)</value>
+      <value>(744, 188)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1093,7 +1042,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(28, 316)</value>
+      <value>(16, 172)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1156,7 +1105,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(392, 172)</value>
+      <value>(96, 412)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1250,7 +1199,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(896, 172)</value>
+      <value>(592, 324)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1605,7 +1554,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1136, 256)</value>
+      <value>(1224, 360)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1637,7 +1586,7 @@
     </param>
     <param>
       <key>label1</key>
-      <value></value>
+      <value>Input Symbols (I)</value>
     </param>
     <param>
       <key>marker1</key>
@@ -1685,7 +1634,7 @@
     </param>
     <param>
       <key>label2</key>
-      <value></value>
+      <value>Input Symbols (Q)</value>
     </param>
     <param>
       <key>marker2</key>
@@ -1709,7 +1658,7 @@
     </param>
     <param>
       <key>label3</key>
-      <value></value>
+      <value>Demodulated Symbols (I)</value>
     </param>
     <param>
       <key>marker3</key>
@@ -1733,7 +1682,7 @@
     </param>
     <param>
       <key>label4</key>
-      <value></value>
+      <value>Demodulated Symbols (Q)</value>
     </param>
     <param>
       <key>marker4</key>
@@ -2308,12 +2257,6 @@
     <sink_key>1</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_head_0</source_block_id>
-    <sink_block_id>blocks_repack_bits_bb_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
     <source_block_id>blocks_multiply_const_vxx_0</source_block_id>
     <sink_block_id>blocks_float_to_complex_0</sink_block_id>
     <source_key>0</source_key>
@@ -2381,7 +2324,7 @@
   </connection>
   <connection>
     <source_block_id>blocks_vector_source_x_1</source_block_id>
-    <sink_block_id>blocks_head_0</sink_block_id>
+    <sink_block_id>blocks_repack_bits_bb_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
