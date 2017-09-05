@@ -1633,7 +1633,9 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>Only keep the 6 
+memoryless, encoded 
+bytes.</value>
     </param>
     <param>
       <key>affinity</key>
@@ -1923,7 +1925,9 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>Skip the first 
+unreliable 10 
+bytes (80 bits).</value>
     </param>
     <param>
       <key>affinity</key>
