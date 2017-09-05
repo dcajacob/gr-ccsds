@@ -1113,7 +1113,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(912, 648)</value>
+      <value>(912, 616)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1148,7 +1148,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1088, 652)</value>
+      <value>(1088, 620)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1539,7 +1539,7 @@ auto-encoded ASM.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(320, 540)</value>
+      <value>(320, 516)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1647,7 +1647,7 @@ bytes.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(400, 636)</value>
+      <value>(400, 604)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1753,7 +1753,7 @@ bytes.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(72, 636)</value>
+      <value>(72, 604)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1843,7 +1843,7 @@ bytes.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(760, 700)</value>
+      <value>(760, 668)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1939,7 +1939,7 @@ bytes (80 bits).</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(232, 636)</value>
+      <value>(232, 604)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2049,7 +2049,7 @@ bytes (80 bits).</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(552, 636)</value>
+      <value>(552, 604)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2198,7 +2198,7 @@ bytes (80 bits).</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(760, 636)</value>
+      <value>(760, 604)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2577,7 +2577,7 @@ This leads to the observed unreliable first 10 bytes (80 bits).
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(608, 428)</value>
+      <value>(608, 404)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -2796,7 +2796,7 @@ This leads to the observed unreliable first 10 bytes (80 bits).
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(608, 524)</value>
+      <value>(608, 500)</value>
     </param>
     <param>
       <key>gui_hint</key>
