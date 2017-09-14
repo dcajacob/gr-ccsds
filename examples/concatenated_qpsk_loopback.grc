@@ -2516,7 +2516,7 @@ by 22 samples.</value>
     </param>
     <param>
       <key>dist</key>
-      <value>blocks.STROBE_POISSON</value>
+      <value>blocks.STROBE_UNIFORM</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -6195,7 +6195,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>name</key>
-      <value>Modulated Fill Frame Untrimmed</value>
+      <value>Modulated Fill Frame Untrimmed (2 x full frames)</value>
     </param>
     <param>
       <key>nconnections</key>
@@ -6203,7 +6203,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>size</key>
-      <value>len(modulated_preamble_untrimmed)</value>
+      <value>len(modulated_preamble_untrimmed)*2</value>
     </param>
     <param>
       <key>srate</key>
@@ -6558,7 +6558,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>name</key>
-      <value>Demodulated Fill Frame Untrimmed</value>
+      <value>Demodulated Fill Frame Untrimmed (2 x full frames)</value>
     </param>
     <param>
       <key>nconnections</key>
@@ -6566,7 +6566,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>size</key>
-      <value>len(modulated_preamble_untrimmed)</value>
+      <value>len(modulated_preamble_untrimmed)*2</value>
     </param>
     <param>
       <key>srate</key>
@@ -6921,7 +6921,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>name</key>
-      <value>Modulated Fill Frame Trimmed</value>
+      <value>Modulated Fill Frame Trimmed (2 x full frames)</value>
     </param>
     <param>
       <key>nconnections</key>
@@ -6929,7 +6929,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>size</key>
-      <value>len(modulated_idle_frame_trimmed_nodiff)</value>
+      <value>len(modulated_idle_frame_trimmed_nodiff)*2</value>
     </param>
     <param>
       <key>srate</key>
@@ -8010,7 +8010,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>name</key>
-      <value>"Modulated Data + Filler Packets"</value>
+      <value>"Modulated Data + Filler Packets (2 x full frames)"</value>
     </param>
     <param>
       <key>nconnections</key>
@@ -8018,7 +8018,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>size</key>
-      <value>1279*int(1/R)*8*sps_tx/bps</value>
+      <value>1279*int(1/R)*8*sps_tx/bps*2</value>
     </param>
     <param>
       <key>srate</key>
@@ -8373,7 +8373,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>name</key>
-      <value>"Modulated Data Packets"</value>
+      <value>"Modulated Data Packets (2 x full frames)"</value>
     </param>
     <param>
       <key>nconnections</key>
@@ -8381,7 +8381,7 @@ def reverse_bits(x):
     </param>
     <param>
       <key>size</key>
-      <value>1279*2*8*2/2</value>
+      <value>1279*int(1/R)*8*sps_tx/bps*2</value>
     </param>
     <param>
       <key>srate</key>
