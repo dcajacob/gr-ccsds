@@ -15,6 +15,12 @@ then clone this repo and follow these instructions
     cmake .. -DCMAKE_INSTALL_PREFIX=/path/to/your/prefix
     make
     make install
+    
+## GNURadio Conference Talk
+
+I presented my additions to this OOT module. My contribution was adding convolutional coding to create a nearly CCSDS-compliant full-duplex modem. I cheat a little by using my own toy encapsulation and link layer protocols.
+
+See the presentation here: https://drive.google.com/open?id=0B-CV_07uSBIuVXBBdzRZYWw1cG8
 
 ## IP Encapsulation Instructions
 
