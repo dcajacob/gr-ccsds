@@ -21,6 +21,7 @@ then clone this repo and follow these instructions
 I presented my additions to this OOT module. My contribution was adding convolutional coding to create a nearly CCSDS-compliant full-duplex modem. I cheat a little by using my own toy encapsulation and link layer protocols.
 
 See the presentation here: https://drive.google.com/open?id=0B-CV_07uSBIuVXBBdzRZYWw1cG8
+And the video here: https://www.youtube.com/watch?v=gVCCQ6rX3nk
 
 ## IP Encapsulation Instructions
 
